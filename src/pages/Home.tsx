@@ -1,0 +1,305 @@
+import { Link } from 'react-router-dom'
+import { CTA, WhatsAppGlyph } from '@/components/CTA'
+import { Picture, imageSrcSet } from '@/components/Picture'
+import { Seo } from '@/components/Seo'
+import { Eyebrow, Rule, Section, SectionHead } from '@/components/ui'
+import { site, commitments } from '@/content/site'
+import { solutions } from '@/content/solutions'
+import { featuredProject, categoryLabel } from '@/content/projects'
+
+export default function Home() {
+  return (
+    <>
+      <Seo
+        path="/"
+        title="VETRA — Arquitetura em vidro sob medida · Fortaleza/CE"
+        description="Fachadas e envidraçamento, box elegance, espelhos e divisórias em vidro sob medida para projetos residenciais e corporativos em Fortaleza. Especificação técnica e execução própria."
+      >
+        {/* O hero é o LCP da home. Sem preload o browser só descobre a imagem
+            depois de resolver o CSS do <picture>. */}
+        <link
+          rel="preload"
+          as="image"
+          type="image/avif"
+          media="(max-width: 767px)"
+          href="/img/hero-mobile-1024.avif"
+          imageSrcSet={imageSrcSet('hero-mobile')}
+          imageSizes="100vw"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          type="image/avif"
+          media="(min-width: 768px)"
+          href="/img/hero-desktop-1440.avif"
+          imageSrcSet={imageSrcSet('hero-desktop')}
+          imageSizes="100vw"
+          fetchPriority="high"
+        />
+      </Seo>
+
+      {/* ------------------------------------------------------------ hero
+          Ocupa a tela inteira, começando no pixel zero: sobe por baixo do
+          header (que fica transparente nesta rota) com margem negativa da
+          altura dele, e devolve o espaço com padding interno. */}
+      {/* `min-h-svh`, não `h-svh`: em tela curta (360x640) o hero precisa poder
+          CRESCER. Com altura travada, o conteúdo transbordava para cima e o
+          eyebrow sumia atrás do header. */}
+      <section className="relative -mt-20 flex min-h-svh flex-col overflow-hidden md:-mt-24">
+        <Picture
+          name="hero-desktop"
+          mobile="hero-mobile"
+          alt="Varanda envidraçada de piso a teto com vista para a praia, os coqueiros da orla e os prédios de Fortaleza"
+          fill
+          priority
+          sizes="100vw"
+        />
+
+        {/* Véus em `ink` (preto), não em navy: navy tinge a foto inteira de
+            azul e mata o mar e a areia. Preto só escurece, a cor sobrevive.
+            As opacidades não são escolha estética — saíram de medir o
+            contraste real do branco sobre os pixels desta foto. Trocar a foto
+            pede medir de novo (ver README › Imagens › Hero). */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink/70 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/65 via-ink/15 to-transparent"
+          aria-hidden="true"
+        />
+        {/* As listras diagonais da marca NÃO entram aqui. Aplicadas sobre o
+            terço direito da foto, elas caíam em cima de mobiliário de primeiro
+            plano (cadeiras, painel ripado, tampo de pedra) que não tem vidro
+            na frente — lia como falha de textura, não como reflexo. O motivo
+            continua vivo nas faixas navy, onde corre sobre cor chapada. */}
+
+        <div className="container-vetra relative flex h-full flex-col justify-end pt-20 pb-16 md:pt-24 md:pb-20">
+          <Eyebrow tone="photo">
+            {site.address.locality} / {site.address.region} — desde o projeto
+          </Eyebrow>
+          {/* Uma cor só. A hierarquia entre as duas linhas vem do PESO
+              (light → regular), não de tingir a segunda linha: sobre foto,
+              cor no título compete com a própria imagem. */}
+          <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white">
+            Arquitetura em vidro
+            <span className="block font-normal">sob medida.</span>
+          </h1>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <CTA utm={{ campaign: 'home', content: 'hero-whatsapp' }}>
+              <WhatsAppGlyph />
+              Falar com a VETRA
+            </CTA>
+            <CTA
+              variant="glass"
+              to="/projetos"
+              utm={{ campaign: 'home', content: 'hero-projetos' }}
+            >
+              Ver projetos
+            </CTA>
+          </div>
+
+          {/* Barra técnica. Faz dois trabalhos: dá ao arquiteto um fato
+              específico para ler no primeiro viewport (o slogan sozinho é um
+              descritor de categoria que qualquer concorrente escreveria), e
+              distribui o peso da composição pela largura do quadro em vez de
+              empilhar tudo no canto inferior esquerdo. */}
+          <dl className="mt-10 grid gap-x-10 gap-y-4 border-t border-white/25 pt-6 sm:grid-cols-3 md:mt-14 md:gap-x-16">
+            {commitments.map((c) => (
+              <div key={c.label} className="flex gap-3 sm:block">
+                {/* `mist`, não `white/60`: sobre a faixa clara da foto (céu e
+                    areia) o branco a 60% caía para 3.91:1 em "ORÇAMENTO" e
+                    reprovava AA. Mist é cor de marca, sólida, e ainda separa o
+                    rótulo do claim — o branco puro achataria os dois. */}
+                <dt className="font-display text-eyebrow uppercase tracking-wordmark text-mist sm:mb-2">
+                  {c.label}
+                </dt>
+                <dd className="font-display text-sm font-light text-white text-balance md:text-base">
+                  {c.claim}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* O lede sai de cima da foto: sobre imagem ficam só marca, título e ação. */}
+      <Section className="py-16 md:py-20">
+        <p className="max-w-3xl text-lede text-ink/70">
+          Trabalhamos com quem desenha o espaço antes de ele existir. Fachadas,
+          boxes, divisórias e espelhos especificados junto com o projeto — e
+          executados no milímetro que o projeto pediu.
+        </p>
+      </Section>
+
+      {/* --------------------------------------------------- como atendemos */}
+      <Section tone="mist" className="py-20">
+        <div className="grid gap-12 md:grid-cols-3">
+          {[
+            {
+              title: 'Especificação junto com o projeto',
+              text: 'Entramos antes do revestimento assentado, quando ainda dá para resolver rebaixo de forro, prumo e ponto de carga.',
+            },
+            {
+              title: 'Medição técnica no local',
+              text: 'Cada vão é medido depois do acabamento executado. Obra pronta raramente é retangular — e o vidro não perdoa.',
+            },
+            {
+              title: 'Execução acompanhada',
+              text: 'Uma pessoa responde pelo projeto do orçamento à instalação. Sem repassar o problema para o próximo elo.',
+            },
+          ].map((item) => (
+            <div key={item.title}>
+              <Rule />
+              <h3 className="mt-6 font-display text-heading font-medium text-balance">
+                {item.title}
+              </h3>
+              <p className="mt-4 text-ink/60">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ---------------------------------------------------- três soluções */}
+      <Section>
+        <SectionHead
+          eyebrow="Soluções"
+          title="Três frentes, uma mesma exigência de acabamento."
+        />
+
+        <div className="mt-16 grid gap-x-8 gap-y-14 md:grid-cols-3">
+          {solutions.map((s) => (
+            <article key={s.id} className="group">
+              <Link to={`/projetos?categoria=${s.id}`} className="block">
+                <Picture
+                  name={s.image}
+                  alt={s.imageAlt}
+                  ratio="3/4"
+                  sizes="(min-width: 768px) 30vw, 92vw"
+                  imgClassName="transition-transform duration-700 ease-glass group-hover:scale-[1.03]"
+                />
+                <div className="mt-6 flex items-baseline gap-4">
+                  <span className="font-display text-eyebrow tracking-label text-navy">
+                    {s.index}
+                  </span>
+                  <h3 className="font-display text-heading font-medium">{s.title}</h3>
+                </div>
+              </Link>
+              <p className="mt-4 text-ink/60">{s.lede}</p>
+              <ul className="mt-6 space-y-2 border-t border-ink/10 pt-6 text-sm text-ink/60">
+                {s.items.map((i) => (
+                  <li key={i}>{i}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      {/* ------------------------------------------------ projeto em destaque */}
+      <Section tone="mist">
+        <SectionHead eyebrow="Em destaque" title={featuredProject.title} />
+        <div className="mt-14 grid gap-12 lg:grid-cols-[1.35fr_1fr] lg:items-end">
+          <Link to={`/projetos/${featuredProject.slug}`} className="group block">
+            <Picture
+              name={featuredProject.cover}
+              alt={featuredProject.coverAlt}
+              ratio="4/3"
+              sizes="(min-width: 1024px) 58vw, 92vw"
+              imgClassName="transition-transform duration-700 ease-glass group-hover:scale-[1.02]"
+            />
+          </Link>
+          <div>
+            <p className="text-lede text-ink/70">{featuredProject.body[0]}</p>
+            <dl className="mt-10 divide-y divide-ink/10 border-y border-ink/10 text-sm">
+              {[
+                ['Categoria', categoryLabel(featuredProject.category)],
+                ['Local', featuredProject.spec.local],
+                ['Vidro', featuredProject.spec.vidro],
+              ].map(([k, v]) => (
+                <div key={k} className="flex justify-between gap-6 py-3.5">
+                  <dt className="font-display text-eyebrow uppercase tracking-label text-ink/60">
+                    {k}
+                  </dt>
+                  <dd className="text-right text-ink/70">{v}</dd>
+                </div>
+              ))}
+            </dl>
+            <CTA
+              variant="portfolio"
+              to={`/projetos/${featuredProject.slug}`}
+              utm={{ campaign: 'home', content: 'destaque' }}
+              className="mt-10"
+            >
+              Ver o projeto
+            </CTA>
+          </div>
+        </div>
+      </Section>
+
+      {/* ------------------------------------------------------- arquitetos */}
+      <section className="relative overflow-hidden bg-navy py-section text-white">
+        <div
+          className="glass-stripes pointer-events-none absolute inset-0 opacity-[0.05]"
+          aria-hidden="true"
+        />
+        <div className="container-vetra relative grid gap-12 lg:grid-cols-2 lg:items-center">
+          <SectionHead
+            tone="white"
+            eyebrow="Programa de parceria"
+            title="Para quem especifica."
+            lede="Arquitetos e designers de interiores têm canal direto, prazo de retorno definido e desenho técnico do sistema antes do fechamento — para o vidro entrar no projeto como projeto, não como fornecedor."
+          />
+          <div className="lg:justify-self-end">
+            <CTA
+              variant="portfolio"
+              to="/arquitetos"
+              utm={{ campaign: 'home', content: 'arquitetos' }}
+              className="border-white/30 text-white hover:border-white hover:bg-white hover:text-navy"
+            >
+              Conhecer o programa
+            </CTA>
+          </div>
+        </div>
+      </section>
+
+      {/* -------------------------------------------------------- CTA final */}
+      <Section className="py-24">
+        <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+          <div>
+            <Eyebrow>Próximo passo</Eyebrow>
+            <h2 className="mt-6 max-w-3xl font-display text-title font-light text-balance">
+              Manda a planta, a foto do vão ou só a dúvida.
+            </h2>
+            <p className="mt-6 max-w-xl text-lede text-ink/60">
+              Respondemos com a especificação técnica e o caminho de execução —
+              antes de falar de preço.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <CTA
+              utm={{ campaign: 'home', content: 'fechamento-whatsapp' }}
+              message="Olá, VETRA. Vim pelo site e quero falar sobre um projeto em vidro."
+            >
+              <WhatsAppGlyph />
+              Falar no WhatsApp
+            </CTA>
+            <CTA
+              variant="portfolio"
+              to="/contato"
+              utm={{ campaign: 'home', content: 'fechamento-contato' }}
+            >
+              Enviar briefing
+            </CTA>
+          </div>
+        </div>
+      </Section>
+    </>
+  )
+}

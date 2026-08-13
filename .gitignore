@@ -1,0 +1,14 @@
+node_modules
+dist
+.vite
+.vercel
+.env
+.env.local
+.DS_Store
+*.log
+
+# Pasta de trabalho do André na raiz: fotos avulsas, imagens de IA e um PDF de
+# proposta comercial. Não é fonte do site e não deve entrar no histórico.
+# As fotos que o site usa ficam em fotos-origem/ (originais do hero) e em
+# public/img/ (derivados gerados por `npm run assets`).
+/img/

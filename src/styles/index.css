@@ -1,0 +1,149 @@
+@import 'tailwindcss';
+
+@import '@fontsource-variable/montserrat/index.css';
+@import '@fontsource-variable/inter/index.css';
+@import 'lenis/dist/lenis.css';
+
+/* ==========================================================================
+   SISTEMA DE DESIGN — VETRA
+   Documentação completa em README.md › "Sistema de design".
+   Tudo aqui é token: nada de hex solto nos componentes.
+   ========================================================================== */
+
+@theme {
+  /* --- Cor -----------------------------------------------------------
+     Paleta oficial da marca. Nenhuma cor fora desta lista.
+     Neutros intermediários saem de `ink` com modificador de opacidade
+     (ex.: text-ink/60), nunca de um cinza inventado.                    */
+  --color-ink: #000000; /* texto principal, wordmark            */
+  --color-navy: #00376b; /* header/footer, CTA secundário        */
+  --color-cyan: #00aaeb; /* CTA primário, acentos, hover         */
+  --color-mist: #c0e7ef; /* fundos de seção e cards              */
+  --color-white: #ffffff; /* base dominante (70%+ das superfícies) */
+
+  /* --- Tipografia ----------------------------------------------------
+     display = Montserrat (mesma família geométrica do wordmark),
+     usada em headline, eyebrow e labels — sempre com tracking largo.
+     sans = Inter, para blocos longos de leitura.                        */
+  --font-display: 'Montserrat Variable', 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --tracking-wordmark: 0.28em; /* eyebrow / "SOLUÇÕES EM VIDROS" */
+  --tracking-label: 0.18em; /* labels, botões, nav             */
+
+  /* Escala fluida. O nome diz o papel, não o tamanho. */
+  --text-hero: clamp(2.75rem, 7vw, 6rem);
+  --text-hero--line-height: 0.98;
+  --text-hero--letter-spacing: -0.02em;
+
+  --text-title: clamp(2rem, 4.2vw, 3.5rem);
+  --text-title--line-height: 1.06;
+  --text-title--letter-spacing: -0.015em;
+
+  --text-heading: clamp(1.375rem, 2.2vw, 1.875rem);
+  --text-heading--line-height: 1.2;
+
+  --text-lede: clamp(1.0625rem, 1.35vw, 1.3125rem);
+  --text-lede--line-height: 1.6;
+
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--line-height: 1;
+  --text-eyebrow--letter-spacing: 0.28em;
+
+  /* --- Ritmo vertical ------------------------------------------------ */
+  --spacing-section: 7rem; /* respiro padrão entre seções */
+  --spacing-gutter: 1.5rem;
+
+  /* --- Movimento ----------------------------------------------------- */
+  --ease-glass: cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  /* Rolagem suave nativa como plano B: vale enquanto o Lenis não assumiu
+     (ele carimba a classe .lenis no <html>) ou se o JS não carregar.
+     Os dois juntos brigam pelo scroll. */
+  html:not(.lenis) {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html:not(.lenis) {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    /* evita salto de largura quando o menu mobile trava o scroll */
+    scrollbar-gutter: stable;
+  }
+
+  /* Foco visível e consistente — requisito de navegação por teclado. */
+  /* Ciano sobre branco dá 2.64:1 — abaixo do 3:1 exigido para indicador de
+     foco. Sobre branco o foco é navy; dentro das faixas navy, ciano (4.52:1). */
+  :focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .bg-navy :focus-visible,
+  footer :focus-visible {
+    outline-color: var(--color-cyan);
+  }
+
+  ::selection {
+    background: var(--color-cyan);
+    color: var(--color-white);
+  }
+}
+
+@layer components {
+  /* Elemento-assinatura: as listras diagonais do próprio símbolo da marca.
+     Usadas como textura sutil sobre foto ou fundo — nunca como cor chapada. */
+  .glass-stripes {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      color-mix(in srgb, var(--color-white) 55%, transparent) 0 2px,
+      transparent 2px 26px
+    );
+  }
+
+  .glass-stripes-mist {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      color-mix(in srgb, var(--color-navy) 8%, transparent) 0 1px,
+      transparent 1px 22px
+    );
+  }
+
+  /* Régua fina que abre as seções, ecoando a diagonal do losango. */
+  .rule-cyan {
+    background: linear-gradient(90deg, var(--color-cyan), transparent);
+  }
+}
+
+@utility container-vetra {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 84rem;
+  padding-inline: var(--spacing-gutter);
+
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+
+  @media (width >= 80rem) {
+    padding-inline: 4rem;
+  }
+}
