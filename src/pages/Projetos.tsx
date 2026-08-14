@@ -1,9 +1,9 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { CTA, WhatsAppGlyph } from '@/components/CTA'
-import { Picture } from '@/components/Picture'
+import { ProjectPicture } from '@/components/Picture'
 import { Seo } from '@/components/Seo'
 import { Eyebrow, Section } from '@/components/ui'
-import { categories, categoryLabel, projects, type CategoryId } from '@/content/projects'
+import { categoriasComObra, categoryLabel, projects, type CategoryId } from '@/content/projects'
 
 export default function Projetos() {
   const [params, setParams] = useSearchParams()
@@ -21,7 +21,7 @@ export default function Projetos() {
       <Seo
         path="/projetos"
         title="Projetos executados"
-        description="Fachadas, envidraçamento, boxes, espelhos e divisórias em vidro executados pela VETRA em Fortaleza. Cada projeto com galeria e ficha técnica."
+        description="Obras de cortina de vidro, portas de correr, divisórias e espelhos executadas pela VETRA em Fortaleza e Região Metropolitana. Galeria de cada projeto."
       />
 
       <Section className="pt-16 pb-10 md:pt-24">
@@ -31,8 +31,8 @@ export default function Projetos() {
           <span className="block text-ink/45">executados.</span>
         </h1>
         <p className="mt-8 max-w-xl text-lede text-ink/60">
-          Obras entregues em Fortaleza e Região Metropolitana. Cada uma com a
-          ficha técnica do que foi especificado.
+          Obras entregues em Fortaleza e Região Metropolitana — condomínios,
+          escritórios, lojas e residências.
         </p>
 
         {/* ------------------------------------------------------- filtros */}
@@ -44,7 +44,7 @@ export default function Projetos() {
           <FilterButton active={active === null} onClick={() => select(null)}>
             Todos
           </FilterButton>
-          {categories.map((c) => (
+          {categoriasComObra().map((c) => (
             <FilterButton
               key={c.id}
               active={active === c.id}
@@ -60,8 +60,8 @@ export default function Projetos() {
           {visible.map((p, i) => (
             <article key={p.slug} className="group">
               <Link to={`/projetos/${p.slug}`} className="block">
-                <Picture
-                  name={p.cover}
+                <ProjectPicture
+                  photo={p.cover}
                   alt={p.coverAlt}
                   ratio="4/3"
                   priority={i < 2}
@@ -79,7 +79,7 @@ export default function Projetos() {
               </Link>
               <p className="mt-3 text-ink/60">{p.summary}</p>
               <p className="mt-5 font-display text-eyebrow uppercase tracking-label text-ink/60">
-                {categoryLabel(p.category)} · {p.spec.local}
+                {categoryLabel(p.category)}
               </p>
             </article>
           ))}

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { CTA, WhatsAppGlyph } from '@/components/CTA'
-import { Picture, imageSrcSet } from '@/components/Picture'
+import { Picture, ProjectPicture, imageSrcSet } from '@/components/Picture'
 import { Seo } from '@/components/Seo'
 import { Eyebrow, Rule, Section, SectionHead } from '@/components/ui'
 import { site, commitments } from '@/content/site'
@@ -13,7 +13,7 @@ export default function Home() {
       <Seo
         path="/"
         title="VETRA — Arquitetura em vidro sob medida · Fortaleza/CE"
-        description="Fachadas e envidraçamento, box elegance, espelhos e divisórias em vidro sob medida para projetos residenciais e corporativos em Fortaleza. Especificação técnica e execução própria."
+        description="Cortina de vidro, portas de correr e divisórias, espelhos e box de banheiro sob medida em Fortaleza. Obras executadas para condomínios, escritórios e residências."
       >
         {/* O hero é o LCP da home. Sem preload o browser só descobre a imagem
             depois de resolver o CSS do <picture>. */}
@@ -136,9 +136,9 @@ export default function Home() {
       {/* O lede sai de cima da foto: sobre imagem ficam só marca, título e ação. */}
       <Section className="py-16 md:py-20">
         <p className="max-w-3xl text-lede text-ink/70">
-          Trabalhamos com quem desenha o espaço antes de ele existir. Fachadas,
-          boxes, divisórias e espelhos especificados junto com o projeto — e
-          executados no milímetro que o projeto pediu.
+          Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de
+          vidro, portas, divisórias, espelhos e box especificados junto com o
+          projeto — e executados no milímetro que o projeto pediu.
         </p>
       </Section>
 
@@ -174,10 +174,10 @@ export default function Home() {
       <Section>
         <SectionHead
           eyebrow="Soluções"
-          title="Três frentes, uma mesma exigência de acabamento."
+          title="Quatro frentes, uma mesma exigência de acabamento."
         />
 
-        <div className="mt-16 grid gap-x-8 gap-y-14 md:grid-cols-3">
+        <div className="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map((s) => (
             <article key={s.id} className="group">
               <Link to={`/projetos?categoria=${s.id}`} className="block">
@@ -211,8 +211,8 @@ export default function Home() {
         <SectionHead eyebrow="Em destaque" title={featuredProject.title} />
         <div className="mt-14 grid gap-12 lg:grid-cols-[1.35fr_1fr] lg:items-end">
           <Link to={`/projetos/${featuredProject.slug}`} className="group block">
-            <Picture
-              name={featuredProject.cover}
+            <ProjectPicture
+              photo={featuredProject.cover}
               alt={featuredProject.coverAlt}
               ratio="4/3"
               sizes="(min-width: 1024px) 58vw, 92vw"
@@ -224,9 +224,7 @@ export default function Home() {
             <dl className="mt-10 divide-y divide-ink/10 border-y border-ink/10 text-sm">
               {[
                 ['Categoria', categoryLabel(featuredProject.category)],
-                ['Local', featuredProject.spec.local],
-                ['Vidro', featuredProject.spec.vidro],
-              ].map(([k, v]) => (
+                              ].map(([k, v]) => (
                 <div key={k} className="flex justify-between gap-6 py-3.5">
                   <dt className="font-display text-eyebrow uppercase tracking-label text-ink/60">
                     {k}

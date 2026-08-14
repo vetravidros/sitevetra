@@ -107,3 +107,53 @@ export function Picture({
     </div>
   )
 }
+
+/* --------------------------------------------------------------------------
+   Fotos de obra
+
+   Vivem em /img/obras/, vêm de outro pipeline (`npm run assets:obras`) e
+   carregam as próprias dimensões — por isso não passam pelo IMAGE_META, que
+   indexa só os assets fixos do site (hero, capas de solução).
+   -------------------------------------------------------------------------- */
+
+export type FotoObra = { nome: string; w: number; h: number; larguras: number[] }
+
+export function ProjectPicture({
+  photo,
+  alt,
+  sizes,
+  ratio = '3/4',
+  priority = false,
+  className = '',
+  imgClassName = '',
+}: {
+  photo: FotoObra
+  alt: string
+  sizes: string
+  ratio?: NonNullable<Props['ratio']>
+  priority?: boolean
+  className?: string
+  imgClassName?: string
+}) {
+  const base = `obras/${photo.nome}`
+
+  return (
+    <div className={`relative overflow-hidden bg-mist/60 ${ratioClass[ratio]} ${className}`}>
+      <picture>
+        <source type="image/avif" srcSet={srcset(base, photo.larguras, 'avif')} sizes={sizes} />
+        <source type="image/webp" srcSet={srcset(base, photo.larguras, 'webp')} sizes={sizes} />
+        <img
+          src={`/img/${base}.jpg`}
+          alt={alt}
+          width={photo.w}
+          height={photo.h}
+          sizes={sizes}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+          decoding={priority ? 'sync' : 'async'}
+          className={`absolute inset-0 h-full w-full object-cover ${imgClassName}`}
+        />
+      </picture>
+    </div>
+  )
+}

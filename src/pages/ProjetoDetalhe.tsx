@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { CTA, WhatsAppGlyph } from '@/components/CTA'
-import { Picture } from '@/components/Picture'
+import { ProjectPicture } from '@/components/Picture'
 import { JsonLd, Seo } from '@/components/Seo'
 import { Eyebrow, Rule, Section } from '@/components/ui'
 import { categoryLabel, projectBySlug, projects } from '@/content/projects'
@@ -16,21 +16,25 @@ export default function ProjetoDetalhe() {
   const index = projects.findIndex((p) => p.slug === project.slug)
   const next = projects[(index + 1) % projects.length]
 
-  const ficha: [string, string][] = [
-    ['Local', project.spec.local],
-    ['Ano', project.spec.ano],
-    ['Tipologia', project.spec.tipologia],
-    ['Vidro', project.spec.vidro],
-    ['Ferragem', project.spec.ferragem],
-    ['Arquitetura', project.spec.architect ?? 'Projeto direto com o cliente'],
-  ]
+  // Ficha só existe quando há dado confirmado. Nenhuma obra tem hoje — ver o
+  // comentário de `Spec` em src/content/projects.ts.
+  const ficha: [string, string][] = project.spec
+    ? ([
+        ['Local', project.spec.local],
+        ['Ano', project.spec.ano],
+        ['Tipologia', project.spec.tipologia],
+        ['Vidro', project.spec.vidro],
+        ['Ferragem', project.spec.ferragem],
+        ['Arquitetura', project.spec.architect],
+      ].filter(([, v]) => Boolean(v)) as [string, string][])
+    : []
 
   return (
     <>
       <Seo
         path={`/projetos/${project.slug}`}
         title={project.title}
-        description={`${project.summary} Ficha técnica: ${project.spec.tipologia}, ${project.spec.vidro}. ${project.spec.local}.`}
+        description={`${project.summary} Obra executada pela VETRA em Fortaleza/CE.`}
         type="article"
       />
       <JsonLd
@@ -66,8 +70,8 @@ export default function ProjetoDetalhe() {
       </Section>
 
       <div className="container-vetra">
-        <Picture
-          name={project.cover}
+        <ProjectPicture
+          photo={project.cover}
           alt={project.coverAlt}
           ratio="3/2"
           priority
@@ -115,9 +119,9 @@ export default function ProjetoDetalhe() {
         <Eyebrow>Galeria</Eyebrow>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {project.gallery.map((img) => (
-            <Picture
-              key={img.name}
-              name={img.name}
+            <ProjectPicture
+              key={img.photo.nome}
+              photo={img.photo}
               alt={img.alt}
               ratio="3/4"
               sizes="(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 92vw"
@@ -134,8 +138,8 @@ export default function ProjetoDetalhe() {
             <h2 className="font-display text-title font-light text-balance transition-colors duration-300 group-hover:text-navy">
               {next.title}
             </h2>
-            <Picture
-              name={next.cover}
+            <ProjectPicture
+              photo={next.cover}
               alt={next.coverAlt}
               ratio="3/2"
               sizes="(min-width: 768px) 18rem, 92vw"
