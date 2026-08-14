@@ -68,7 +68,7 @@ Mudar aqui muda em todo lugar: rodapé, contato, Google e meta tags.
 ### SEO
 
 - `[home.seo.title]` `SEO` → VETRA — Arquitetura em vidro sob medida · Fortaleza/CE
-- `[home.seo.description]` `SEO` → Fachadas e envidraçamento, box elegance, espelhos e divisórias em vidro sob medida para projetos residenciais e corporativos em Fortaleza. Especificação técnica e execução própria.
+- `[home.seo.description]` `SEO` → Cortina de vidro, portas de correr e divisórias, espelhos e box de banheiro sob medida em Fortaleza. Obras executadas para condomínios, escritórios e residências.
 
 ### Topo (sobre a foto)
 
@@ -90,7 +90,7 @@ específica do primeiro viewport — se algum deixar de ser verdade, sai do site
 
 ### Parágrafo de abertura
 
-- `[home.lede]` → Trabalhamos com quem desenha o espaço antes de ele existir. Fachadas, boxes, divisórias e espelhos especificados junto com o projeto — e executados no milímetro que o projeto pediu.
+- `[home.lede]` → Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de vidro, portas, divisórias, espelhos e box especificados junto com o projeto — e executados no milímetro que o projeto pediu.
 
 ### Faixa "como atendemos" (3 colunas, fundo azul claro)
 
@@ -101,21 +101,22 @@ específica do primeiro viewport — se algum deixar de ser verdade, sai do site
 - `[home.atend.3.titulo]` → Execução acompanhada
 - `[home.atend.3.texto]` → Uma pessoa responde pelo projeto do orçamento à instalação. Sem repassar o problema para o próximo elo.
 
-### Três soluções
+### Quatro soluções
 
 - `[home.solucoes.eyebrow]` → Soluções
-- `[home.solucoes.titulo]` → Três frentes, uma mesma exigência de acabamento.
+- `[home.solucoes.titulo]` → Quatro frentes, uma mesma exigência de acabamento.
 
-(O conteúdo dos 3 cards está na seção **6. Soluções**, porque se repete no rodapé
-e na página de projetos.)
+(O conteúdo dos 4 cards está na seção **6. Soluções**, porque se repete no rodapé
+e nos filtros da página de projetos.)
 
 ### Projeto em destaque
 
 - `[home.destaque.eyebrow]` → Em destaque
 - `[home.destaque.cta]` → Ver o projeto
 
-O título e o texto vêm do projeto marcado como destaque (hoje: *Varanda contínua,
-Guararapes* — ver seção **7. Projetos**).
+O título e o texto vêm da obra marcada como destaque (hoje: *Edifício Ana Amélia
+Boulevard* — ver seção **7. Obras**). Trocar = editar `DESTAQUES` em
+`src/content/projects.ts`.
 
 ### Faixa azul-escura para arquitetos
 
@@ -139,20 +140,21 @@ Guararapes* — ver seção **7. Projetos**).
 ### SEO
 
 - `[projetos.seo.title]` `SEO` → Projetos executados
-- `[projetos.seo.description]` `SEO` → Fachadas, envidraçamento, boxes, espelhos e divisórias em vidro executados pela VETRA em Fortaleza. Cada projeto com galeria e ficha técnica.
+- `[projetos.seo.description]` `SEO` → Obras de cortina de vidro, portas de correr, divisórias e espelhos executadas pela VETRA em Fortaleza e Região Metropolitana. Galeria de cada projeto.
 
 ### Topo
 
 - `[projetos.eyebrow]` → Portfólio
 - `[projetos.h1.linha1]` → Projetos
 - `[projetos.h1.linha2]` (em cinza) → executados.
-- `[projetos.lede]` → Obras entregues em Fortaleza e Região Metropolitana. Cada uma com a ficha técnica do que foi especificado.
+- `[projetos.lede]` → Obras entregues em Fortaleza e Região Metropolitana — condomínios, escritórios, lojas e residências.
 
 ### Filtros
 
 - `[projetos.filtro.todos]` → Todos
 
-(Os outros três filtros usam os nomes das soluções — seção **6**.)
+(Os demais filtros usam os nomes das categorias — seção **6**. Categoria sem obra
+publicada não aparece como filtro.)
 
 ### Estado vazio e fechamento
 
@@ -164,7 +166,9 @@ Guararapes* — ver seção **7. Projetos**).
 
 ## 3. Página de projeto (`/projetos/...`)
 
-Rótulos fixos, iguais em todos os projetos:
+Rótulos fixos. **Hoje a ficha técnica não aparece em nenhuma obra** — nenhuma
+tem dado confirmado, e a seção some quando está vazia. Estes rótulos só voltam
+a ser visíveis quando você preencher `FICHAS` em `src/content/projects.ts`.
 
 - `[projeto.voltar]` → ← Todos os projetos
 - `[projeto.ficha.titulo]` → Ficha técnica
@@ -332,92 +336,87 @@ Rótulos fixos, iguais em todos os projetos:
 
 Aparecem na home, nos filtros de projetos e no rodapé. Mudar aqui muda nos três.
 
-### 01 — Fachadas
+### 01 — Cortina de Vidro
 
-- `[sol.fachadas.titulo]` → Fachadas e envidraçamento
-- `[sol.fachadas.lede]` → Fechar uma varanda sem fechar a vista. Perfis mínimos, vão livre, o vidro assumindo o papel de parede.
-- `[sol.fachadas.itens]` →
-  - Cortina de vidro sem roldanas aparentes
-  - Envidraçamento de sacada e terraço
-  - Fachadas em vidro estrutural
-  - Guarda-corpos em vidro laminado
+- `[sol.cortina-de-vidro.titulo]` → Cortina de Vidro
+- `[sol.cortina-de-vidro.lede]` → Fechar a varanda sem fechar a vista. Vão livre, perfil mínimo, o vidro assumindo o papel de parede.
+- `[sol.cortina-de-vidro.itens]` →
+  - Envidraçamento de varanda e terraço
+  - Sistema sem roldanas aparentes
+  - Folhas de piso a teto, recolhimento lateral
+  - Ferragem dimensionada para vento e maresia
 
-### 02 — Box
+### 02 — Portas de Correr e Divisórias
 
-- `[sol.box.titulo]` → Box e Box Elegance
-- `[sol.box.lede]` → O banho como peça de projeto. Ferragens escolhidas junto com o metal da louça, não depois dele.
+- `[sol.portas-e-divisorias.titulo]` → Portas de Correr e Divisórias
+- `[sol.portas-e-divisorias.lede]` → Separar ambientes sem escurecer nenhum. Perfil estreito desenha a linha, não o volume.
+- `[sol.portas-e-divisorias.itens]` →
+  - Divisórias internas em vidro
+  - Portas de correr com trilho embutido
+  - Perfil preto fosco, inox e alumínio
+  - Fachadas e vitrines comerciais
+
+### 03 — Espelhos
+
+- `[sol.espelhos.titulo]` → Espelhos
+- `[sol.espelhos.lede]` → De painel contínuo de parede inteira a peça recortada para um vão específico.
+- `[sol.espelhos.itens]` →
+  - Espelhos de grande formato
+  - Iluminação embutida e recuo de LED
+  - Película de segurança na face posterior
+  - Formatos sob medida e bordas trabalhadas
+
+### 04 — Box de Banheiro
+
+- `[sol.box.titulo]` → Box de Banheiro
+- `[sol.box.lede]` → O banho como peça de projeto. Ferragem escolhida junto com o metal da louça, não depois dele.
 - `[sol.box.itens]` →
-  - Box Elegance com perfil embutido
   - Box de correr, abrir e canto
+  - Perfil embutido e ferragem aparente
   - Acabamentos em preto, dourado, cobre e inox
   - Vidro incolor, fumê e extraclaro
 
-### 03 — Sob medida
-
-- `[sol.medida.titulo]` → Espelhos e sob medida
-- `[sol.medida.lede]` → O que não existe em catálogo. Divisórias, portas, painéis e espelhos desenhados para um vão específico.
-- `[sol.medida.itens]` →
-  - Divisórias e portas slide door com perfil preto
-  - Espelhos de grande formato com iluminação embutida
-  - Painéis, prateleiras e tampos em vidro
-  - Projetos comerciais e corporativos
-
 ---
 
-## 8. Projetos do portfólio (`src/content/projects.ts`)
+## 8. Obras do portfólio (`src/content/projects.ts` › `RESUMOS`)
 
-⚠︎ **Atenção:** as fichas técnicas (ano, espessura, ferragem) foram escritas como
-conteúdo de referência. Revise cada uma antes de publicar.
+21 obras reais. Título e categoria ficam em `scripts/projects.manifest.mjs`; o
+resumo de uma linha, aqui. **Nenhuma tem ficha técnica** — ver seção 3.
 
-### 8.1 Varanda contínua, Guararapes — *em destaque na home*
+### Cortina de Vidro — 12 obras
 
-- `[p1.titulo]` → Varanda contínua, Guararapes
-- `[p1.resumo]` → Sala e varanda integradas por um plano de vidro de ponta a ponta.
-- `[p1.ficha]` ⚠︎ → Guararapes, Fortaleza/CE · 2025 · Cortina de vidro em varanda de apartamento · Temperado incolor 10 mm · Sistema deslizante com trilho embutido, acabamento branco
-- `[p1.p1]` → A varanda já tinha a vista. O que faltava era conseguir usá-la o ano inteiro sem transformar o vão em uma moldura de alumínio.
-- `[p1.p2]` → A solução foi reduzir a leitura do sistema ao mínimo: trilho superior embutido no forro, folhas de piso a teto e nenhum perfil vertical entre elas. Fechada, a varanda vira extensão da sala. Aberta, o vidro se recolhe inteiro em uma lateral.
-- `[p1.p3]` → O alinhamento do trilho foi definido junto com o rebaixo de gesso, antes do acabamento — é o tipo de decisão que precisa acontecer no projeto, não na instalação.
+- `[obra.helbor-reserva]` **Helbor Reserva** (6 fotos) → Varanda em L envidraçada de ponta a ponta, com vista aberta para a cidade.
+- `[obra.helbor-parque-clube]` **Helbor Parque Clube** (3 fotos) → Envidraçamento de varanda corrida em andar alto, sobre área verde.
+- `[obra.ana-amelia-boulevard]` **Edifício Ana Amélia Boulevard** (5 fotos) → Varanda curva envidraçada acompanhando o raio da laje, de frente para o mar.
+- `[obra.unique-meireles]` **Edifício Unique Meireles** (3 fotos) → Varanda envidraçada com esquadria escura e vista para o Meireles.
+- `[obra.manhattan-beach-riviera]` **Manhattan Beach Riviera** (5 fotos) → Terraço envidraçado voltado para a piscina do condomínio, em ambiente litorâneo.
+- `[obra.terraco-dos-passaros]` **Terraço dos Pássaros** (6 fotos) → Varanda social envidraçada, integrada à sala de jantar.
+- `[obra.verdi]` **Verdi** (6 fotos) → Envidraçamento de varanda ampla com vista panorâmica para a cidade.
+- `[obra.paco-do-bem]` **Paço do Bem** (3 fotos) → Varanda envidraçada em vértice, com dois panos convergindo na quina.
+- `[obra.portal-de-malaga]` **Portal de Málaga** (3 fotos) → Varanda envidraçada em pavimento alto, sobre área arborizada.
+- `[obra.golf-ville]` **Golf Ville** (3 fotos) → Envidraçamento de varanda com vista para o campo e os coqueiros.
+- `[obra.condominio-inovatto]` **Condomínio Inovatto** (3 fotos) → Varanda envidraçada de apartamento, com guarda-corpo em vidro.
+- `[obra.maison-de-la-musique]` **Maison de La Musique** (3 fotos) → Varanda envidraçada sobre a área de lazer do empreendimento.
 
-### 8.2 Terraço voltado para o mar
+### Portas de Correr e Divisórias — 6 obras
 
-- `[p2.titulo]` → Terraço voltado para o mar
-- `[p2.resumo]` → Envidraçamento em ambiente de alta salinidade e vento constante.
-- `[p2.ficha]` ⚠︎ → Beira-Mar, Fortaleza/CE · 2025 · Envidraçamento de terraço em condomínio litorâneo · Temperado incolor 10 mm · Componentes em inox e alumínio anodizado
-- `[p2.p1]` → Frente de mar impõe duas variáveis que mudam a especificação inteira: maresia e carga de vento. Ferragem comum não sobrevive ao primeiro ano.
-- `[p2.p2]` → Todo o conjunto foi especificado em inox e alumínio anodizado, com fixações dimensionadas para a pressão de vento da cota do pavimento. O acabamento branco acompanha a esquadria existente para não criar uma segunda linha visual na fachada.
+- `[obra.boi-e-cia]` **Boi & Cia** (4 fotos) → Fachada comercial em vidro com portas automáticas, voltada para a rua.
+- `[obra.casa-do-churrasco]` **Casa do Churrasco** (3 fotos) → Vitrine em vidro e guarda-corpo de escada na loja, com estrutura metálica aparente.
+- `[obra.sintsef]` **SINTSEF** (6 fotos) → Divisórias de vidro em salas de atendimento, com portas de abrir.
+- `[obra.majo-beauty-club]` **Majô Beauty Club** (6 fotos) → Divisórias e portas de vidro separando as salas do salão, com fachada envidraçada para a rua.
+- `[obra.espaco-305]` **Espaço 305** (6 fotos) → Portas e divisórias de vidro em clínica de estética, com ferragem clara.
+- `[obra.loopfit]` **Loopfit** (5 fotos) → Loja envidraçada com perfil preto, montada dentro de galpão de pé-direito alto.
 
-### 8.3 Escritório em Aldeota — *em destaque na home*
+### Espelhos — 3 obras
 
-- `[p3.titulo]` → Escritório em Aldeota
-- `[p3.resumo]` → Divisórias em vidro com perfil preto: privacidade acústica sem perder a luz.
-- `[p3.ficha]` ⚠︎ → Aldeota, Fortaleza/CE · 2024 · Divisórias internas e porta de correr slide door · Temperado incolor 10 mm · Perfil slide door preto fosco, roldana embutida
-- `[p3.p1]` → O programa pedia salas fechadas em uma planta que dependia de uma única fachada para iluminar tudo. Parede de alvenaria resolveria a acústica e mataria a luz.
-- `[p3.p2]` → As divisórias em vidro com perfil preto fosco mantêm a profundidade do corredor e devolvem a luz da fachada ao miolo da planta. O perfil foi escolhido pela seção estreita — ele desenha a linha, não o volume.
-- `[p3.p3]` → As portas correm sobre trilho embutido no forro, alinhadas ao mesmo prumo das divisórias fixas.
+- `[obra.imperator-performance]` **Imperator Performance** (6 fotos) → Espelhos de grande formato em academia, com iluminação linear embutida e recuo de LED.
+- `[obra.residencia-evando]` **Residência Evando** (6 fotos) → Painel espelhado ao longo do corredor, espelho orgânico iluminado e divisória de vidro colorido.
+- `[obra.espelhos-sob-medida]` **Espelhos sob medida** (6 fotos) → Espelhos de banheiro em formatos variados: redondo, arco e painel contínuo sobre bancada.
 
-### 8.4 Suíte master, Box Elegance
+### Box de Banheiro — 0 obras
 
-- `[p4.titulo]` → Suíte master, Box Elegance
-- `[p4.resumo]` → Box com perfil embutido, alinhado ao nicho iluminado do revestimento.
-- `[p4.ficha]` ⚠︎ → Fortaleza/CE · 2025 · Box Elegance de correr, vão único · Temperado incolor 8 mm · Perfil embutido, acabamento acetinado
-- `[p4.p1]` → O nicho iluminado já estava executado quando o box entrou. Qualquer desalinhamento entre o perfil e a linha de LED ficaria evidente de frente.
-- `[p4.p2]` → A medição foi feita depois do revestimento assentado e o perfil superior recebeu recorte para acompanhar a cota exata do nicho. É meio centímetro que só aparece se estiver errado.
-
-### 8.5 Série de banhos sob medida
-
-- `[p5.titulo]` → Série de banhos sob medida
-- `[p5.resumo]` → Cinco banheiros, cinco ferragens diferentes — uma para cada paleta.
-- `[p5.ficha]` ⚠︎ → Fortaleza e Região Metropolitana · 2024 — 2025 · Boxes de correr e de abrir, vãos irregulares · Temperado incolor e fumê, 8 mm · Preto fosco, dourado escovado, cobre e inox
-- `[p5.p1]` → Nenhum destes vãos era retangular. Prumo fora, contrapiso com caimento, parede com barriga — o normal de obra pronta.
-- `[p5.p2]` → Cada peça saiu de medição a laser feita no local, com o revestimento já assentado. A ferragem foi definida a partir do metal já especificado no banheiro: quando o box chega depois, ele se ajusta à paleta, não o contrário.
-
-### 8.6 Espelhos de grande formato, Imperator
-
-- `[p6.titulo]` → Espelhos de grande formato, Imperator
-- `[p6.resumo]` → Painéis contínuos e divisórias para uma operação comercial de alto fluxo.
-- `[p6.ficha]` ⚠︎ → Fortaleza/CE · 2024 · Espelhos de parede, divisórias de vestiário e portas · Espelho 4 mm com película de segurança; temperado fumê 8 mm nas divisórias · Perfil preto fosco e fixação oculta
-- `[p6.p1]` → Espelho em ambiente comercial tem duas exigências que o residencial não tem: continuidade visual em vãos longos e comportamento seguro em caso de quebra.
-- `[p6.p2]` → Os painéis foram paginados para que as juntas caíssem fora do campo de visão dos equipamentos, e todos receberam película de segurança na face posterior. Nos vestiários, o vidro fumê resolve a privacidade sem exigir divisória cega.
+Categoria criada, sem obra publicada. O card aparece na home, mas o filtro em
+/projetos fica oculto enquanto não houver obra.
 
 ---
 
