@@ -73,15 +73,26 @@ export function Header() {
               razão saltaria para 2,75:1 — o símbolo passa a dominar e o nome
               vira legenda. Aqui o símbolo é redimensionado para manter o 1,6:1
               contra o que sobrou. Rebalancear faz parte da versão reduzida. */}
+          {/* Sobre a foto usa os recortes da variante DARK — a mesma origem do
+              rodapé. Motivo: na variante clara o quadrado de fundo é opaco, e
+              sob `brightness(0) invert(1)` ele, o losango e o "V" viravam tudo
+              branco e se fundiam num bloco ilegível. Na variante escura o
+              quadrado tem alpha, então o símbolo sobrevive ao filtro. */}
           <img
-            src="/brand/vetra-simbolo-lockup.svg"
+            src={
+              transparent
+                ? '/brand/vetra-simbolo-lockup-dark.svg'
+                : '/brand/vetra-simbolo-lockup.svg'
+            }
             alt=""
             width={104}
             height={95}
             className={`h-7 w-auto md:h-8 ${transparent ? 'brightness-0 invert' : ''}`}
           />
           <img
-            src="/brand/vetra-wordmark.svg"
+            src={
+              transparent ? '/brand/vetra-wordmark-dark.svg' : '/brand/vetra-wordmark.svg'
+            }
             alt=""
             width={257}
             height={36}
@@ -119,7 +130,15 @@ export function Header() {
                         aria-hidden="true"
                         className={`absolute inset-x-0 -bottom-0.5 h-px origin-left transition-transform duration-300 ease-glass ${
                           isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                        } ${transparent ? 'bg-white' : isActive ? 'bg-navy' : 'bg-ink/40'}`}
+                        } ${
+                          transparent
+                            ? isActive
+                              ? 'bg-white'
+                              : 'bg-white/50'
+                            : isActive
+                              ? 'bg-navy'
+                              : 'bg-ink/40'
+                        }`}
                       />
                     </>
                   )}
@@ -185,19 +204,38 @@ export function Header() {
             <ul className="space-y-1">
               {nav.map((item, i) => (
                 <li key={item.href} className="border-b border-ink/8">
+                  {/* Mesmo princípio do desktop: a página atual é marcada por
+                      FORMA, não por cor. Só navy contra preto dava 1,76:1 de
+                      luminância — colapsa em tela pequena e sob sol. */}
                   <NavLink
                     to={item.href}
                     end={item.href === '/'}
                     className={({ isActive }) =>
-                      `flex items-baseline gap-4 py-5 font-display text-2xl font-light ${
-                        isActive ? 'text-navy' : 'text-ink'
+                      `flex items-baseline gap-4 py-5 font-display text-2xl ${
+                        isActive ? 'font-medium text-navy' : 'font-light text-ink'
                       }`
                     }
                   >
-                    <span className="font-display text-eyebrow tracking-label text-ink/60">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    {item.label}
+                    {({ isActive }) => (
+                      <>
+                        <span
+                          className={`font-display text-eyebrow tracking-label ${
+                            isActive ? 'text-navy' : 'text-ink/60'
+                          }`}
+                        >
+                          {String(i + 1).padStart(2, '0')}
+                        </span>
+                        <span className="relative">
+                          {item.label}
+                          {isActive && (
+                            <span
+                              aria-hidden="true"
+                              className="absolute inset-x-0 -bottom-1 h-0.5 bg-navy"
+                            />
+                          )}
+                        </span>
+                      </>
+                    )}
                   </NavLink>
                 </li>
               ))}
