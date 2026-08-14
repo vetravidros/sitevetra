@@ -64,22 +64,28 @@ export function Header() {
             Decisão de marca registrada no README › Identidade. */}
         <Link
           to="/"
-          className="flex shrink-0 items-center gap-[5px] md:gap-1.5"
+          className="flex shrink-0 items-center gap-2 md:gap-2.5"
           aria-label={`${site.legalName} — página inicial`}
         >
+          {/* Proporção: no lockup do manual o símbolo é dimensionado contra o
+              bloco de texto INTEIRO (wordmark + tagline ≈ 59 unidades), numa
+              razão de ~1,6:1. Tirar a tagline encolheu o texto para 34,5 e a
+              razão saltaria para 2,75:1 — o símbolo passa a dominar e o nome
+              vira legenda. Aqui o símbolo é redimensionado para manter o 1,6:1
+              contra o que sobrou. Rebalancear faz parte da versão reduzida. */}
           <img
             src="/brand/vetra-simbolo-lockup.svg"
             alt=""
             width={104}
             height={95}
-            className={`h-8 w-auto md:h-10 ${transparent ? 'brightness-0 invert' : ''}`}
+            className={`h-7 w-auto md:h-8 ${transparent ? 'brightness-0 invert' : ''}`}
           />
           <img
             src="/brand/vetra-wordmark.svg"
             alt=""
             width={257}
             height={36}
-            className={`h-3 w-auto md:h-[15px] ${transparent ? 'brightness-0 invert' : ''}`}
+            className={`h-[17px] w-auto md:h-5 ${transparent ? 'brightness-0 invert' : ''}`}
           />
         </Link>
 
