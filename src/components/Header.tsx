@@ -93,22 +93,36 @@ export function Header() {
           <ul className="flex items-center gap-9">
             {nav.map((item) => (
               <li key={item.href}>
+                {/* "Você está aqui" NÃO pode ser só cor. Sobre a foto, ativo e
+                    inativo ficavam a 1,32:1 de luminância — indistinguíveis; e
+                    no header sólido o hover em preto puro pesava mais que o
+                    navy do ativo, invertendo a hierarquia. Agora o estado vem
+                    de um filete: persistente no ativo, e que cresce da esquerda
+                    no hover. Mecanismos diferentes, sem competir. */}
                 <NavLink
                   to={item.href}
                   end={item.href === '/'}
                   className={({ isActive }) =>
-                    `font-display text-[0.8125rem] font-medium uppercase tracking-label transition-colors duration-300 ${
+                    `group relative block py-1 font-display text-[0.8125rem] font-medium uppercase tracking-label transition-colors duration-300 ${
                       transparent
-                        ? isActive
-                          ? 'text-mist'
-                          : 'text-white hover:text-mist'
+                        ? 'text-white'
                         : isActive
                           ? 'text-navy'
                           : 'text-ink/70 hover:text-ink'
                     }`
                   }
                 >
-                  {item.label}
+                  {({ isActive }) => (
+                    <>
+                      {item.label}
+                      <span
+                        aria-hidden="true"
+                        className={`absolute inset-x-0 -bottom-0.5 h-px origin-left transition-transform duration-300 ease-glass ${
+                          isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                        } ${transparent ? 'bg-white' : isActive ? 'bg-navy' : 'bg-ink/40'}`}
+                      />
+                    </>
+                  )}
                 </NavLink>
               </li>
             ))}
