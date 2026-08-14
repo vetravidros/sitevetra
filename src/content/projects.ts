@@ -75,6 +75,9 @@ const RESUMOS: Record<string, string> = {
     'Espelhos de grande formato em academia, com iluminação linear embutida e recuo de LED.',
   'residencia-evando':
     'Painel espelhado ao longo do corredor, espelho orgânico iluminado e divisória de vidro colorido.',
+
+  'box-sob-medida':
+    'Boxes de correr executados em banheiros com revestimentos e ferragens diferentes: mármore, azulejo escuro, ripado com nicho de LED.',
 }
 
 /** Duas ou três frases por obra. Só o que a fotografia sustenta. */

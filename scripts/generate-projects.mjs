@@ -142,7 +142,7 @@ export type ObraFoto = { nome: string; w: number; h: number; larguras: number[] 
 export type ObraGerada = {
   slug: string
   titulo: string
-  categoria: 'fachadas' | 'box' | 'sob-medida'
+  categoria: 'cortina-de-vidro' | 'portas-e-divisorias' | 'espelhos' | 'box'
   fotos: ObraFoto[]
 }
 

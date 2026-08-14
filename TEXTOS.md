@@ -413,10 +413,12 @@ resumo de uma linha, aqui. **Nenhuma tem ficha técnica** — ver seção 3.
 - `[obra.residencia-evando]` **Residência Evando** (6 fotos) → Painel espelhado ao longo do corredor, espelho orgânico iluminado e divisória de vidro colorido.
 - `[obra.espelhos-sob-medida]` **Espelhos sob medida** (6 fotos) → Espelhos de banheiro em formatos variados: redondo, arco e painel contínuo sobre bancada.
 
-### Box de Banheiro — 0 obras
+### Box de Banheiro — 1 obra
 
-Categoria criada, sem obra publicada. O card aparece na home, mas o filtro em
-/projetos fica oculto enquanto não houver obra.
+- `[obra.box-sob-medida]` **Box sob medida** (6 fotos) → Boxes de correr executados em banheiros com revestimentos e ferragens diferentes: mármore, azulejo escuro, ripado com nicho de LED.
+
+Coleção sem cliente identificado, como "Espelhos sob medida" — por isso o
+título é genérico em vez de nome de obra.
 
 ---
 

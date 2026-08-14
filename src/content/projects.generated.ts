@@ -1125,5 +1125,72 @@ export const OBRAS_GERADAS: ObraGerada[] = [
         ]
       }
     ]
+  },
+  {
+    "slug": "box-sob-medida",
+    "titulo": "Box sob medida",
+    "categoria": "box",
+    "fotos": [
+      {
+        "nome": "box-sob-medida-01",
+        "w": 1400,
+        "h": 2489,
+        "larguras": [
+          480,
+          900,
+          1400
+        ]
+      },
+      {
+        "nome": "box-sob-medida-02",
+        "w": 1400,
+        "h": 2489,
+        "larguras": [
+          480,
+          900,
+          1400
+        ]
+      },
+      {
+        "nome": "box-sob-medida-03",
+        "w": 1400,
+        "h": 2489,
+        "larguras": [
+          480,
+          900,
+          1400
+        ]
+      },
+      {
+        "nome": "box-sob-medida-04",
+        "w": 1400,
+        "h": 1050,
+        "larguras": [
+          480,
+          900,
+          1400
+        ]
+      },
+      {
+        "nome": "box-sob-medida-05",
+        "w": 1400,
+        "h": 1050,
+        "larguras": [
+          480,
+          900,
+          1400
+        ]
+      },
+      {
+        "nome": "box-sob-medida-06",
+        "w": 1400,
+        "h": 2489,
+        "larguras": [
+          480,
+          900,
+          1400
+        ]
+      }
+    ]
   }
 ]

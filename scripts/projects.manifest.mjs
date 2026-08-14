@@ -124,4 +124,12 @@ export const OBRAS = [
     titulo: 'Espelhos sob medida',
     categoria: 'espelhos',
   },
+
+  // -------------------------------------------------------- box de banheiro
+  {
+    pasta: 'Box Banheiro',
+    slug: 'box-sob-medida',
+    titulo: 'Box sob medida',
+    categoria: 'box',
+  },
 ]
