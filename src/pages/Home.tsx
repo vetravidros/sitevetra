@@ -109,15 +109,19 @@ export default function Home() {
               específico para ler no primeiro viewport (o slogan sozinho é um
               descritor de categoria que qualquer concorrente escreveria), e
               distribui o peso da composição pela largura do quadro em vez de
-              empilhar tudo no canto inferior esquerdo. */}
+              empilhar tudo no canto inferior esquerdo.
+
+              O rótulo fica sempre ACIMA do claim: lado a lado, os três rótulos
+              têm larguras diferentes e empurravam cada claim para um x
+              distinto, quebrando o alinhamento da coluna no celular. */}
           <dl className="mt-10 grid gap-x-10 gap-y-4 border-t border-white/25 pt-6 sm:grid-cols-3 md:mt-14 md:gap-x-16">
             {commitments.map((c) => (
-              <div key={c.label} className="flex gap-3 sm:block">
+              <div key={c.label}>
                 {/* `mist`, não `white/60`: sobre a faixa clara da foto (céu e
                     areia) o branco a 60% caía para 3.91:1 em "ORÇAMENTO" e
                     reprovava AA. Mist é cor de marca, sólida, e ainda separa o
                     rótulo do claim — o branco puro achataria os dois. */}
-                <dt className="font-display text-eyebrow uppercase tracking-wordmark text-mist sm:mb-2">
+                <dt className="mb-2 font-display text-eyebrow uppercase tracking-wordmark text-mist">
                   {c.label}
                 </dt>
                 <dd className="font-display text-sm font-light text-white text-balance md:text-base">

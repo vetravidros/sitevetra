@@ -40,10 +40,14 @@ export function Header() {
   }, [])
 
   return (
-    // A linha inferior é um elemento absoluto, não `border-b`: com borda a
-    // altura do header vira 81/97px e o hero da home, que sobe com -mt-20/-mt-24,
-    // deixa 1px de fresta branca no topo da página.
+    <>
+    {/* A linha inferior é um elemento absoluto, não `border-b`: com borda a
+        altura do header vira 81/97px e o hero da home, que sobe com -mt-20/-mt-24,
+        deixa 1px de fresta branca no topo da página. */}
     <header
+      // marca o estado sobre foto para o CSS trocar a cor do anel de foco:
+      // navy sobre claro é invisível contra o céu escurecido da imagem
+      data-over-photo={transparent ? '' : undefined}
       className={`sticky top-0 z-50 transition-colors duration-500 ease-glass ${
         transparent ? 'bg-transparent' : 'bg-white/90 backdrop-blur-md'
       }`}
@@ -52,17 +56,30 @@ export function Header() {
         <div className="absolute inset-x-0 bottom-0 h-px bg-ink/8" aria-hidden="true" />
       )}
       <div className="container-vetra flex h-20 items-center justify-between gap-6 md:h-24">
+        {/* Assinatura reduzida: símbolo + wordmark, sem "SOLUÇÕES EM VIDROS".
+            Na 2ª assinatura horizontal completa a tagline sai a 5,5px de altura
+            nesta escala — ilegível. Os dois arquivos são recortes por viewBox do
+            MESMO SVG oficial (nenhum traço foi redesenhado), então proporção e
+            espaçamento entre símbolo e wordmark são os do manual.
+            Decisão de marca registrada no README › Identidade. */}
         <Link
           to="/"
-          className="shrink-0"
+          className="flex shrink-0 items-center gap-[5px] md:gap-1.5"
           aria-label={`${site.legalName} — página inicial`}
         >
           <img
-            src={transparent ? '/brand/vetra-horizontal-dark.svg' : '/brand/vetra-horizontal.svg'}
-            alt={site.legalName}
-            width={400}
-            height={112}
-            className={`h-9 w-auto md:h-11 ${transparent ? 'brightness-0 invert' : ''}`}
+            src="/brand/vetra-simbolo-lockup.svg"
+            alt=""
+            width={104}
+            height={95}
+            className={`h-8 w-auto md:h-10 ${transparent ? 'brightness-0 invert' : ''}`}
+          />
+          <img
+            src="/brand/vetra-wordmark.svg"
+            alt=""
+            width={257}
+            height={36}
+            className={`h-3 w-auto md:h-[15px] ${transparent ? 'brightness-0 invert' : ''}`}
           />
         </Link>
 
@@ -130,8 +147,14 @@ export function Header() {
           </button>
         </div>
       </div>
+    </header>
 
-      {/* --- menu mobile --- */}
+      {/* --- menu mobile ---
+          FORA do <header> de propósito. O header usa `backdrop-blur`, e
+          backdrop-filter cria bloco contentor para descendentes `fixed`: com o
+          menu dentro dele, `top-20 bottom-0` era resolvido contra a caixa de
+          80px do header em vez do viewport, e o painel abria com altura ZERO —
+          menu invisível e scroll travado. Mantenha este bloco fora do header. */}
       <div
         id="menu-mobile"
         hidden={!open}
@@ -172,6 +195,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   )
 }

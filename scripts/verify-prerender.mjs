@@ -66,9 +66,18 @@ for (const [route, needle] of EXPECTED) {
   if (!html.includes('property="og:image"')) problems.push('og:image ausente')
   if (!html.includes('"@type":"LocalBusiness"')) problems.push('JSON-LD LocalBusiness ausente')
   if (!/<h1[\s>]/.test(html)) problems.push('h1 ausente')
-  // toda <img> de conteúdo precisa de alt preenchido
-  const imgsSemAlt = (html.match(/<img(?![^>]*\salt="[^"]+")[^>]*>/g) ?? []).length
-  if (imgsSemAlt > 0) problems.push(`${imgsSemAlt} <img> sem alt`)
+  // Regra de alt em duas camadas, que é como a acessibilidade de fato funciona:
+  //   - TODA <img> precisa do atributo alt (sem ele, o leitor de tela lê a URL);
+  //   - <img> dentro de <main> é conteúdo e precisa de alt PREENCHIDO.
+  // alt="" é a marcação correta para imagem decorativa — o logo do header e do
+  // rodapé, por exemplo, cujo nome já é anunciado pelo aria-label do link.
+  const semAtributo = (html.match(/<img(?![^>]*\salt=)[^>]*>/g) ?? []).length
+  if (semAtributo > 0) problems.push(`${semAtributo} <img> sem atributo alt`)
+
+  const main = html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? ''
+  const decorativaNoConteudo = (main.match(/<img(?![^>]*\salt="[^"]+")[^>]*>/g) ?? []).length
+  if (decorativaNoConteudo > 0)
+    problems.push(`${decorativaNoConteudo} <img> em <main> com alt vazio`)
 
   const bytes = Buffer.byteLength(html)
 

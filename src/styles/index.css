@@ -102,6 +102,12 @@
     outline-color: var(--color-cyan);
   }
 
+  /* Header transparente sobre a foto do hero: navy some contra a imagem
+     escurecida, então o anel de foco vira branco. */
+  [data-over-photo] :focus-visible {
+    outline-color: var(--color-white);
+  }
+
   ::selection {
     background: var(--color-cyan);
     color: var(--color-white);

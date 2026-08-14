@@ -17,6 +17,7 @@ npm run verify:prerender   # critério de aceite (ver abaixo)
 - [Critério de aceite](#critério-de-aceite)
 - [Scripts](#scripts)
 - [Estrutura](#estrutura)
+- [Identidade da marca](#identidade-da-marca)
 - [Sistema de design](#sistema-de-design)
 - [Conteúdo](#conteúdo)
 - [Imagens](#imagens)
@@ -81,9 +82,58 @@ src/
   routes.tsx              ← rotas + getStaticPaths dos projetos
   styles/index.css        ← tokens do design system
 public/
-  brand/                  ← logo em SVG (horizontal, símbolo, versões dark)
+  brand/                  ← logo em SVG. Os arquivos *-lockup e *-wordmark
+                            são recortes do oficial (ver Identidade da marca)
   img/                    ← GERADO por npm run assets
 ```
+
+## Identidade da marca
+
+Fonte da verdade: **`VETRA - MANUAL MARCA.pdf`** (Wsete design, maio/2026). O
+manual define as assinaturas, a paleta e a família tipográfica. Onde o site se
+afasta dele, o afastamento está registrado abaixo, com a data e quem decidiu.
+
+### Assinaturas oficiais
+
+O manual prevê três, e só três:
+
+1. **Principal** — vertical: símbolo acima, `VETRA` + `SOLUÇÕES EM VIDROS` abaixo.
+2. **2ª assinatura [horizontal]** — símbolo à esquerda, `VETRA` + tagline à direita.
+3. **Símbolo** isolado.
+
+Não existe versão oficial sem a tagline, e o manual não trata de versão reduzida.
+
+### Desvios decididos pelo cliente (13/08/2026)
+
+| Ponto | O manual diz | O site faz | Por quê |
+| --- | --- | --- | --- |
+| Assinatura no header | tagline sempre junto | símbolo + `VETRA`, sem tagline | na escala do header a tagline renderiza a **5,5px** e é ilegível — pior que ausente |
+| Tipografia | **Gotham** (Medium/Book) | Montserrat (display) + Inter (corpo) | Gotham é da Hoefler&Co, paga, sem versão web livre. Montserrat é a substituta geométrica mais próxima |
+| Logo sobre foto | sem versão monocromática | branco sólido (`brightness(0) invert(1)`) | garante legibilidade sobre qualquer imagem |
+
+Os três foram decididos pelo André. O primeiro merece confirmação da Wsete
+design, que assina o manual.
+
+### Como a assinatura reduzida foi feita
+
+`public/brand/vetra-simbolo-lockup.svg` e `public/brand/vetra-wordmark.svg` são
+**recortes por `viewBox` do mesmo `vetra-horizontal.svg` oficial** — nenhum path
+foi editado, redesenhado ou substituído. Isso preserva as letras reais da marca
+(a base é Vandiana Platin modificada, não uma fonte que se possa recompor) e
+mantém proporção e espaçamento entre símbolo e wordmark idênticos ao manual.
+
+Para regerar depois de trocar o SVG de origem, os recortes são:
+
+| Arquivo | viewBox |
+| --- | --- |
+| `vetra-simbolo-lockup.svg` | `226.94 247.64 104.50 94.75` |
+| `vetra-wordmark.svg` | `344.69 274.14 257.25 35.50` |
+
+No header eles são compostos com `gap` de 5–6px, que é a calha de 14,25 unidades
+do lockup original convertida para a escala renderizada.
+
+> **Nunca** recomponha o wordmark ajustando "VETRA" em Montserrat. As letras do
+> manual têm desenho próprio; Montserrat entrega outra marca com o mesmo nome.
 
 ## Sistema de design
 
@@ -355,3 +405,6 @@ dados foram preenchidos com o que havia disponível:
       compromisso real.
 - [ ] **Endereço** — o site trabalha com "atendimento agendado", sem endereço de
       rua. Se houver showroom, adicionar em `site.address` e no JSON-LD.
+- [ ] **Assinatura reduzida do header** — símbolo + `VETRA` sem a tagline. Decidido
+      pelo André em 13/08/2026 por ilegibilidade (5,5px). Vale confirmar com a
+      Wsete design, que assina o manual da marca.
