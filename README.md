@@ -400,9 +400,11 @@ dados foram preenchidos com o que havia disponível:
       Onde houver arquiteto responsável, preencher `spec.architect` e pedir
       autorização de publicação.
 - [ ] **Instagram** — o handle `@vetravidros` está assumido em `site.social`.
-- [x] ~~Prazo de retorno de 48h úteis na página /arquitetos~~ — removido em
-      13/08/2026: a VETRA não sustenta esse SLA hoje. Só volta se virar
-      compromisso real.
+- [ ] **Prazo de retorno de 24h na página /arquitetos** — publicado em 15/08/2026
+      no programa ArqVetra, em dois lugares (benefício 01 e passo 02 de "Como
+      entrar"). Substituiu o prazo de 48h removido em 13/08/2026 por não ser
+      sustentado à época. Confirmar que o atendimento consegue cumprir 24h antes
+      de divulgar o programa — é promessa feita ao parceiro, não texto de venda.
 - [ ] **Endereço** — o site trabalha com "atendimento agendado", sem endereço de
       rua. Se houver showroom, adicionar em `site.address` e no JSON-LD.
 - [ ] **Assinatura reduzida do header** — símbolo + `VETRA` sem a tagline. Decidido
