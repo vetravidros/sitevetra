@@ -82,12 +82,13 @@ Mudar aqui muda em todo lugar: rodapé, contato, Google e meta tags.
 
 ### Barra técnica do hero (`src/content/site.ts` › `commitments`)
 
-Os três compromissos que você confirmou como verdadeiros. São a única afirmação
-específica do primeiro viewport — se algum deixar de ser verdade, sai do site.
+As quatro etapas do processo, na ordem em que acontecem. É a única afirmação
+específica do primeiro viewport — se alguma etapa mudar, ajuste aqui.
 
-- `[hero.comp.1]` → Medição · Depois do revestimento assentado
-- `[hero.comp.2]` → Orçamento · Aberto, item a item
-- `[hero.comp.3]` → Responsável · Uma pessoa, do projeto à instalação
+- `[hero.comp.1]` → Especificação · Damos suporte no início do projeto para adequar a solução mais recomendada.
+- `[hero.comp.2]` → Medição · Visita técnica para análise minuciosa das medidas.
+- `[hero.comp.3]` → Instalação · A execução do projeto é acompanhada de perto.
+- `[hero.comp.4]` → Entrega · Finalizamos com orientações sobre cuidados e recomendações.
 
 ### Parágrafo de abertura
 

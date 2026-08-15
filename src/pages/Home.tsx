@@ -73,6 +73,16 @@ export default function Home() {
           className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/65 via-ink/15 to-transparent"
           aria-hidden="true"
         />
+        {/* Véu extra, só para a faixa onde a barra técnica cai. Os três véus
+            acima foram calibrados quando a barra tinha 3 colunas — a 4ª
+            (mais à direita) caiu numa região que eles escurecem pouco, e o
+            rótulo "Entrega" reprovava AA (4.41:1). Em vez de reabrir a
+            calibração dos véus globais (que também protege h1 e eyebrow, já
+            medidos), soma-se um véu local só na altura da barra. */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-ink/55 to-transparent md:h-96"
+          aria-hidden="true"
+        />
         {/* As listras diagonais da marca NÃO entram aqui. Aplicadas sobre o
             terço direito da foto, elas caíam em cima de mobiliário de primeiro
             plano (cadeiras, painel ripado, tampo de pedra) que não tem vidro
@@ -111,16 +121,23 @@ export default function Home() {
               distribui o peso da composição pela largura do quadro em vez de
               empilhar tudo no canto inferior esquerdo.
 
-              O rótulo fica sempre ACIMA do claim: lado a lado, os três rótulos
-              têm larguras diferentes e empurravam cada claim para um x
-              distinto, quebrando o alinhamento da coluna no celular. */}
-          <dl className="mt-10 grid gap-x-10 gap-y-4 border-t border-white/25 pt-6 sm:grid-cols-3 md:mt-14 md:gap-x-16">
+              O rótulo fica sempre ACIMA do claim: lado a lado, rótulos de
+              larguras diferentes empurram cada claim para um x distinto,
+              quebrando o alinhamento da coluna no celular.
+
+              Grade 1 → 2 → 4 colunas: com 4 etapas e claim em frase completa,
+              travar em 3 (herdado de quando eram 3 itens) deixava a última
+              célula sozinha numa linha. 2 colunas no tablet evita frase
+              esganada; 4 no desktop, onde sobra largura, volta a ocupar o
+              quadro inteiro. */}
+          <dl className="mt-10 grid gap-x-8 gap-y-5 border-t border-white/25 pt-6 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-4 lg:gap-x-12 md:mt-14">
             {commitments.map((c) => (
               <div key={c.label}>
-                {/* `mist`, não `white/60`: sobre a faixa clara da foto (céu e
-                    areia) o branco a 60% caía para 3.91:1 em "ORÇAMENTO" e
-                    reprovava AA. Mist é cor de marca, sólida, e ainda separa o
-                    rótulo do claim — o branco puro achataria os dois. */}
+                {/* `mist`, não `white/60`: sobre a foto o branco a 60%
+                    reprovava AA em alguns pontos do quadro (medido 3.91:1).
+                    Mist é cor de marca, sólida, e ainda separa o rótulo do
+                    claim — o branco puro achataria os dois. Refazer a medição
+                    se a foto do hero ou esta grade mudarem (ver README). */}
                 <dt className="mb-2 font-display text-eyebrow uppercase tracking-wordmark text-mist">
                   {c.label}
                 </dt>

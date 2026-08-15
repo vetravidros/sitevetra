@@ -48,25 +48,28 @@ export const site = {
 } as const
 
 /**
- * Os três compromissos de execução da VETRA.
+ * As quatro etapas do processo da VETRA, na ordem em que acontecem.
  *
- * Confirmados como verdadeiros e sustentáveis publicamente (13/08/2026).
- * São a única afirmação específica do hero — o que separa a VETRA de um
- * concorrente que escreveria o mesmo slogan de categoria. Se algum deixar de
- * ser verdade, sai daqui e some do site inteiro.
+ * Texto definido pelo André (14/08/2026). É a única afirmação específica do
+ * hero — o que separa a VETRA de um concorrente que escreveria o mesmo slogan
+ * de categoria. Se alguma etapa deixar de ser verdade, ajuste aqui.
  */
 export const commitments = [
   {
+    label: 'Especificação',
+    claim: 'Damos suporte no início do projeto para adequar a solução mais recomendada.',
+  },
+  {
     label: 'Medição',
-    claim: 'Depois do revestimento assentado',
+    claim: 'Visita técnica para análise minuciosa das medidas.',
   },
   {
-    label: 'Orçamento',
-    claim: 'Aberto, item a item',
+    label: 'Instalação',
+    claim: 'A execução do projeto é acompanhada de perto.',
   },
   {
-    label: 'Responsável',
-    claim: 'Uma pessoa, do projeto à instalação',
+    label: 'Entrega',
+    claim: 'Finalizamos com orientações sobre cuidados e recomendações.',
   },
 ] as const
 
