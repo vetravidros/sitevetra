@@ -102,6 +102,9 @@ export const OBRAS = [
     slug: 'imperator-performance',
     titulo: 'Imperator Performance',
     categoria: 'espelhos',
+    // Capa escolhida pelo André (14/08/2026) — a primeira de `destaques`
+    // sempre vira a capa da obra.
+    destaques: ['IMG_1303.heic'],
   },
   { pasta: 'SINTSEF', slug: 'sintsef', titulo: 'SINTSEF', categoria: 'portas-e-divisorias' },
   {

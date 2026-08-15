@@ -78,6 +78,7 @@ export const localBusinessSchema = {
   url: site.url,
   telephone: site.contact.phoneE164,
   email: site.contact.email,
+  taxID: site.cnpj,
   image: `${site.url}/og-vetra.png`,
   logo: `${site.url}/brand/vetra-simbolo.svg`,
   priceRange: '$$$',

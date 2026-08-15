@@ -46,7 +46,8 @@ Onde cada bloco vive hoje, se quiser conferir: `src/pages/*.tsx`,
 - `[footer.col.solucoes]` → Soluções
 - `[footer.col.contato]` → Contato
 - `[footer.google]` → Perfil da Empresa no Google
-- `[footer.copyright]` → © 2026 VETRA Soluções em Vidros. Fortaleza / CE.
+- `[footer.copyright]` → © 2026 VETRA Soluções em Vidros. CNPJ 66.861.917/0001-99. Fortaleza / CE.
+- `[site.cnpj]` (`src/content/site.ts`) → 66.861.917/0001-99 — também entra no JSON-LD (`taxID`)
 
 ### Dados da empresa (`src/content/site.ts`)
 

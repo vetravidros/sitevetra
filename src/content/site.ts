@@ -7,6 +7,8 @@
 export const site = {
   name: 'VETRA',
   legalName: 'VETRA Soluções em Vidros',
+  /** Dígitos verificadores conferidos em 14/08/2026. */
+  cnpj: '66.861.917/0001-99',
   tagline: 'Soluções em Vidros',
   /** Usado em <title> e no schema. Trocar aqui muda o site inteiro. */
   positioning: 'Arquitetura em vidro sob medida',

@@ -108,7 +108,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col gap-4 border-t border-white/12 pt-8 text-xs text-white/70 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {site.legalName}. Fortaleza / CE.
+            © {year} {site.legalName}. CNPJ {site.cnpj}. Fortaleza / CE.
           </p>
           <a
             href={site.social.googleBusiness}
