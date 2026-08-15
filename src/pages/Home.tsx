@@ -181,13 +181,25 @@ export default function Home() {
           {solutions.map((s) => (
             <article key={s.id} className="group">
               <Link to={`/projetos?categoria=${s.id}`} className="block">
-                <Picture
-                  name={s.image}
-                  alt={s.imageAlt}
-                  ratio="3/4"
-                  sizes="(min-width: 768px) 30vw, 92vw"
-                  imgClassName="transition-transform duration-700 ease-glass group-hover:scale-[1.03]"
-                />
+                {/* `image` pode ser um asset fixo (string) ou a foto de uma
+                    obra já publicada (objeto) — ver comentário em solutions.ts */}
+                {typeof s.image === 'string' ? (
+                  <Picture
+                    name={s.image}
+                    alt={s.imageAlt}
+                    ratio="3/4"
+                    sizes="(min-width: 768px) 30vw, 92vw"
+                    imgClassName="transition-transform duration-700 ease-glass group-hover:scale-[1.03]"
+                  />
+                ) : (
+                  <ProjectPicture
+                    photo={s.image}
+                    alt={s.imageAlt}
+                    ratio="3/4"
+                    sizes="(min-width: 768px) 30vw, 92vw"
+                    imgClassName="transition-transform duration-700 ease-glass group-hover:scale-[1.03]"
+                  />
+                )}
                 <div className="mt-6 flex items-baseline gap-4">
                   <span className="font-display text-eyebrow tracking-label text-navy">
                     {s.index}

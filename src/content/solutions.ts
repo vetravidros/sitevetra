@@ -1,5 +1,7 @@
 import type { ImageName } from '@/content/images.generated'
+import type { FotoObra } from '@/components/Picture'
 import type { CategoryId } from '@/content/projects'
+import { projects } from '@/content/projects'
 
 export type Solution = {
   /** Mesmo id da categoria do portfólio — é o que liga o card ao filtro. */
@@ -9,8 +11,29 @@ export type Solution = {
   title: string
   lede: string
   items: string[]
-  image: ImageName
+  /**
+   * String = asset fixo (`public/img/<nome>`, gerado por `npm run assets`).
+   * ObraFoto = reaproveita uma foto já publicada numa obra (`public/img/obras/`),
+   * para não duplicar a mesma imagem em dois pipelines — ver `espelhos` abaixo.
+   */
+  image: ImageName | FotoObra
   imageAlt: string
+}
+
+/**
+ * Card "Espelhos" reaproveita a capa da galeria "Espelhos sob medida" em vez
+ * de ter um asset fixo próprio. Antes ele usava 'solucao-box' por engano —
+ * cortado e colado da entrada de Box de Banheiro logo abaixo, nunca corrigido
+ * quando a taxonomia virou 4 categorias.
+ */
+const fotoEspelhos = projects
+  .find((p) => p.slug === 'espelhos-sob-medida')
+  ?.gallery.find((g) => g.photo.nome === 'espelhos-sob-medida-14')?.photo
+
+if (!fotoEspelhos) {
+  throw new Error(
+    'solutions.ts: foto espelhos-sob-medida-14 não encontrada — rode `npm run assets:obras`.',
+  )
 }
 
 export const solutions: Solution[] = [
@@ -55,8 +78,9 @@ export const solutions: Solution[] = [
       'Película de segurança na face posterior',
       'Formatos sob medida e bordas trabalhadas',
     ],
-    image: 'solucao-box',
-    imageAlt: 'Espelho iluminado sobre bancada de banheiro com revestimento claro',
+    image: fotoEspelhos,
+    imageAlt:
+      'Painel de espelho de parede inteira refletindo sala de jantar e estar, com estante de mármore ao lado',
   },
   {
     id: 'box',
