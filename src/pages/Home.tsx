@@ -155,7 +155,7 @@ export default function Home() {
         <p className="max-w-3xl text-lede text-ink/70">
           Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de
           vidro, portas, divisórias, espelhos e box especificados junto com o
-          projeto — e executados no milímetro que o projeto pediu.
+          projeto e executados exatamente conforme o projeto.
         </p>
       </Section>
 
