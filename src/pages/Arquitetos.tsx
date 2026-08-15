@@ -66,7 +66,8 @@ export default function Arquitetos() {
         <p className="mt-8 max-w-2xl text-lede text-ink/60">
           Vidro é o item do projeto que mais depende de decisão antecipada e o
           que mais sofre quando chega no fim da obra. Este programa existe para
-          o vidro entrar na sua prancheta junto com o resto — não depois.
+          que o vidro possa ser especificado da forma mais recomendada e
+          segura em conformidade com as normas da ABNT.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <CTA
