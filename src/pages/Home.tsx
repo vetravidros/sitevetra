@@ -154,8 +154,8 @@ export default function Home() {
       <Section className="py-16 md:py-20">
         <p className="max-w-3xl text-lede text-ink/70">
           Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de
-          vidro, portas, divisórias, espelhos e box especificados junto com o
-          projeto e executados exatamente conforme o projeto.
+          vidro, Box, Portas, Janelas e Espelhos especificados e executados
+          exatamente conforme o projeto.
         </p>
       </Section>
 
