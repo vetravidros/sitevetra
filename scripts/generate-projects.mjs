@@ -73,8 +73,10 @@ for (const obra of OBRAS) {
     continue
   }
 
+  const excluidos = new Set(obra.excluir ?? [])
   const arquivos = (await fs.readdir(dir))
     .filter((f) => /\.(jpe?g|heic|png)$/i.test(f))
+    .filter((f) => !excluidos.has(f))
     .sort()
 
   // Seleção por RESOLUÇÃO, não por nome de arquivo. As pastas misturam foto de
@@ -82,6 +84,8 @@ for (const obra of OBRAS) {
   // virar capa da obra. `sharp.metadata()` lê o cabeçalho sem decodificar, o
   // que funciona até em HEIC — então isso custa quase nada.
   // `destaques` no manifesto continua tendo prioridade sobre o tamanho.
+  // `excluir` tira um arquivo da seleção por completo — usado quando duas
+  // fotos da mesma pasta são, na prática, a mesma foto (burst quase idêntico).
   const medidos = []
   for (const f of arquivos) {
     try {

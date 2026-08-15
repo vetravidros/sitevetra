@@ -411,7 +411,7 @@ resumo de uma linha, aqui. **Nenhuma tem ficha técnica** — ver seção 3.
 ### Espelhos — 3 obras
 
 - `[obra.imperator-performance]` **Imperator Performance** (6 fotos) → Espelhos de grande formato em academia, com iluminação linear embutida e recuo de LED.
-- `[obra.residencia-evando]` **Residência Evando** (6 fotos) → Painel espelhado ao longo do corredor, espelho orgânico iluminado e divisória de vidro colorido.
+- `[obra.residencia-bs-flower]` **Residência BS Flower** (6 fotos) → Painel espelhado no corredor, espelhos com iluminação embutida em dois banheiros e divisória de vidro colorido na cozinha.
 - `[obra.espelhos-sob-medida]` **Espelhos sob medida** (14 fotos) → Espelhos em banheiro, sala, bar e closet: redondo, oval, arco e painel contínuo, com e sem iluminação embutida.
 
 ### Box de Banheiro — 1 obra

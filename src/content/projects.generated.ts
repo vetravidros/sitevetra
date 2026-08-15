@@ -936,12 +936,12 @@ export const OBRAS_GERADAS: ObraGerada[] = [
     ]
   },
   {
-    "slug": "residencia-evando",
-    "titulo": "Residência Evando",
+    "slug": "residencia-bs-flower",
+    "titulo": "Residência BS Flower",
     "categoria": "espelhos",
     "fotos": [
       {
-        "nome": "residencia-evando-01",
+        "nome": "residencia-bs-flower-01",
         "w": 1400,
         "h": 2489,
         "larguras": [
@@ -951,7 +951,7 @@ export const OBRAS_GERADAS: ObraGerada[] = [
         ]
       },
       {
-        "nome": "residencia-evando-02",
+        "nome": "residencia-bs-flower-02",
         "w": 1400,
         "h": 2489,
         "larguras": [
@@ -961,7 +961,7 @@ export const OBRAS_GERADAS: ObraGerada[] = [
         ]
       },
       {
-        "nome": "residencia-evando-03",
+        "nome": "residencia-bs-flower-03",
         "w": 1400,
         "h": 2489,
         "larguras": [
@@ -971,7 +971,7 @@ export const OBRAS_GERADAS: ObraGerada[] = [
         ]
       },
       {
-        "nome": "residencia-evando-04",
+        "nome": "residencia-bs-flower-04",
         "w": 1400,
         "h": 2489,
         "larguras": [
@@ -981,7 +981,7 @@ export const OBRAS_GERADAS: ObraGerada[] = [
         ]
       },
       {
-        "nome": "residencia-evando-05",
+        "nome": "residencia-bs-flower-05",
         "w": 1400,
         "h": 2489,
         "larguras": [
@@ -991,7 +991,7 @@ export const OBRAS_GERADAS: ObraGerada[] = [
         ]
       },
       {
-        "nome": "residencia-evando-06",
+        "nome": "residencia-bs-flower-06",
         "w": 1400,
         "h": 2489,
         "larguras": [

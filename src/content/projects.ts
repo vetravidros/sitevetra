@@ -73,8 +73,8 @@ const RESUMOS: Record<string, string> = {
     'Espelhos em banheiro, sala, bar e closet: redondo, oval, arco e painel contínuo, com e sem iluminação embutida.',
   'imperator-performance':
     'Espelhos de grande formato em academia, com iluminação linear embutida e recuo de LED.',
-  'residencia-evando':
-    'Painel espelhado ao longo do corredor, espelho orgânico iluminado e divisória de vidro colorido.',
+  'residencia-bs-flower':
+    'Painel espelhado no corredor, espelhos com iluminação embutida em dois banheiros e divisória de vidro colorido na cozinha.',
 
   'box-sob-medida':
     'Boxes de correr executados em banheiros com revestimentos e ferragens diferentes: mármore, azulejo escuro, ripado com nicho de LED.',

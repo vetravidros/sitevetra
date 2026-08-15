@@ -119,7 +119,16 @@ export const OBRAS = [
     titulo: 'Espaço 305',
     categoria: 'portas-e-divisorias',
   },
-  { pasta: 'Evando', slug: 'residencia-evando', titulo: 'Residência Evando', categoria: 'espelhos' },
+  {
+    pasta: 'Evando',
+    slug: 'residencia-bs-flower',
+    titulo: 'Residência BS Flower',
+    categoria: 'espelhos',
+    // IMG_2224 é o mesmo enquadramento de IMG_2223 (corredor com espelho),
+    // diferença média de pixel de ~10/255 — burst, não duas fotos distintas.
+    // Excluído para não duplicar a mesma imagem na galeria.
+    excluir: ['IMG_2224.heic'],
+  },
   { pasta: 'Loopfit', slug: 'loopfit', titulo: 'Loopfit', categoria: 'portas-e-divisorias' },
   {
     pasta: 'Espelhos',
