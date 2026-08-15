@@ -96,7 +96,9 @@ for (const obra of OBRAS) {
     .filter((m) => !preferidas.includes(m.f))
     .sort((a, b) => b.area - a.area)
     .map((m) => m.f)
-  const escolhidas = [...preferidas, ...restantes].slice(0, MAX_FOTOS)
+  // `maxFotos` no manifesto sobrepõe o teto global — usado nas coleções "sob
+  // medida" (sem cliente único), onde a variedade É o conteúdo da obra.
+  const escolhidas = [...preferidas, ...restantes].slice(0, obra.maxFotos ?? MAX_FOTOS)
 
   const fotos = []
   for (let i = 0; i < escolhidas.length; i++) {

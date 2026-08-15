@@ -126,6 +126,9 @@ export const OBRAS = [
     slug: 'espelhos-sob-medida',
     titulo: 'Espelhos sob medida',
     categoria: 'espelhos',
+    // Coleção, não obra única — a variedade de formato/acabamento É o
+    // conteúdo. Sobrepõe o MAX_FOTOS global para publicar a pasta inteira.
+    maxFotos: 20,
   },
 
   // -------------------------------------------------------- box de banheiro

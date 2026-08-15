@@ -1123,6 +1123,81 @@ export const OBRAS_GERADAS: ObraGerada[] = [
           900,
           1400
         ]
+      },
+      {
+        "nome": "espelhos-sob-medida-07",
+        "w": 1400,
+        "h": 1050,
+        "larguras": [
+          480,
+          900,
+          1400
+        ]
+      },
+      {
+        "nome": "espelhos-sob-medida-08",
+        "w": 1400,
+        "h": 2489,
+        "larguras": [
+          480,
+          900,
+          1400
+        ]
+      },
+      {
+        "nome": "espelhos-sob-medida-09",
+        "w": 1400,
+        "h": 2489,
+        "larguras": [
+          480,
+          900,
+          1400
+        ]
+      },
+      {
+        "nome": "espelhos-sob-medida-10",
+        "w": 900,
+        "h": 1200,
+        "larguras": [
+          480,
+          900
+        ]
+      },
+      {
+        "nome": "espelhos-sob-medida-11",
+        "w": 900,
+        "h": 1200,
+        "larguras": [
+          480,
+          900
+        ]
+      },
+      {
+        "nome": "espelhos-sob-medida-12",
+        "w": 900,
+        "h": 1600,
+        "larguras": [
+          480,
+          900
+        ]
+      },
+      {
+        "nome": "espelhos-sob-medida-13",
+        "w": 900,
+        "h": 1600,
+        "larguras": [
+          480,
+          900
+        ]
+      },
+      {
+        "nome": "espelhos-sob-medida-14",
+        "w": 900,
+        "h": 1203,
+        "larguras": [
+          480,
+          900
+        ]
       }
     ]
   },

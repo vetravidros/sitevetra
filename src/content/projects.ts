@@ -70,7 +70,7 @@ const RESUMOS: Record<string, string> = {
   loopfit: 'Loja envidraçada com perfil preto, montada dentro de galpão de pé-direito alto.',
 
   'espelhos-sob-medida':
-    'Espelhos de banheiro em formatos variados: redondo, arco e painel contínuo sobre bancada.',
+    'Espelhos em banheiro, sala, bar e closet: redondo, oval, arco e painel contínuo, com e sem iluminação embutida.',
   'imperator-performance':
     'Espelhos de grande formato em academia, com iluminação linear embutida e recuo de LED.',
   'residencia-evando':
@@ -112,6 +112,17 @@ const ALT_POR_CATEGORIA: Record<CategoryId, (titulo: string) => string> = {
 }
 
 /**
+ * Exceção ao padrão acima. Nas coleções "sob medida" (sem cliente único —
+ * ver `maxFotos` no manifesto) o título já REPETE a descrição da categoria,
+ * e a fórmula genérica gerava alt redundante:
+ * "Espelhos sob medida executados em Espelhos sob medida, Fortaleza".
+ */
+const ALT_OVERRIDES: Record<string, string> = {
+  'espelhos-sob-medida': 'Espelho sob medida instalado em residência em Fortaleza',
+  'box-sob-medida': 'Box de banheiro sob medida instalado em residência em Fortaleza',
+}
+
+/**
  * Fichas técnicas confirmadas. Vazio por enquanto — ver comentário em `Spec`.
  * Exemplo de preenchimento:
  *   'helbor-reserva': { ano: '2025', vidro: 'Temperado incolor 10 mm' },
@@ -122,7 +133,7 @@ const FICHAS: Record<string, Spec> = {}
 const DESTAQUES = ['ana-amelia-boulevard']
 
 export const projects: Project[] = OBRAS_GERADAS.map((obra) => {
-  const alt = ALT_POR_CATEGORIA[obra.categoria](obra.titulo)
+  const alt = ALT_OVERRIDES[obra.slug] ?? ALT_POR_CATEGORIA[obra.categoria](obra.titulo)
   const ficha = FICHAS[obra.slug]
 
   return {
