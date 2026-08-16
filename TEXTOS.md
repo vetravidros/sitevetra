@@ -268,12 +268,13 @@ própria conversa.
 ### Prova técnica
 
 - `[arq.ficha.eyebrow]` → Especificação técnica, não venda de vidro
-- `[arq.ficha.titulo]` → A ficha técnica é sua para usar no memorial.
-- `[arq.ficha.lede]` ⚠︎ → Normas, folgas, materiais e parâmetros de medição documentados — para entrar direto no memorial descritivo, com a sua assinatura no projeto.
-- `[arq.ficha.cta]` → Pedir a ficha técnica de especificação
+- `[arq.ficha.titulo]` → A especificação vai por escrito, pronta para o memorial.
+- `[arq.ficha.lede]` ⚠︎ → Sistema, espessura, tipo de vidro, ferragem, folgas e parâmetros de medição — documentados para o seu projeto, no formato que entra direto no memorial descritivo.
+- `[arq.ficha.cta]` → Pedir a especificação do seu projeto
 
-> **O documento não existe ainda.** Por isso o botão abre o WhatsApp em vez de
-> baixar um arquivo. Quando o PDF ficar pronto, vira link direto.
+> Promete a especificação **por projeto**, não um documento pronto para baixar —
+> esse PDF não existe. Se ele for produzido, a seção vira link direto e o botão
+> de WhatsApp sai.
 
 ### Fechamento
 

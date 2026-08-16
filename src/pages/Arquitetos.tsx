@@ -222,20 +222,24 @@ export default function Arquitetos() {
         </div>
       </section>
 
-      {/* ----------------------------------------------------- prova técnica */}
+      {/* ----------------------------------------------------- prova técnica
+          Promete a especificação POR PROJETO, não um documento pronto: não
+          existe ficha técnica publicada para baixar, e prometer download de
+          um arquivo inexistente é dívida na primeira conversa. Se o PDF for
+          produzido, esta seção vira link direto e o CTA some. */}
       <Section>
         <SectionHead
           eyebrow="Especificação técnica, não venda de vidro"
-          title="A ficha técnica é sua para usar no memorial."
-          lede="Normas, folgas, materiais e parâmetros de medição documentados — para entrar direto no memorial descritivo, com a sua assinatura no projeto."
+          title="A especificação vai por escrito, pronta para o memorial."
+          lede="Sistema, espessura, tipo de vidro, ferragem, folgas e parâmetros de medição — documentados para o seu projeto, no formato que entra direto no memorial descritivo."
         />
         <div className="mt-10">
           <CTA
             variant="ghost"
-            utm={{ campaign: 'arquitetos', content: 'ficha-tecnica' }}
-            message="Olá, VETRA. Sou parceiro(a) ArqVetra e quero receber a ficha técnica de especificação."
+            utm={{ campaign: 'arquitetos', content: 'especificacao' }}
+            message="Olá, VETRA. Sou arquiteto(a)/designer e quero a especificação técnica para o meu projeto."
           >
-            Pedir a ficha técnica de especificação
+            Pedir a especificação do seu projeto
           </CTA>
         </div>
       </Section>
