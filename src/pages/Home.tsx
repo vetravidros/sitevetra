@@ -284,11 +284,16 @@ export default function Home() {
           aria-hidden="true"
         />
         <div className="container-vetra relative grid gap-12 lg:grid-cols-2 lg:items-center">
+          {/* Os três itens do lede são os MESMOS pilares da /arquitetos, na
+              mesma ordem. Esta faixa é a porta de entrada do programa:
+              prometer aqui algo que a página de destino não entrega (era o
+              caso do "desenho técnico antes do fechamento") quebra a
+              expectativa de quem clica. Mudou lá, muda aqui. */}
           <SectionHead
             tone="white"
-            eyebrow="Programa de parceria"
+            eyebrow="ArqVetra — programa de parceria"
             title="Para quem especifica."
-            lede="Arquitetos e designers de interiores têm canal direto, prazo de retorno definido e desenho técnico do sistema antes do fechamento — para o vidro entrar no projeto como projeto, não como fornecedor."
+            lede="Arquitetos e designers parceiros têm canal direto com especialista e retorno em até 24h, prioridade na agenda de medição, execução e instalação, e condição especial de valor e pagamento para os clientes que indicam."
           />
           <div className="lg:justify-self-end">
             <CTA

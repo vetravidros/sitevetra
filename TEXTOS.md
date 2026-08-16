@@ -135,15 +135,14 @@ Boulevard* — ver seção **7. Obras**). Trocar = editar `DESTAQUES` em
 
 ### Faixa azul-escura para arquitetos
 
-- `[home.arq.eyebrow]` → Programa de parceria
+- `[home.arq.eyebrow]` → ArqVetra — programa de parceria
 - `[home.arq.titulo]` → Para quem especifica.
-- `[home.arq.lede]` → Arquitetos e designers de interiores têm canal direto, prazo de retorno definido e desenho técnico do sistema antes do fechamento — para o vidro entrar no projeto como projeto, não como fornecedor.
+- `[home.arq.lede]` ⚠︎ → Arquitetos e designers parceiros têm canal direto com especialista e retorno em até 24h, prioridade na agenda de medição, execução e instalação, e condição especial de valor e pagamento para os clientes que indicam.
 - `[home.arq.cta]` → Conhecer o programa
 
-> Esta faixa ainda promete **desenho técnico do sistema antes do fechamento**,
-> que saiu dos três pilares do ArqVetra (seção 4). Quem clica aqui esperando
-> isso não encontra na página de destino. Alinhar com os pilares atuais: canal
-> direto em 24h, condição especial e prioridade na agenda.
+> Este lede repete os **três pilares** da seção 4, na mesma ordem. É a porta de
+> entrada do programa: se os pilares mudarem lá, mudam aqui também — senão quem
+> clica encontra outra promessa na página de destino.
 
 ### Fechamento
 
