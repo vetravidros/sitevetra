@@ -16,6 +16,15 @@ Marcações:
 Onde cada bloco vive hoje, se quiser conferir: `src/pages/*.tsx`,
 `src/components/{Header,Footer}.tsx` e `src/content/*.ts`.
 
+> **Sincronizado com o commit `7a9bd05` (16/08/2026).** Este arquivo é uma
+> cópia manual do que está no código — ele não se atualiza sozinho. Se o site
+> mudou depois desse commit e ninguém editou aqui, o mapa está atrasado. Para
+> conferir: `git log --oneline 7a9bd05..HEAD -- src/`. Se essa lista não estiver
+> vazia, peça a atualização antes de usar o mapa como referência.
+
+Blocos citados como `> nota` são avisos meus sobre o texto — inconsistências ou
+promessas a confirmar. Não são texto do site.
+
 ---
 
 ## 0. Global — aparece em todas as páginas
@@ -92,7 +101,10 @@ específica do primeiro viewport — se alguma etapa mudar, ajuste aqui.
 
 ### Parágrafo de abertura
 
-- `[home.lede]` → Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de vidro, portas, divisórias, espelhos e box especificados junto com o projeto — e executados no milímetro que o projeto pediu.
+- `[home.lede]` → Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de vidro, Box, Portas, Janelas e Espelhos especificados e executados exatamente conforme o projeto.
+
+> Este parágrafo cita **Janelas**, que não é uma das quatro categorias do site
+> (seção 7) nem tem obra publicada. Ou vira categoria, ou sai da lista.
 
 ### Faixa "como atendemos" (3 colunas, fundo azul claro)
 
@@ -126,6 +138,11 @@ Boulevard* — ver seção **7. Obras**). Trocar = editar `DESTAQUES` em
 - `[home.arq.titulo]` → Para quem especifica.
 - `[home.arq.lede]` → Arquitetos e designers de interiores têm canal direto, prazo de retorno definido e desenho técnico do sistema antes do fechamento — para o vidro entrar no projeto como projeto, não como fornecedor.
 - `[home.arq.cta]` → Conhecer o programa
+
+> Esta faixa ainda promete **desenho técnico do sistema antes do fechamento**,
+> que saiu dos três pilares do ArqVetra (seção 4). Quem clica aqui esperando
+> isso não encontra na página de destino. Alinhar com os pilares atuais: canal
+> direto em 24h, condição especial e prioridade na agenda.
 
 ### Fechamento
 
@@ -187,57 +204,87 @@ a ser visíveis quando você preencher `FICHAS` em `src/content/projects.ts`.
 
 ---
 
-## 4. Arquitetos (`/arquitetos`)
+## 4. Arquitetos — programa ArqVetra (`/arquitetos`)
+
+A página inteira foi reescrita como programa de parceria. Único CTA de
+conversão: WhatsApp. Não existe formulário aqui — o "cadastro" acontece na
+própria conversa.
 
 ### SEO
 
-- `[arq.seo.title]` `SEO` → Programa para arquitetos e designers
-- `[arq.seo.description]` `SEO` → Parceria da VETRA com arquitetos e designers de interiores em Fortaleza: canal direto com quem especifica, detalhamento do sistema antes do fechamento e crédito de autoria preservado.
+- `[arq.seo.title]` `SEO` → ArqVetra — programa de parceria para arquitetos e designers
+- `[arq.seo.description]` `SEO` ⚠︎ → Programa de parceria técnica da VETRA em Fortaleza: canal direto com especialista e retorno em até 24h, prioridade na agenda de medição, execução e instalação, e condição especial de valor e pagamento para os clientes indicados.
 
-### Topo
+### Topo (sobre a foto)
 
-- `[arq.eyebrow]` → Programa de parceria
-- `[arq.h1.linha1]` → Para quem
-- `[arq.h1.linha2]` (em cinza) → especifica.
-- `[arq.lede]` → Vidro é o item do projeto que mais depende de decisão antecipada e o que mais sofre quando chega no fim da obra. Este programa existe para o vidro entrar na sua prancheta junto com o resto — não depois.
-- `[arq.cta1]` → Abrir canal direto
+- `[arq.eyebrow]` → ArqVetra — Programa de parceria VETRA
+- `[arq.h1.linha1]` → Especificar vidro deixa de ser risco.
+- `[arq.h1.linha2]` (mesma cor, peso maior) → Passa a ser vantagem.
+- `[arq.lede]` → Um programa de parceria técnica para arquitetos e designers que projetam com padrão — canal direto com especialista, prioridade em toda a agenda de produção e condições especiais para os seus clientes.
+- `[arq.cta1]` → Quero ser parceiro ArqVetra
 - `[arq.cta2]` → Ver projetos executados
-- `[arq.foto.alt]` `ALT` → Sala de reunião fechada por divisórias de vidro com perfil preto, vista do corredor do escritório
+- `[arq.foto.alt]` `ALT` → Dois profissionais da VETRA conferindo a planta e medindo o vão de uma varanda envidraçada em obra, com vista para o mar
+- `[arq.msg-whatsapp]` (texto já preenchido ao abrir a conversa) → Quero ser parceiro do ArqVetra. Sou arquiteto(a)/designer e quero conhecer o programa.
 
-### Condições do programa
+### Por que o programa existe
 
-- `[arq.cond.eyebrow]` → O que você ganha
-- `[arq.cond.titulo]` → Condições do programa.
-- `[arq.cond.lede]` → Sem cadastro, sem meta e sem catálogo. O que muda é a forma de trabalhar.
-- `[arq.cond.1.titulo]` → Canal direto, sem fila
-- `[arq.cond.1.texto]` → Contato com quem decide, não com atendimento. Quem responde é quem vai especificar o projeto.
-- `[arq.cond.2.titulo]` → Desenho antes do fechamento
-- `[arq.cond.2.texto]` ⚠︎ → Detalhamento do sistema em DWG ou PDF para você compatibilizar com o restante do projeto — antes de qualquer assinatura.
-- `[arq.cond.3.titulo]` → Sua assinatura preservada
-- `[arq.cond.3.texto]` → O crédito do projeto é seu. Publicamos a obra com a autoria informada e com a sua autorização prévia.
-- `[arq.cond.4.titulo]` → Visita conjunta ao cliente
-- `[arq.cond.4.texto]` → Quando ajuda a defender a especificação, vamos junto à reunião. O vidro costuma ser o item que o cliente tenta cortar primeiro.
+- `[arq.problema.eyebrow]` → Por que o ArqVetra existe
+- `[arq.problema.titulo]` → Especificar vidro é assumir um risco que não é seu.
+- `[arq.problema.texto]` → Especificar vidro em projeto exige confiar num fornecedor que não vai te deixar na mão na hora H — prazo estourado, medição errada, retrabalho que vira problema seu com o cliente. A maioria dos vidraceiros trata arquiteto como canal de venda. A VETRA trata como parceiro técnico com responsabilidade compartilhada pelo resultado.
 
-### Processo (faixa azul-escura, 4 etapas)
+### Os três benefícios (fundo azul claro)
 
-- `[arq.proc.eyebrow]` → Processo
-- `[arq.proc.titulo]` → Como a especificação acontece.
-- `[arq.proc.1.titulo]` → Leitura do projeto
-- `[arq.proc.1.texto]` → Você manda a planta, o corte ou a referência. Devolvemos a leitura do que o vidro exige do projeto: rebaixo de forro, ponto de fixação, cota de piso, folga de dilatação.
-- `[arq.proc.2.titulo]` → Especificação técnica
-- `[arq.proc.2.texto]` → Sistema, espessura, tipo de vidro e ferragem definidos por escrito, com o acabamento já compatibilizado com os metais que você especificou.
-- `[arq.proc.3.titulo]` → Orçamento aberto
-- `[arq.proc.3.texto]` → Preço separado por item — vidro, ferragem, instalação. Sem pacote fechado que impede o cliente de comparar ou de cortar escopo com critério.
-- `[arq.proc.4.titulo]` → Medição e execução
-- `[arq.proc.4.texto]` → Medição feita depois do revestimento assentado, agendada com a obra. Instalação acompanhada pela mesma pessoa que fez a especificação.
+- `[arq.benef.eyebrow]` → O que você ganha no ArqVetra
+- `[arq.benef.titulo]` → Três compromissos, sem letra miúda escondida.
+- `[arq.benef.1.tag]` → 01 · Acesso técnico
+- `[arq.benef.1.titulo]` ⚠︎ → Fale com quem entende, em até 24h
+- `[arq.benef.1.texto]` ⚠︎ → Parceiro ArqVetra tem canal direto de atendimento com um especialista — não com atendente genérico. Dúvida de especificação, detalhe construtivo ou pedido de orçamento têm retorno garantido em até 24 horas.
+- `[arq.benef.2.tag]` → 02 · Vantagem comercial
+- `[arq.benef.2.titulo]` → Condição exclusiva de valor e pagamento
+- `[arq.benef.2.texto]` ⚠︎ → Clientes indicados por parceiro ArqVetra recebem condição especial de valor e de forma de pagamento — vantagem exclusiva do canal de parceria, que você leva para a mesa junto com o seu projeto.
+- `[arq.benef.3.tag]` → 03 · Prazo
+- `[arq.benef.3.titulo]` → Seu projeto entra na frente
+- `[arq.benef.3.texto]` ⚠︎ → Prioridade em toda a cadeia: medição, execução e instalação. Projeto de parceiro ArqVetra não disputa fila com a demanda geral — o cronograma da sua obra não fica refém do nosso.
+
+### Termos da condição comercial (letra miúda, logo abaixo dos benefícios)
+
+- `[arq.termos.titulo]` → Termos da condição comercial
+- `[arq.termos.1]` → Condição válida exclusivamente para clientes indicados por parceiro ArqVetra ativo.
+- `[arq.termos.2]` → Aplicável apenas se o fechamento ocorrer dentro do prazo de validade da proposta.
+- `[arq.termos.3]` → Não cumulativa com outras condições especiais eventualmente em vigor.
+- `[arq.termos.4]` → Condições de pagamento sujeitas a análise por projeto.
+
+### Como entrar (faixa azul-escura, 3 passos)
+
+- `[arq.entrar.eyebrow]` → Como entrar
+- `[arq.entrar.titulo]` → Três passos, tudo pelo WhatsApp.
+- `[arq.entrar.1.titulo]` → Cadastro
+- `[arq.entrar.1.texto]` → Você se identifica como arquiteto ou designer parceiro pelo WhatsApp: nome, escritório e CAU ou contato.
+- `[arq.entrar.2.titulo]` → Ativação
+- `[arq.entrar.2.texto]` ⚠︎ → Confirmação em até 24h e liberação do canal direto com especialista.
+- `[arq.entrar.3.titulo]` → Indicação
+- `[arq.entrar.3.texto]` → Você especifica VETRA no projeto ou indica um cliente; a condição especial é aplicada no orçamento.
+
+### Prova técnica
+
+- `[arq.ficha.eyebrow]` → Especificação técnica, não venda de vidro
+- `[arq.ficha.titulo]` → A ficha técnica é sua para usar no memorial.
+- `[arq.ficha.lede]` ⚠︎ → Normas, folgas, materiais e parâmetros de medição documentados — para entrar direto no memorial descritivo, com a sua assinatura no projeto.
+- `[arq.ficha.cta]` → Pedir a ficha técnica de especificação
+
+> **O documento não existe ainda.** Por isso o botão abre o WhatsApp em vez de
+> baixar um arquivo. Quando o PDF ficar pronto, vira link direto.
 
 ### Fechamento
 
-- `[arq.fim.eyebrow]` → Contato direto
-- `[arq.fim.titulo]` → Manda o projeto. A gente devolve a especificação.
-- `[arq.fim.texto]` → Planta, corte, foto do vão ou só a dúvida técnica — qualquer um dos quatro serve para começar. Atendimento em Fortaleza e Região Metropolitana.
-- `[arq.fim.cta1]` → Falar no WhatsApp
-- `[arq.fim.cta2]` → Enviar arquivos
+- `[arq.fim.eyebrow]` → Próximo passo
+- `[arq.fim.titulo]` → Transparência é posicionamento.
+- `[arq.fim.texto]` → Entre no ArqVetra. Sem burocracia, sem contrato de exclusividade, somente um compromisso técnico. Atendimento em Fortaleza e Região Metropolitana — (85) 99178-5809.
+- `[arq.fim.cta]` → Falar no WhatsApp
+
+> **O prazo de 24h aparece em dois lugares** (`[arq.benef.1.*]` e
+> `[arq.entrar.2.texto]`) e também na descrição do Google (`[arq.seo.description]`).
+> Se mudar, mude nos três. Se não for sustentável, tire dos três.
 
 ---
 
