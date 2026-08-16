@@ -101,10 +101,11 @@ específica do primeiro viewport — se alguma etapa mudar, ajuste aqui.
 
 ### Parágrafo de abertura
 
-- `[home.lede]` → Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de vidro, Box, Portas, Janelas e Espelhos especificados e executados exatamente conforme o projeto.
+- `[home.lede]` → Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de vidro, Box, Portas e Espelhos especificados e executados exatamente conforme o projeto.
 
-> Este parágrafo cita **Janelas**, que não é uma das quatro categorias do site
-> (seção 7) nem tem obra publicada. Ou vira categoria, ou sai da lista.
+> A lista espelha as quatro categorias da seção 7, na mesma ordem dos cards.
+> Se acrescentar um produto aqui, ele precisa existir como categoria — senão
+> promete uma seção que o visitante não encontra.
 
 ### Faixa "como atendemos" (3 colunas, fundo azul claro)
 

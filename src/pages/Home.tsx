@@ -153,9 +153,12 @@ export default function Home() {
       {/* O lede sai de cima da foto: sobre imagem ficam só marca, título e ação. */}
       <Section className="py-16 md:py-20">
         <p className="max-w-3xl text-lede text-ink/70">
+          {/* A lista espelha as quatro categorias do portfólio, na mesma ordem
+              dos cards abaixo. Citar um produto que não é categoria (era o caso
+              de "Janelas") promete ao visitante uma seção que não existe. */}
           Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de
-          vidro, Box, Portas, Janelas e Espelhos especificados e executados
-          exatamente conforme o projeto.
+          vidro, Box, Portas e Espelhos especificados e executados exatamente
+          conforme o projeto.
         </p>
       </Section>
 
