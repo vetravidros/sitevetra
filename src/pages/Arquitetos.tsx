@@ -66,23 +66,54 @@ export default function Arquitetos() {
       />
 
       {/* ------------------------------------------------------------- hero
-          Único hero escuro do site fora da home. `ink`, não `navy`: navy é a
-          cor de faixa/rodapé e já aparece duas vezes nesta página — repetir
-          achataria a hierarquia. A paleta não admite um cinza-carvão próprio
-          (ver `@theme` em styles/index.css). */}
+          Fundo fotográfico: medição em obra, planta na mão. O assunto da foto
+          fica no centro/direita; o texto ocupa a esquerda, que é justamente a
+          faixa clara (céu, mar, prédios). Por isso o véu é assimétrico e forte
+          à esquerda — escurece onde o texto cai e devolve a cena onde ela
+          importa.
+
+          Véus em `ink`, nunca em navy: navy tinge a foto de azul e mata o mar.
+          As opacidades saíram de medir contraste real sobre os pixels desta
+          foto — trocar a foto exige medir de novo (ver README › Imagens). */}
       <section className="relative overflow-hidden bg-ink py-20 text-white md:py-28">
+        <Picture
+          name="arqvetra-hero"
+          alt="Dois profissionais da VETRA conferindo a planta e medindo o vão de uma varanda envidraçada em obra, com vista para o mar"
+          fill
+          priority
+          sizes="100vw"
+        />
+
+        {/* 01 — véu geral: nenhuma parte da foto fica em brilho pleno sob texto */}
+        <div
+          className="pointer-events-none absolute inset-0 bg-ink/45"
+          aria-hidden="true"
+        />
+        {/* 02 — véu direcional: a coluna de texto é a esquerda */}
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/10"
+          aria-hidden="true"
+        />
+        {/* 03 — véu de topo: separa o header branco da foto sem linha dura */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/60 to-transparent"
+          aria-hidden="true"
+        />
         <div
           className="glass-stripes pointer-events-none absolute inset-0 opacity-[0.06]"
           aria-hidden="true"
         />
+
         <div className="container-vetra relative">
-          <Eyebrow tone="white">ArqVetra — Programa de parceria VETRA</Eyebrow>
+          {/* `photo`, não `white`: sobre foto nenhuma transparência sobrevive
+              ao AA — mesma regra já aplicada no hero da home. */}
+          <Eyebrow tone="photo">ArqVetra — Programa de parceria VETRA</Eyebrow>
           <Rule className="mt-5" />
           <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white">
             Especificar vidro deixa de ser risco.
-            <span className="block text-white/50">Passa a ser vantagem.</span>
+            <span className="block font-normal">Passa a ser vantagem.</span>
           </h1>
-          <p className="mt-8 max-w-2xl text-lede text-white/70">
+          <p className="mt-8 max-w-2xl text-lede text-white">
             Um programa de parceria técnica para arquitetos e designers que
             projetam com padrão — canal direto com especialista, prioridade em
             toda a agenda de produção e condições especiais para os seus
@@ -107,15 +138,9 @@ export default function Arquitetos() {
         </div>
       </section>
 
-      <div className="container-vetra -mt-px">
-        <Picture
-          name="aldeota-02"
-          alt="Sala de reunião fechada por divisórias de vidro com perfil preto, vista do corredor do escritório"
-          ratio="16/9"
-          priority
-          sizes="(min-width: 1280px) 76rem, 100vw"
-        />
-      </div>
+      {/* A faixa com `aldeota-02` saiu daqui quando o hero virou fotográfico:
+          duas fotos coladas, sem respiro entre elas, liam como galeria — e
+          aquela era uma foto vertical forçada em 16/9. */}
 
       {/* --------------------------------------------------------- problema
           Framing, não venda: nomeia o risco que o arquiteto já conhece antes

@@ -25,6 +25,15 @@ export const IMAGE_META = {
       1440
     ]
   },
+  "arqvetra-hero": {
+    "w": 1440,
+    "h": 810,
+    "widths": [
+      640,
+      1024,
+      1440
+    ]
+  },
   "guararapes-01": {
     "w": 1200,
     "h": 1600,

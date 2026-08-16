@@ -47,6 +47,13 @@ export const IMAGES = [
     widths: HERO_WIDTHS,
     fallback: `${HERO_DIR}hero-desktop.png`,
   },
+  {
+    // Fundo do hero da /arquitetos. Medição em obra com planta na mão — é a
+    // cena que o programa ArqVetra vende, não um ambiente pronto.
+    out: 'arqvetra-hero',
+    src: `${HERO_DIR}arqvetra-hero.png`, // 1672x941 — não gera 1920/2560
+    widths: HERO_WIDTHS,
+  },
 
   // ------------------------------------- envidraçamento / cortina de vidro
   { out: 'guararapes-01', src: 'Cortina de Vidro/4206F896-AF5E-407E-BB75-AAF34945530F_1_102_o.jpeg' }, // 1536x2048
