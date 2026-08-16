@@ -168,15 +168,15 @@ export default function Home() {
           {[
             {
               title: 'Especificação junto com o projeto',
-              text: 'Entramos antes do revestimento assentado, quando ainda dá para resolver rebaixo de forro, prumo e ponto de carga.',
+              text: 'Iniciamos um acompanhamento técnico ainda em fase de projeto para que os vidros sejam especificados da forma mais segura e funcional.',
             },
             {
               title: 'Medição técnica no local',
-              text: 'Cada vão é medido depois do acabamento executado. Obra pronta raramente é retangular — e o vidro não perdoa.',
+              text: 'Realizamos a medição técnica com equipamentos de alta precisão in loco após todos os revestimentos e acabamentos serem finalizados.',
             },
             {
               title: 'Execução acompanhada',
-              text: 'Uma pessoa responde pelo projeto do orçamento à instalação. Sem repassar o problema para o próximo elo.',
+              text: 'Todo o processo de produção e instalação é acompanhado de perto para evitar quaisquer imprevistos ou divergências do projeto.',
             },
           ].map((item) => (
             <div key={item.title}>

@@ -110,11 +110,11 @@ específica do primeiro viewport — se alguma etapa mudar, ajuste aqui.
 ### Faixa "como atendemos" (3 colunas, fundo azul claro)
 
 - `[home.atend.1.titulo]` → Especificação junto com o projeto
-- `[home.atend.1.texto]` → Entramos antes do revestimento assentado, quando ainda dá para resolver rebaixo de forro, prumo e ponto de carga.
+- `[home.atend.1.texto]` → Iniciamos um acompanhamento técnico ainda em fase de projeto para que os vidros sejam especificados da forma mais segura e funcional.
 - `[home.atend.2.titulo]` → Medição técnica no local
-- `[home.atend.2.texto]` → Cada vão é medido depois do acabamento executado. Obra pronta raramente é retangular — e o vidro não perdoa.
+- `[home.atend.2.texto]` → Realizamos a medição técnica com equipamentos de alta precisão in loco após todos os revestimentos e acabamentos serem finalizados.
 - `[home.atend.3.titulo]` → Execução acompanhada
-- `[home.atend.3.texto]` → Uma pessoa responde pelo projeto do orçamento à instalação. Sem repassar o problema para o próximo elo.
+- `[home.atend.3.texto]` → Todo o processo de produção e instalação é acompanhado de perto para evitar quaisquer imprevistos ou divergências do projeto.
 
 ### Quatro soluções
 
