@@ -192,10 +192,8 @@ export default function Home() {
 
       {/* ---------------------------------------------------- três soluções */}
       <Section>
-        <SectionHead
-          eyebrow="Soluções"
-          title="Quatro frentes, uma mesma exigência de acabamento."
-        />
+        <Eyebrow>Soluções</Eyebrow>
+        <Rule className="mt-5" />
 
         <div className="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map((s) => (

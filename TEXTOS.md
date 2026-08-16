@@ -119,7 +119,9 @@ específica do primeiro viewport — se alguma etapa mudar, ajuste aqui.
 ### Quatro soluções
 
 - `[home.solucoes.eyebrow]` → Soluções
-- `[home.solucoes.titulo]` → Quatro frentes, uma mesma exigência de acabamento.
+
+> Título removido a pedido do André (16/08/2026) — a seção ficou só com o
+> eyebrow, sem H2 de efeito.
 
 (O conteúdo dos 4 cards está na seção **6. Soluções**, porque se repete no rodapé
 e nos filtros da página de projetos.)
