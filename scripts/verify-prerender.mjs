@@ -26,6 +26,7 @@ const EXPECTED = [
   ['/projetos/sintsef', 'SINTSEF'],
   ['/projetos/loopfit', 'Loopfit'],
   ['/projetos/espelhos-sob-medida', 'Espelhos sob medida'],
+  ['/cortina-de-vidro', 'Feche a sacada'],
   ['/arquitetos', 'Programa de parceria'],
   ['/sobre', 'Vidro é projeto'],
   ['/contato', 'Comece pelo'],

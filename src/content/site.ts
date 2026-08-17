@@ -76,6 +76,7 @@ export const commitments = [
 export const nav = [
   { href: '/', label: 'Início' },
   { href: '/projetos', label: 'Projetos' },
+  { href: '/cortina-de-vidro', label: 'Cortina de Vidro' },
   { href: '/arquitetos', label: 'Arquitetos' },
   { href: '/sobre', label: 'Sobre' },
   { href: '/contato', label: 'Contato' },

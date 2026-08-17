@@ -33,6 +33,7 @@ promessas a confirmar. Não são texto do site.
 
 - `[nav.home]` → Início
 - `[nav.projetos]` → Projetos
+- `[nav.cortina-de-vidro]` → Cortina de Vidro
 - `[nav.arquitetos]` → Arquitetos
 - `[nav.sobre]` → Sobre
 - `[nav.contato]` → Contato
@@ -103,7 +104,7 @@ específica do primeiro viewport — se alguma etapa mudar, ajuste aqui.
 
 - `[home.lede]` → Trabalhamos com quem desenha o espaço antes de ele existir. Cortina de vidro, Box, Portas e Espelhos especificados e executados exatamente conforme o projeto.
 
-> A lista espelha as quatro categorias da seção 7, na mesma ordem dos cards.
+> A lista espelha as quatro categorias da seção 8, na mesma ordem dos cards.
 > Se acrescentar um produto aqui, ele precisa existir como categoria — senão
 > promete uma seção que o visitante não encontra.
 
@@ -123,7 +124,7 @@ específica do primeiro viewport — se alguma etapa mudar, ajuste aqui.
 > Título removido a pedido do André (16/08/2026) — a seção ficou só com o
 > eyebrow, sem H2 de efeito.
 
-(O conteúdo dos 4 cards está na seção **6. Soluções**, porque se repete no rodapé
+(O conteúdo dos 4 cards está na seção **8. Soluções**, porque se repete no rodapé
 e nos filtros da página de projetos.)
 
 ### Projeto em destaque
@@ -132,7 +133,7 @@ e nos filtros da página de projetos.)
 - `[home.destaque.cta]` → Ver o projeto
 
 O título e o texto vêm da obra marcada como destaque (hoje: *Edifício Ana Amélia
-Boulevard* — ver seção **7. Obras**). Trocar = editar `DESTAQUES` em
+Boulevard* — ver seção **9. Obras**). Trocar = editar `DESTAQUES` em
 `src/content/projects.ts`.
 
 ### Faixa azul-escura para arquitetos
@@ -142,7 +143,7 @@ Boulevard* — ver seção **7. Obras**). Trocar = editar `DESTAQUES` em
 - `[home.arq.lede]` ⚠︎ → Arquitetos e designers parceiros têm canal direto com especialista e retorno em até 24h, prioridade na agenda de medição, execução e instalação, e condição especial de valor e pagamento para os clientes que indicam.
 - `[home.arq.cta]` → Conhecer o programa
 
-> Este lede repete os **três pilares** da seção 4, na mesma ordem. É a porta de
+> Este lede repete os **três pilares** da seção 5, na mesma ordem. É a porta de
 > entrada do programa: se os pilares mudarem lá, mudam aqui também — senão quem
 > clica encontra outra promessa na página de destino.
 
@@ -174,7 +175,7 @@ Boulevard* — ver seção **7. Obras**). Trocar = editar `DESTAQUES` em
 
 - `[projetos.filtro.todos]` → Todos
 
-(Os demais filtros usam os nomes das categorias — seção **6**. Categoria sem obra
+(Os demais filtros usam os nomes das categorias — seção **8**. Categoria sem obra
 publicada não aparece como filtro.)
 
 ### Estado vazio e fechamento
@@ -185,7 +186,79 @@ publicada não aparece como filtro.)
 
 ---
 
-## 3. Página de projeto (`/projetos/...`)
+## 3. Cortina de Vidro (`/cortina-de-vidro`)
+
+Página feita para tráfego pago — link do anúncio aponta direto pra cá. Também
+entrou no menu principal, entre Projetos e Arquitetos.
+
+### SEO
+
+- `[cortina.seo.title]` `SEO` → Cortina de Vidro para Varanda em Fortaleza
+- `[cortina.seo.description]` `SEO` → Cortina de vidro sob medida para fechar sacada e varanda em Fortaleza. Sistema sem roldanas aparentes, vedação técnica e instalação executada pela VETRA. Peça seu orçamento.
+
+### Topo (sobre a foto)
+
+- `[cortina.hero.eyebrow]` → Cortina de Vidro — VETRA Soluções em Vidros
+- `[cortina.hero.h1.linha1]` → Feche a sacada. Não feche a vista.
+- `[cortina.hero.h1.linha2]` → Cortina de vidro sob medida, vão livre.
+- `[cortina.hero.lede]` → Envidraçamento de varanda e sacada com vão livre e perfil mínimo — o vidro assume o lugar da parede, sem tirar a vista que você paga caro para ter.
+- `[cortina.hero.cta]` → Pedir orçamento
+- `[cortina.hero.msg-whatsapp]` (mensagem pré-preenchida) → Olá, VETRA. Quero orçamento de cortina de vidro para minha varanda/sacada.
+- `[cortina.hero.alt]` `ALT` → Varanda envidraçada em Fortaleza com vista para piscina e coqueiros, painéis de vidro recolhidos na lateral
+
+> Foto provisória: reaproveita `solucao-fachadas`, já publicada em outra
+> página. Você mandou 6 fotos novas de sacada fechada para essa página — não
+> deram para converter ainda (formato HEIC que as ferramentas daqui não leem).
+> Exporte-as como JPEG (no Mac: selecionar no Finder → Arquivo → Exportar, ou
+> abrir no Preview e "Exportar como…") e me devolva; eu troco a foto do topo e
+> da galeria e rodo `npm run assets`.
+
+### Por que fechar a varanda
+
+- `[cortina.motivo.eyebrow]` → Por que fechar a varanda
+- `[cortina.motivo.titulo]` → Chuva, poeira e barulho ficam do lado de fora.
+- `[cortina.motivo.1.tag]` → Conforto
+- `[cortina.motivo.1.titulo]` → Varanda utilizável o ano todo
+- `[cortina.motivo.1.texto]` → Chuva de lado, vento forte e poeira da rua deixam de decidir se dá para usar a varanda hoje.
+- `[cortina.motivo.2.tag]` → Espaço
+- `[cortina.motivo.2.titulo]` → Metro quadrado que você já paga
+- `[cortina.motivo.2.texto]` → A varanda fechada vira sala, home office ou espaço de estar — sem obra, sem alvenaria.
+- `[cortina.motivo.3.tag]` → Silêncio
+- `[cortina.motivo.3.titulo]` → Menos barulho da rua
+- `[cortina.motivo.3.texto]` → O vidro também barra ruído: menos trânsito, menos vizinho, mais sossego.
+
+### O sistema (faixa azul-escura)
+
+- `[cortina.sistema.eyebrow]` → O sistema
+- `[cortina.sistema.titulo]` → Vidro que desliza, não que emperra.
+- `[cortina.sistema.1]` → Sem roldanas aparentes — o painel desliza em fitas de polímero de alta resistência, apoiado no trilho inferior.
+- `[cortina.sistema.2]` → Travamento interno entre os painéis, para alinhamento perfeito do conjunto.
+- `[cortina.sistema.3]` → Vedação com perfil de silicone entre os vidros — sem ressecar, sem abrir vão com o tempo.
+- `[cortina.sistema.4]` → Manutenção praticamente inexistente: sem rolamento para desgastar.
+
+> Vem de um catálogo técnico de terceiro que você mandou (fabricante Cristal
+> System / "Kit Sacada Certa", revenda "Ramos Vidraçaria"). Usei só os pontos
+> técnicos genéricos do sistema sem roldanas — não citei a marca do
+> fabricante, porque não é produto próprio da VETRA.
+
+### Galeria (fundo azul claro)
+
+- `[cortina.galeria.eyebrow]` → Instalações executadas
+- `[cortina.galeria.titulo]` → Cada vão, medido e executado pela VETRA.
+
+(5 fotos provisórias da categoria Cortina de Vidro — mesmas de `solutions.ts`.
+Trocar pelas 6 fotos novas quando chegarem em JPEG.)
+
+### Fechamento
+
+- `[cortina.fim.eyebrow]` → Peça o seu
+- `[cortina.fim.titulo]` → Do orçamento à instalação, o mesmo time acompanha o projeto.
+- `[cortina.fim.texto]` → Atendimento em Fortaleza e Região Metropolitana — (85) 99178-5809.
+- `[cortina.fim.cta]` → Falar no WhatsApp
+
+---
+
+## 4. Página de projeto (`/projetos/...`)
 
 Rótulos fixos. **Hoje a ficha técnica não aparece em nenhuma obra** — nenhuma
 tem dado confirmado, e a seção some quando está vazia. Estes rótulos só voltam
@@ -206,7 +279,7 @@ a ser visíveis quando você preencher `FICHAS` em `src/content/projects.ts`.
 
 ---
 
-## 4. Arquitetos — programa ArqVetra (`/arquitetos`)
+## 5. Arquitetos — programa ArqVetra (`/arquitetos`)
 
 A página inteira foi reescrita como programa de parceria. Único CTA de
 conversão: WhatsApp. Não existe formulário aqui — o "cadastro" acontece na
@@ -291,7 +364,7 @@ própria conversa.
 
 ---
 
-## 5. Sobre (`/sobre`)
+## 6. Sobre (`/sobre`)
 
 ### SEO
 
@@ -335,7 +408,7 @@ própria conversa.
 
 ---
 
-## 6. Contato (`/contato`)
+## 7. Contato (`/contato`)
 
 ### SEO
 
@@ -384,7 +457,7 @@ própria conversa.
 
 ---
 
-## 7. Soluções (`src/content/solutions.ts`)
+## 8. Soluções (`src/content/solutions.ts`)
 
 Aparecem na home, nos filtros de projetos e no rodapé. Mudar aqui muda nos três.
 
@@ -430,10 +503,10 @@ Aparecem na home, nos filtros de projetos e no rodapé. Mudar aqui muda nos trê
 
 ---
 
-## 8. Obras do portfólio (`src/content/projects.ts` › `RESUMOS`)
+## 9. Obras do portfólio (`src/content/projects.ts` › `RESUMOS`)
 
 21 obras reais. Título e categoria ficam em `scripts/projects.manifest.mjs`; o
-resumo de uma linha, aqui. **Nenhuma tem ficha técnica** — ver seção 3.
+resumo de uma linha, aqui. **Nenhuma tem ficha técnica** — ver seção 4.
 
 ### Cortina de Vidro — 12 obras
 
@@ -474,7 +547,7 @@ título é genérico em vez de nome de obra.
 
 ---
 
-## 9. Página de erro (404)
+## 10. Página de erro (404)
 
 - `[404.eyebrow]` → Erro 404
 - `[404.h1.linha1]` → Esse vão

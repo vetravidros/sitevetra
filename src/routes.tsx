@@ -23,6 +23,11 @@ export const routes: RouteRecord[] = [
         lazy: () => import('@/pages/Projetos').then((m) => ({ Component: m.default })),
       },
       {
+        path: 'cortina-de-vidro',
+        entry: 'src/pages/CortinaDeVidro.tsx',
+        lazy: () => import('@/pages/CortinaDeVidro').then((m) => ({ Component: m.default })),
+      },
+      {
         path: 'projetos/:slug',
         entry: 'src/pages/ProjetoDetalhe.tsx',
         lazy: () => import('@/pages/ProjetoDetalhe').then((m) => ({ Component: m.default })),

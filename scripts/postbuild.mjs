@@ -19,7 +19,8 @@ const EXCLUDE = new Set(['/404'])
 /** Prioridade por rota — a home puxa mais que uma página de projeto. */
 function priority(route) {
   if (route === '/') return '1.0'
-  if (route === '/projetos' || route === '/arquitetos') return '0.9'
+  if (route === '/projetos' || route === '/arquitetos' || route === '/cortina-de-vidro')
+    return '0.9'
   if (route.startsWith('/projetos/')) return '0.7'
   return '0.8'
 }
