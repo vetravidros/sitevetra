@@ -16,10 +16,10 @@ Marcações:
 Onde cada bloco vive hoje, se quiser conferir: `src/pages/*.tsx`,
 `src/components/{Header,Footer}.tsx` e `src/content/*.ts`.
 
-> **Sincronizado com o commit `7a9bd05` (16/08/2026).** Este arquivo é uma
+> **Sincronizado com o commit `6cafd83` (17/08/2026).** Este arquivo é uma
 > cópia manual do que está no código — ele não se atualiza sozinho. Se o site
 > mudou depois desse commit e ninguém editou aqui, o mapa está atrasado. Para
-> conferir: `git log --oneline 7a9bd05..HEAD -- src/`. Se essa lista não estiver
+> conferir: `git log --oneline 6cafd83..HEAD -- src/`. Se essa lista não estiver
 > vazia, peça a atualização antes de usar o mapa como referência.
 
 Blocos citados como `> nota` são avisos meus sobre o texto — inconsistências ou
