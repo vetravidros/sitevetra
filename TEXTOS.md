@@ -204,14 +204,13 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.hero.lede]` → Envidraçamento de varanda e sacada com vão livre e perfil mínimo — o vidro assume o lugar da parede, sem tirar a vista que você paga caro para ter.
 - `[cortina.hero.cta]` → Pedir orçamento
 - `[cortina.hero.msg-whatsapp]` (mensagem pré-preenchida) → Olá, VETRA. Quero orçamento de cortina de vidro para minha varanda/sacada.
-- `[cortina.hero.alt]` `ALT` → Varanda envidraçada em Fortaleza com vista para piscina e coqueiros, painéis de vidro recolhidos na lateral
+- `[cortina.hero.alt]` `ALT` → Varanda fechada com cortina de vidro, mesa posta e vista para os prédios de Fortaleza
 
-> Foto provisória: reaproveita `solucao-fachadas`, já publicada em outra
-> página. Você mandou 6 fotos novas de sacada fechada para essa página — não
-> deram para converter ainda (formato HEIC que as ferramentas daqui não leem).
-> Exporte-as como JPEG (no Mac: selecionar no Finder → Arquivo → Exportar, ou
-> abrir no Preview e "Exportar como…") e me devolva; eu troco a foto do topo e
-> da galeria e rodo `npm run assets`.
+> Foto: obra Reserva do Parque, uma das 6 que você mandou. As outras 5:
+> 2 já entraram na galeria (Ana Amélia Boulevard e Unique Meireles); as 3
+> coladas direto na mensagem eu só consigo ver, não tenho o arquivo — preciso
+> que você mande com `@caminho` (igual às outras três) para eu trocar o resto
+> da galeria.
 
 ### Por que fechar a varanda
 
@@ -246,8 +245,8 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.galeria.eyebrow]` → Instalações executadas
 - `[cortina.galeria.titulo]` → Cada vão, medido e executado pela VETRA.
 
-(5 fotos provisórias da categoria Cortina de Vidro — mesmas de `solutions.ts`.
-Trocar pelas 6 fotos novas quando chegarem em JPEG.)
+(2 fotos reais — Ana Amélia Boulevard e Unique Meireles — + 3 provisórias da
+categoria Cortina de Vidro, mesmas de `solutions.ts`, até o resto chegar.)
 
 ### Fechamento
 

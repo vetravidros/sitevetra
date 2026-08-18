@@ -54,6 +54,13 @@ export const IMAGES = [
     src: `${HERO_DIR}arqvetra-hero.png`, // 1672x941 — não gera 1920/2560
     widths: HERO_WIDTHS,
   },
+  {
+    // Fundo do hero da /cortina-de-vidro. Varanda fechada com mesa posta,
+    // foto vertical de celular — o object-cover corta as laterais no fill.
+    out: 'cortina-vidro-hero',
+    src: `${HERO_DIR}cortina-vidro-reserva-parque.jpg`, // 2268x4032
+    widths: HERO_WIDTHS,
+  },
 
   // ------------------------------------- envidraçamento / cortina de vidro
   { out: 'guararapes-01', src: 'Cortina de Vidro/4206F896-AF5E-407E-BB75-AAF34945530F_1_102_o.jpeg' }, // 1536x2048
@@ -61,6 +68,11 @@ export const IMAGES = [
   { out: 'beira-mar-01', src: 'Cortina de Vidro/BD36A8B3-290B-45A9-B149-E83419C107A9_1_102_o.jpeg' }, // 1536x2048
   { out: 'beira-mar-02', src: 'Cortina de Vidro/CAC6B426-6A34-4BDE-BE49-1A1FC2BD0541_1_102_o.jpeg' }, // 1536x2048
   { out: 'beira-mar-03', src: 'Cortina de Vidro/9D0BF133-887C-42FE-8D98-36651C87CD0D.jpeg' }, // 1080x1080
+
+  // Galeria da /cortina-de-vidro — fotos enviadas pelo André das obras
+  // Reserva do Parque, Ana Amélia Boulevard e Unique Meireles.
+  { out: 'cortina-vidro-ana-amelia', src: `${HERO_DIR}cortina-vidro-ana-amelia.jpg` }, // 3024x4032
+  { out: 'cortina-vidro-unique-meireles', src: `${HERO_DIR}cortina-vidro-unique-meireles.jpg` }, // 3213x5712
 
   // -------------------------------------------- slide door / divisórias
   { out: 'aldeota-01', src: 'Slide Door/9D37763B-A1FE-4C8E-A7D0-348EC3A055B0.jpeg' }, // 1200x1600

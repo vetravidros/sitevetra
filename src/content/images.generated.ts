@@ -34,6 +34,16 @@ export const IMAGE_META = {
       1440
     ]
   },
+  "cortina-vidro-hero": {
+    "w": 1920,
+    "h": 3413,
+    "widths": [
+      640,
+      1024,
+      1440,
+      1920
+    ]
+  },
   "guararapes-01": {
     "w": 1200,
     "h": 1600,
@@ -76,6 +86,26 @@ export const IMAGE_META = {
     "widths": [
       480,
       800
+    ]
+  },
+  "cortina-vidro-ana-amelia": {
+    "w": 1600,
+    "h": 2133,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "cortina-vidro-unique-meireles": {
+    "w": 1600,
+    "h": 2844,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
     ]
   },
   "aldeota-01": {

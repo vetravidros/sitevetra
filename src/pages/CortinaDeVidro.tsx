@@ -36,19 +36,19 @@ const sistema = [
 ]
 
 /**
- * Galeria provisória com fotos já publicadas da categoria Cortina de Vidro
- * (mesmas de `solutions.ts`/portfólio). Trocar pelas 6 fotos novas assim que
- * elas forem convertidas para JPEG e passarem por `npm run assets` — ver
- * nota em `scripts/assets.manifest.mjs`.
+ * 3 das 6 fotos que o André mandou já entraram (Reserva do Parque, Ana
+ * Amélia Boulevard, Unique Meireles). As outras 3 vieram coladas direto na
+ * mensagem, sem caminho de arquivo — ainda não dá para copiar pro pipeline.
+ * Preenchendo com fotos já publicadas da categoria até elas chegarem.
  */
 const galeria = [
   {
-    name: 'guararapes-01' as const,
-    alt: 'Varanda envidraçada em Fortaleza com cortina de vidro fechada, vista para a cidade',
+    name: 'cortina-vidro-ana-amelia' as const,
+    alt: 'Varanda curva fechada com cortina de vidro, vista panorâmica para os prédios de Fortaleza',
   },
   {
-    name: 'guararapes-02' as const,
-    alt: 'Varanda envidraçada em andar alto com vista para área verde e para os prédios de Fortaleza',
+    name: 'cortina-vidro-unique-meireles' as const,
+    alt: 'Varanda fechada com cortina de vidro e tela de proteção, vista para os prédios do bairro Meireles',
   },
   {
     name: 'beira-mar-01' as const,
@@ -78,8 +78,8 @@ export default function CortinaDeVidro() {
           `ink`, nunca em navy (navy tinge a foto de azul). */}
       <section className="relative overflow-hidden bg-ink py-20 text-white md:py-28">
         <Picture
-          name="solucao-fachadas"
-          alt="Varanda envidraçada em Fortaleza com vista para piscina e coqueiros, painéis de vidro recolhidos na lateral"
+          name="cortina-vidro-hero"
+          alt="Varanda fechada com cortina de vidro, mesa posta e vista para os prédios de Fortaleza"
           fill
           priority
           sizes="100vw"
