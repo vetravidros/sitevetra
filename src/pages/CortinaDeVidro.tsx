@@ -103,7 +103,7 @@ export default function CortinaDeVidro() {
           <Rule className="mt-5" />
           <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white">
             Feche a sacada. Não feche a vista.
-            <span className="block font-normal">Cortina de vidro sob medida, vão livre.</span>
+            <span className="block font-normal">Cortina de vidro sob medida.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lede text-white">
             Envidraçamento de varanda e sacada com vão livre e perfil mínimo — o

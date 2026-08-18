@@ -200,7 +200,7 @@ entrou no menu principal, entre Projetos e Arquitetos.
 
 - `[cortina.hero.eyebrow]` → Cortina de Vidro — VETRA Soluções em Vidros
 - `[cortina.hero.h1.linha1]` → Feche a sacada. Não feche a vista.
-- `[cortina.hero.h1.linha2]` → Cortina de vidro sob medida, vão livre.
+- `[cortina.hero.h1.linha2]` → Cortina de vidro sob medida.
 - `[cortina.hero.lede]` → Envidraçamento de varanda e sacada com vão livre e perfil mínimo — o vidro assume o lugar da parede, sem tirar a vista que você paga caro para ter.
 - `[cortina.hero.cta]` → Pedir orçamento
 - `[cortina.hero.msg-whatsapp]` (mensagem pré-preenchida) → Olá, VETRA. Quero orçamento de cortina de vidro para minha varanda/sacada.
