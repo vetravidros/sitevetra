@@ -106,9 +106,11 @@ export default function CortinaDeVidro() {
             <span className="block font-normal">Cortina de vidro sob medida.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lede text-white">
-            Envidraçamento de varanda e sacada com vão livre e perfil mínimo — o
-            vidro assume o lugar da parede, sem tirar a vista que você paga caro
-            para ter.
+            Cortina de vidro premium em Fortaleza.
+            <span className="block">
+              Medição, fabricação e instalação com materiais e execução do
+              serviço de alta qualidade.
+            </span>
           </p>
           <div className="mt-10">
             <CTA
