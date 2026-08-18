@@ -108,6 +108,25 @@ export const IMAGE_META = {
       1600
     ]
   },
+  "cortina-vidro-portal-de-malaga": {
+    "w": 1600,
+    "h": 2133,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "cortina-vidro-manhattan-beach": {
+    "w": 1200,
+    "h": 1600,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
   "aldeota-01": {
     "w": 1200,
     "h": 1600,

@@ -35,12 +35,7 @@ const sistema = [
   'Manutenção praticamente inexistente: sem rolamento para desgastar.',
 ]
 
-/**
- * 3 das 6 fotos que o André mandou já entraram (Reserva do Parque, Ana
- * Amélia Boulevard, Unique Meireles). As outras 3 vieram coladas direto na
- * mensagem, sem caminho de arquivo — ainda não dá para copiar pro pipeline.
- * Preenchendo com fotos já publicadas da categoria até elas chegarem.
- */
+/** Fotos das obras que o André mandou para a página. */
 const galeria = [
   {
     name: 'cortina-vidro-ana-amelia' as const,
@@ -51,16 +46,20 @@ const galeria = [
     alt: 'Varanda fechada com cortina de vidro e tela de proteção, vista para os prédios do bairro Meireles',
   },
   {
+    name: 'cortina-vidro-portal-de-malaga' as const,
+    alt: 'Varanda fechada com cortina de vidro em corredor longo, vista para prédios e área verde',
+  },
+  {
+    name: 'cortina-vidro-manhattan-beach' as const,
+    alt: 'Varanda fechada com cortina de vidro sob cobertura de palha, vista para piscina de condomínio',
+  },
+  {
     name: 'beira-mar-01' as const,
     alt: 'Sacada fechada com cortina de vidro de piso a teto, vista para a orla de Fortaleza',
   },
   {
     name: 'beira-mar-02' as const,
     alt: 'Cortina de vidro recolhida lateralmente em varanda com vista para o mar',
-  },
-  {
-    name: 'beira-mar-03' as const,
-    alt: 'Detalhe de painéis de vidro de cortina de varanda com perfil mínimo',
   },
 ]
 

@@ -206,11 +206,9 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.hero.msg-whatsapp]` (mensagem pré-preenchida) → Olá, VETRA. Quero orçamento de cortina de vidro para minha varanda/sacada.
 - `[cortina.hero.alt]` `ALT` → Varanda fechada com cortina de vidro, mesa posta e vista para os prédios de Fortaleza
 
-> Foto: obra Reserva do Parque, uma das 6 que você mandou. As outras 5:
-> 2 já entraram na galeria (Ana Amélia Boulevard e Unique Meireles); as 3
-> coladas direto na mensagem eu só consigo ver, não tenho o arquivo — preciso
-> que você mande com `@caminho` (igual às outras três) para eu trocar o resto
-> da galeria.
+> Foto: obra Reserva do Parque. As outras 4 fotos reais que você mandou
+> entraram na galeria (Ana Amélia Boulevard, Unique Meireles, Portal de
+> Malaga e Manhattan Beach Riviera).
 
 ### Por que fechar a varanda
 
@@ -245,8 +243,9 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.galeria.eyebrow]` → Instalações executadas
 - `[cortina.galeria.titulo]` → Cada vão, medido e executado pela VETRA.
 
-(2 fotos reais — Ana Amélia Boulevard e Unique Meireles — + 3 provisórias da
-categoria Cortina de Vidro, mesmas de `solutions.ts`, até o resto chegar.)
+(6 fotos: 4 reais das obras Ana Amélia Boulevard, Unique Meireles, Portal de
+Malaga e Manhattan Beach Riviera — + 2 provisórias da categoria Cortina de
+Vidro, mesmas de `solutions.ts`.)
 
 ### Fechamento
 

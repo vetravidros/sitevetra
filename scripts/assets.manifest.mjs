@@ -70,9 +70,12 @@ export const IMAGES = [
   { out: 'beira-mar-03', src: 'Cortina de Vidro/9D0BF133-887C-42FE-8D98-36651C87CD0D.jpeg' }, // 1080x1080
 
   // Galeria da /cortina-de-vidro — fotos enviadas pelo André das obras
-  // Reserva do Parque, Ana Amélia Boulevard e Unique Meireles.
+  // Reserva do Parque, Ana Amélia Boulevard, Unique Meireles, Portal de
+  // Malaga e Manhattan Beach Riviera.
   { out: 'cortina-vidro-ana-amelia', src: `${HERO_DIR}cortina-vidro-ana-amelia.jpg` }, // 3024x4032
   { out: 'cortina-vidro-unique-meireles', src: `${HERO_DIR}cortina-vidro-unique-meireles.jpg` }, // 3213x5712
+  { out: 'cortina-vidro-portal-de-malaga', src: `${HERO_DIR}cortina-vidro-portal-de-malaga.jpg` }, // 3024x4032
+  { out: 'cortina-vidro-manhattan-beach', src: `${HERO_DIR}cortina-vidro-manhattan-beach.jpg` }, // 1536x2048
 
   // -------------------------------------------- slide door / divisórias
   { out: 'aldeota-01', src: 'Slide Door/9D37763B-A1FE-4C8E-A7D0-348EC3A055B0.jpeg' }, // 1200x1600
