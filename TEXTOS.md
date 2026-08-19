@@ -218,7 +218,16 @@ entrou no menu principal, entre Projetos e Arquitetos.
 >
 > Você mandou mais 2 fotos (Ana Amélia Boulevard 2ª foto, Maison de la
 > Musique) para entrar no carrossel — o HEIC dessas duas não abriu em nenhuma
-> ferramenta daqui. Peço reenvio em JPEG para completar.
+> ferramenta daqui. Peço reenvio em JPEG para completar. Mais 4 fotos vieram
+> coladas direto na mensagem, sem arquivo acessível — mesmo pedido de
+> reenvio.
+>
+> Fotos "esbranquiçadas" (18/08/2026) — não era o véu (véu só escurece).
+> Fotos de celular contraluz saem com neblina/estouro real, sem informação
+> pra recuperar no céu. Apliquei filtro de contraste+saturação na própria
+> foto (`contrast(1.35) saturate(1.4) brightness(0.94)`, em
+> `CortinaDeVidro.tsx`) — ajuda bastante onde tem detalhe (prédio, vegetação,
+> nuvem com textura), não resolve céu totalmente estourado.
 
 ### Por que fechar a varanda
 

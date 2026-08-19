@@ -18,10 +18,14 @@ export function HeroCarousel({
   slides,
   sizes,
   intervalMs = 5000,
+  imgClassName = '',
 }: {
   slides: Slide[]
   sizes: string
   intervalMs?: number
+  /** Extra classes aplicadas em toda foto do carrossel — ex.: filtro de
+      contraste/saturação para fotos de celular estouradas/embaçadas de sol. */
+  imgClassName?: string
 }) {
   const [index, setIndex] = useState(0)
 
@@ -47,7 +51,7 @@ export function HeroCarousel({
           fill
           priority={i === 0}
           sizes={sizes}
-          imgClassName={`transition-opacity duration-1000 ease-glass ${
+          imgClassName={`transition-opacity duration-1000 ease-glass ${imgClassName} ${
             i === index ? 'opacity-100' : 'opacity-0'
           }`}
         />

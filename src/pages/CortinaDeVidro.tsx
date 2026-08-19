@@ -275,6 +275,11 @@ export default function CortinaDeVidro() {
             },
           ]}
           sizes="100vw"
+          // As fotos são de celular, contraluz forte — o resultado sai meio
+          // embaçado/estourado (o André chamou de "esbranquiçadas"). Véu não
+          // resolve isso (só escurece); contraste + saturação é que corta a
+          // neblina e faz a cor voltar.
+          imgClassName="contrast-[1.35] saturate-[1.4] brightness-[0.94]"
         />
 
         <div
