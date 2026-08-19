@@ -285,19 +285,27 @@ export default function CortinaDeVidro() {
 
         {/* Sem véu nenhum sobre a foto — o André pediu a imagem limpa, sem
             nenhum efeito de escurecimento por cima. Legibilidade do texto
-            vem só da sombra projetada (drop-shadow), não de escurecer a
-            cena. */}
+            vem só de sombra no texto, não de escurecer a cena.
+            `text-shadow` em camadas, não `drop-shadow` único: uma sombra
+            fechada (pouco blur) desenha um contorno nítido que separa a
+            letra de fundo cheio de linha (grade da varanda, esquadria);
+            camadas maiores por trás dão profundidade sem depender só do
+            blur, que sozinho lia como um halo fraco sobre fundo cheio de
+            detalhe. */}
 
         <div className="container-vetra relative">
-          <Eyebrow tone="photo" className="drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+          <Eyebrow
+            tone="photo"
+            className="[text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_2px_8px_rgba(0,0,0,0.85)]"
+          >
             Cortina de Vidro — VETRA Soluções em Vidros
           </Eyebrow>
           <Rule className="mt-5" />
-          <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
+          <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.95),0_4px_14px_rgba(0,0,0,0.85),0_10px_36px_rgba(0,0,0,0.7)]">
             Feche a sacada. Não feche a vista.
             <span className="block font-normal">Cortina de vidro sob medida.</span>
           </h1>
-          <p className="mt-8 max-w-2xl text-lede text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+          <p className="mt-8 max-w-2xl text-lede text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_3px_10px_rgba(0,0,0,0.8)]">
             Cortina de vidro premium em Fortaleza.
             <span className="block">
               Medição, fabricação e instalação com materiais e execução do
