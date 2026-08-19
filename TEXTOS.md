@@ -205,29 +205,24 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.hero.lede.linha2]` → Medição, fabricação e instalação com materiais e execução do serviço de alta qualidade.
 - `[cortina.hero.cta]` → Pedir orçamento
 - `[cortina.hero.msg-whatsapp]` (mensagem pré-preenchida) → Olá, VETRA. Quero orçamento de cortina de vidro para minha varanda/sacada.
-- `[cortina.hero.alt]` `ALT` → Varanda fechada com cortina de vidro, mesa posta e vista para os prédios de Fortaleza
+- `[cortina.hero.alt]` `ALT` → Varanda fechada com cortina de vidro sob cobertura de palha, vista para piscina de condomínio
 
-> Foto: obra Reserva do Parque. As outras 4 fotos reais que você mandou
-> entraram na galeria (Ana Amélia Boulevard, Unique Meireles, Portal de
-> Malaga e Manhattan Beach Riviera).
+> Foto: obra Manhattan Beach Riviera. **É a única foto no hero agora**
+> (18/08/2026) — sem carrossel, porque as outras 4 (Reserva do Parque, Ana
+> Amélia, Unique Meireles, Portal de Malaga) foram fotografadas contra a luz,
+> através do vidro, olhando pro céu aberto: o resultado é neblina/véu óptico
+> real no arquivo, não uma questão de cor fraca que CSS resolva. Testei até
+> `contrast(2.2) saturate(1.8) brightness(0.7)` (bem mais forte que o normal)
+> e o céu continuou raso — quando a informação de contraste não está no
+> arquivo, não tem o que puxar de volta.
 >
-> Véu do hero reduzido (18/08/2026) — medi o contraste real do texto sobre a
-> foto: o pior ponto ficou em 8.08:1 (H1 precisa de só 3:1), o resto entre
-> 9.5 e 13.8:1. Sobra folga se a foto trocar, mas se alguma foto nova entrar
-> muito mais clara vale medir de novo.
+> As 4 continuam na galeria (mais abaixo, em miniatura o problema incomoda
+> menos) e voltam ao carrossel do hero se/quando você mandar fotos sem esse
+> problema — é só adicionar ao array em `CortinaDeVidro.tsx`.
 >
-> Você mandou mais 2 fotos (Ana Amélia Boulevard 2ª foto, Maison de la
-> Musique) para entrar no carrossel — o HEIC dessas duas não abriu em nenhuma
-> ferramenta daqui. Peço reenvio em JPEG para completar. Mais 4 fotos vieram
-> coladas direto na mensagem, sem arquivo acessível — mesmo pedido de
-> reenvio.
->
-> Fotos "esbranquiçadas" (18/08/2026) — não era o véu (véu só escurece).
-> Fotos de celular contraluz saem com neblina/estouro real, sem informação
-> pra recuperar no céu. Apliquei filtro de contraste+saturação na própria
-> foto (`contrast(1.35) saturate(1.4) brightness(0.94)`, em
-> `CortinaDeVidro.tsx`) — ajuda bastante onde tem detalhe (prédio, vegetação,
-> nuvem com textura), não resolve céu totalmente estourado.
+> Ainda faltam: 2 fotos (Ana Amélia 2ª, Maison de la Musique) com HEIC que
+> não abre em nenhuma ferramenta daqui — peço reenvio em JPEG — e mais 4
+> coladas direto na mensagem, sem arquivo acessível.
 
 ### Por que fechar a varanda
 

@@ -251,35 +251,23 @@ export default function CortinaDeVidro() {
           um véu a menos (tirei o flat ink/50) deixa a cena mais visível fora
           da coluna de texto. */}
       <section className="relative min-h-[560px] overflow-hidden bg-ink py-24 text-white md:min-h-[680px] md:py-32">
+        {/* Só 1 foto por enquanto: as outras 4 (Reserva do Parque, Ana
+            Amélia, Unique Meireles, Portal de Malaga) foram fotografadas
+            contra a luz, através do vidro, olhando pro céu aberto — o
+            resultado é neblina/véu óptico real no arquivo. Contraste e
+            saturação em CSS redistribuem o que já existe na foto; quando o
+            arquivo não tem informação de contraste ali (testei até
+            contrast(2.2) saturate(1.8) brightness(0.7) sem recuperar o céu),
+            não tem o que puxar de volta. Voltam ao carrossel quando fotos
+            novas sem esse problema chegarem — é só adicionar ao array. */}
         <HeroCarousel
           slides={[
-            {
-              name: 'cortina-vidro-hero',
-              alt: 'Varanda fechada com cortina de vidro, mesa posta e vista para os prédios de Fortaleza',
-            },
-            {
-              name: 'cortina-vidro-ana-amelia',
-              alt: 'Varanda curva fechada com cortina de vidro, vista panorâmica para os prédios de Fortaleza',
-            },
-            {
-              name: 'cortina-vidro-unique-meireles',
-              alt: 'Varanda fechada com cortina de vidro e tela de proteção, vista para os prédios do bairro Meireles',
-            },
-            {
-              name: 'cortina-vidro-portal-de-malaga',
-              alt: 'Varanda fechada com cortina de vidro em corredor longo, vista para prédios e área verde',
-            },
             {
               name: 'cortina-vidro-manhattan-beach',
               alt: 'Varanda fechada com cortina de vidro sob cobertura de palha, vista para piscina de condomínio',
             },
           ]}
           sizes="100vw"
-          // As fotos são de celular, contraluz forte — o resultado sai meio
-          // embaçado/estourado (o André chamou de "esbranquiçadas"). Véu não
-          // resolve isso (só escurece); contraste + saturação é que corta a
-          // neblina e faz a cor voltar.
-          imgClassName="contrast-[1.35] saturate-[1.4] brightness-[0.94]"
         />
 
         <div
