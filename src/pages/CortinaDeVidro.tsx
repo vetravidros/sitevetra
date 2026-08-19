@@ -2,7 +2,7 @@ import type { SVGProps } from 'react'
 import { CTA, WhatsAppGlyph } from '@/components/CTA'
 import { HeroCarousel } from '@/components/HeroCarousel'
 import { Picture } from '@/components/Picture'
-import { Seo } from '@/components/Seo'
+import { JsonLd, Seo } from '@/components/Seo'
 import { Eyebrow, Rule, Section, SectionHead } from '@/components/ui'
 import { site } from '@/content/site'
 
@@ -164,7 +164,7 @@ const processo = [
   {
     n: '03',
     title: 'Produção com qualidade',
-    text: 'Materiais de alta qualidade e precisão milimétrica na fabricação.',
+    text: 'Vidro temperado ou laminado de 8, 10 ou 12mm e perfis de alumínio com precisão milimétrica na fabricação.',
   },
   {
     n: '04',
@@ -174,7 +174,7 @@ const processo = [
   {
     n: '05',
     title: 'Entrega com garantia',
-    text: 'Suporte pós-venda depois da instalação concluída.',
+    text: 'Garantia de 7 anos do fabricante nos trilhos do sistema, mais 24 meses de garantia da própria VETRA sobre a instalação.',
   },
 ]
 
@@ -234,13 +234,53 @@ const galeria = [
   },
 ]
 
+const faq = [
+  {
+    pergunta: 'Quanto tempo leva a instalação de uma cortina de vidro?',
+    resposta:
+      'O prazo varia conforme o tamanho do vão e a linha do sistema. Após a medição técnica, a VETRA informa o prazo exato de fabricação e instalação para o seu projeto.',
+  },
+  {
+    pergunta: 'Precisa fazer obra ou alvenaria para instalar?',
+    resposta:
+      'Não. O sistema é fixado diretamente na estrutura existente da varanda, sem necessidade de obra civil ou reforço estrutural na maioria dos casos.',
+  },
+  {
+    pergunta: 'Funciona em varandas curvas ou com formato irregular?',
+    resposta:
+      'Sim. O sistema se adapta a vãos curvos e formatos variados — a VETRA faz a medição técnica no local para confirmar o dimensionamento exato de cada painel.',
+  },
+  {
+    pergunta: 'Qual a garantia da cortina de vidro?',
+    resposta:
+      'Garantia de 7 anos do fabricante sobre os trilhos do sistema, mais 24 meses de garantia da VETRA sobre a instalação e regulagem.',
+  },
+  {
+    pergunta: 'O vidro embaça, risca ou perde a vedação com o tempo?',
+    resposta:
+      'O sistema usa vidro temperado de segurança com vedação em silicone que não resseca. A manutenção recomendada é simples: limpeza periódica dos trilhos e aplicação de silicone spray na pista de deslizamento.',
+  },
+]
+
 export default function CortinaDeVidro() {
   return (
     <>
       <Seo
         path="/cortina-de-vidro"
         title="Cortina de Vidro para Varanda em Fortaleza"
+        titleOverride="Cortina de Vidro para Varanda em Fortaleza | VETRA Soluções em Vidros"
         description="Cortina de vidro sob medida para fechar sacada e varanda em Fortaleza. Sistema sem roldanas aparentes, vedação técnica e instalação executada pela VETRA. Peça seu orçamento."
+      />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faq.map((f) => ({
+            '@type': 'Question',
+            name: f.pergunta,
+            acceptedAnswer: { '@type': 'Answer', text: f.resposta },
+          })),
+        }}
       />
 
       {/* ------------------------------------------------------------- hero
@@ -323,6 +363,20 @@ export default function CortinaDeVidro() {
           </div>
         </div>
       </section>
+
+      {/* ------------------------------------------------- onde atendemos
+          Bairros-alvo da campanha de tráfego pago (Google Ads) — SEO local.
+          Mesmo estilo de texto do parágrafo de atendimento no fechamento da
+          página, só que logo abaixo do hero. */}
+      <Section className="py-10 md:py-12">
+        <Eyebrow>Onde atendemos</Eyebrow>
+        <p className="mt-4 max-w-3xl text-lede text-ink/60">
+          Presença ativa nos principais bairros verticalizados de Fortaleza:
+          Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes e com
+          atendimento também em Eusébio e Aquiraz, para projetos
+          residenciais e condomínios de alto padrão.
+        </p>
+      </Section>
 
       {/* ------------------------------------------------- por que fechar */}
       <Section>
@@ -445,6 +499,35 @@ export default function CortinaDeVidro() {
           Imóveis com varanda fechada e bem aproveitada tendem a se destacar
           no anúncio e vender com mais agilidade.
         </p>
+      </Section>
+
+      {/* --------------------------------------------------------- faq
+          <details>/<summary> nativo: sem componente de accordion no projeto,
+          e isso dá o comportamento (abre/fecha, 1 por vez não é obrigatório)
+          sem JS nem dependência nova. O texto de cada resposta já está no
+          HTML estático mesmo fechado — bom pra SEO e pra leitura por IA,
+          que é o motivo do FAQPage JSON-LD logo no topo do arquivo. */}
+      <Section tone="mist">
+        <SectionHead
+          eyebrow="Antes de pedir o orçamento"
+          title="Perguntas frequentes sobre cortina de vidro."
+        />
+        <div className="mt-12 max-w-3xl divide-y divide-ink/10 border-t border-ink/10">
+          {faq.map((f) => (
+            <details key={f.pergunta} className="group py-6">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-heading font-medium text-balance marker:content-none">
+                {f.pergunta}
+                <span
+                  className="shrink-0 text-title font-light text-navy transition-transform duration-300 ease-glass group-open:rotate-45"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+              </summary>
+              <p className="mt-4 max-w-2xl text-ink/60">{f.resposta}</p>
+            </details>
+          ))}
+        </div>
       </Section>
 
       {/* --------------------------------------------------------- fechamento */}

@@ -6,7 +6,7 @@
 > [TEXTOS.md](TEXTOS.md), seção 4. Este arquivo é o "porquê" por trás do que
 > está lá.
 >
-> **Sincronizado com o commit `9f8d0e6` (18/08/2026).**
+> **Sincronizado com o commit `24cf7f0` (19/08/2026).**
 
 ---
 
@@ -32,12 +32,14 @@ Criada em `6cafd83` (16/08/2026), evoluída em mais 7 commits desde então.
 ## 2. Estrutura da página (ordem real, de cima para baixo)
 
 1. **Hero** — carrossel de fotos, H1 + lede + CTA
-2. **Por que fechar a varanda** — 3 blocos (conforto, espaço, silêncio)
-3. **O sistema** — 6 características técnicas com ícone
-4. **Como funciona** — processo em 5 passos
-5. **Galeria** — 6 fotos de obras executadas
-6. **Valorização do imóvel** — 5 benefícios com ícone + fechamento qualitativo
-7. **Fechamento** — CTA final de WhatsApp
+2. **Onde atendemos** — linha de texto com os bairros-alvo da campanha (nova, 19/08/2026)
+3. **Por que fechar a varanda** — 3 blocos (conforto, espaço, silêncio)
+4. **O sistema** — 6 características técnicas com ícone
+5. **Como funciona** — processo em 5 passos
+6. **Galeria** — 6 fotos de obras executadas
+7. **Valorização do imóvel** — 5 benefícios com ícone + fechamento qualitativo
+8. **Perguntas frequentes** — accordion de 5 perguntas + JSON-LD `FAQPage` (nova, 19/08/2026)
+9. **Fechamento** — CTA final de WhatsApp
 
 ---
 
@@ -182,19 +184,77 @@ fotos reais chegarem.
 
 ---
 
-## 9. Histórico de commits desta página
+## 9. Preparação para campanha paga (Google Ads) — 19/08/2026
+
+O André pediu ajustes de conteúdo/SEO para a campanha de tráfego pago que
+começa essa semana, com uma lista explícita do que **não** podia mudar:
+links de WhatsApp e UTMs, cores da marca, tipografia, tom de voz do hero.
+Tudo abaixo é só texto/metadado, sem tocar em layout ou componentes visuais
+existentes.
+
+- **Title tag** — tinha "Fortaleza" duas vezes ("...em Fortaleza ·
+  VETRA Soluções em Vidros · Fortaleza"). A causa não estava nesta página:
+  o componente [`Seo.tsx`](src/components/Seo.tsx) sempre completa o título
+  com `· {marca} · Fortaleza` para toda página que não é a home — e o
+  `title` desta página já dizia "Fortaleza". Criei um campo novo e opcional,
+  `titleOverride`, que substitui esse comportamento só quando presente;
+  nenhuma outra página do site foi afetada (conferido no HTML gerado das 4
+  páginas restantes). Agora o title, og:title e twitter:title saem como
+  "Cortina de Vidro para Varanda em Fortaleza | VETRA Soluções em Vidros".
+- **"Onde atendemos"** — linha nova logo abaixo do hero, com os bairros que
+  a campanha está mirando (Aldeota, Meireles, Cocó, Dionísio Torres,
+  Guararapes, Eusébio, Aquiraz). Texto visível (não em alt de imagem),
+  pedido explícito do André.
+- **Prova concreta** — trocou linguagem genérica por especificação real:
+  "materiais de alta qualidade" virou "vidro temperado ou laminado de 8, 10
+  ou 12mm e perfis de alumínio"; "suporte pós-venda" virou "garantia de 7
+  anos do fabricante nos trilhos + 24 meses de garantia da VETRA sobre a
+  instalação". Diferente das promessas suavizadas antes nesta página
+  (Instituto Falcão Bauer, valorização de imóvel), esses dois números vieram
+  prontos do André como dado da própria empresa — não inferidos de material
+  de terceiro. Ainda são promessa pública de garantia, então ficaram
+  marcadas `⚠︎` no TEXTOS.md do mesmo jeito.
+- **FAQ** — seção nova com 5 perguntas, entre "Além do conforto" e o
+  fechamento. Sem componente de accordion no projeto — usei `<details>` /
+  `<summary>` nativo do HTML (sem JS, sem dependência nova, texto de cada
+  resposta presente no HTML mesmo fechado). Cada resposta também vai como
+  JSON-LD `FAQPage` no `<head>`, seguindo o mesmo padrão de
+  `<JsonLd data={...} />` já usado em `ProjetoDetalhe.tsx` (breadcrumb) e no
+  `Layout.tsx` (LocalBusiness, presente em toda página).
+- **Checagem de performance** — ver §8 acima (pipeline de imagens) e a nota
+  de LCP abaixo. Resumo: a 1ª foto do carrossel (Manhattan Beach) carrega
+  `loading="eager" fetchpriority="high"`; as outras 4 saem
+  `loading="lazy"` — na prática, como todas as 5 ficam dentro da área do
+  hero (só a ativa em `opacity-100`), o navegador provavelmente busca as 5
+  cedo de qualquer forma (o atributo `lazy` decide por interseção com a
+  viewport, não por opacidade CSS), mas a prioridade de rede
+  (`fetchpriority`) ainda garante que a foto do LCP não disputa banda com as
+  outras 4. AVIF/WebP com fallback JPEG já geradas para todas; nenhum
+  formato não-otimizado em uso. Nenhum ajuste de código feito aqui — é
+  reporte, não correção, como pedido.
+
+---
+
+## 10. Histórico de commits desta página
 
 ```
+24cf7f0 Troca drop-shadow único por text-shadow em camadas no hero de Cortina de Vidro
+751a269 Corrige o bug real da mancha esbranquiçada no hero: opacidade no wrapper
+cffd9a2 Volta o carrossel do hero em Cortina de Vidro com 5 fotos boas
+80dd529 Tira as 4 fotos com neblina óptica do hero de Cortina de Vidro
+67ea19b Remove o glass-stripes do hero em Cortina de Vidro
+fbaa7b0 Aplica filtro de contraste/saturação nas fotos do hero em Cortina de Vidro
+f49a2f8 Cria dossiê da página Cortina de Vidro
+92959b9 Completa a galeria de Cortina de Vidro com 6 fotos, 4 delas reais
 9f8d0e6 Reduz o véu do hero em Cortina de Vidro, foto mais visível
 79e494e Adiciona seções de sistema, processo e valorização em Cortina de Vidro
 93721d2 Adiciona carrossel automático nos heroes da Home e da Cortina de Vidro
 b6bf1f9 Troca o lede do hero em Cortina de Vidro
 fa34c92 Tira "vão livre" da segunda linha do H1 em Cortina de Vidro
-92959b9 Completa a galeria de Cortina de Vidro com 6 fotos, 4 delas reais
 842daff Corrige a rotação duplicada de 2 fotos da galeria Cortina de Vidro
 d6bf994 Troca as fotos do hero e de 2 cards da galeria em Cortina de Vidro
 6cafd83 Cria a página Cortina de Vidro para tráfego pago
 ```
 
 Para conferir se este dossiê está desatualizado:
-`git log --oneline 9f8d0e6..HEAD -- src/pages/CortinaDeVidro.tsx`.
+`git log --oneline 24cf7f0..HEAD -- src/pages/CortinaDeVidro.tsx`.

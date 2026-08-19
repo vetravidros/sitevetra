@@ -11,6 +11,13 @@ type Props = {
   type?: 'website' | 'article'
   /** true nas páginas que não devem indexar (ex.: 404). */
   noindex?: boolean
+  /**
+   * Usa esta string como <title>/og:title/twitter:title exatamente como
+   * veio, sem o sufixo automático " · {legalName} · Fortaleza". Existe para
+   * páginas cujo `title` já menciona a cidade — o sufixo padrão duplicaria
+   * "Fortaleza" (ver /cortina-de-vidro, página de tráfego pago).
+   */
+  titleOverride?: string
   children?: React.ReactNode
 }
 
@@ -21,12 +28,13 @@ export function Seo({
   image = '/og-vetra.png',
   type = 'website',
   noindex = false,
+  titleOverride,
   children,
 }: Props) {
   // canonical precisa bater exatamente com a URL listada no sitemap
   const url = path === '/' ? `${site.url}/` : `${site.url}${path}`
   const fullTitle =
-    path === '/' ? title : `${title} · ${site.legalName} · Fortaleza`
+    titleOverride ?? (path === '/' ? title : `${title} · ${site.legalName} · Fortaleza`)
   const imageUrl = `${site.url}${image}`
 
   return (

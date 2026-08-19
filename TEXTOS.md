@@ -193,8 +193,17 @@ entrou no menu principal, entre Projetos e Arquitetos.
 
 ### SEO
 
-- `[cortina.seo.title]` `SEO` → Cortina de Vidro para Varanda em Fortaleza
+- `[cortina.seo.title]` `SEO` → Cortina de Vidro para Varanda em Fortaleza | VETRA Soluções em Vidros
 - `[cortina.seo.description]` `SEO` → Cortina de vidro sob medida para fechar sacada e varanda em Fortaleza. Sistema sem roldanas aparentes, vedação técnica e instalação executada pela VETRA. Peça seu orçamento.
+
+> Título ajustado (19/08/2026) para a campanha de tráfego pago que começa
+> essa semana: era "...em Fortaleza · VETRA Soluções em Vidros · Fortaleza"
+> (Fortaleza duas vezes — o `Seo.tsx` sempre completa o título com
+> "· {marca} · Fortaleza", e essa página já dizia "Fortaleza" no título
+> próprio). Essa é a única página do site que precisa do título por
+> extenso, sem o complemento automático — usei um campo novo,
+> `titleOverride`, que só entra em ação quando presente; as outras páginas
+> não mudam.
 
 ### Topo (sobre a foto)
 
@@ -246,6 +255,14 @@ entrou no menu principal, entre Projetos e Arquitetos.
 > aplica a sombra) — se algum texto ficar difícil de ler sobre alguma foto
 > nova especialmente clara, é a sombra que precisa reforçar, não um véu.
 
+### Onde atendemos (faixa logo abaixo do hero)
+
+- `[cortina.onde.eyebrow]` → Onde atendemos
+- `[cortina.onde.texto]` → Presença ativa nos principais bairros verticalizados de Fortaleza: Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes e com atendimento também em Eusébio e Aquiraz, para projetos residenciais e condomínios de alto padrão.
+
+> Seção nova (19/08/2026), pedida para a campanha de tráfego pago — SEO
+> local, mira os bairros que o Google Ads está direcionando.
+
 ### Por que fechar a varanda
 
 - `[cortina.motivo.eyebrow]` → Por que fechar a varanda
@@ -292,11 +309,18 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.como.2.titulo]` → Projeto personalizado
 - `[cortina.como.2.texto]` → Layout sob medida que une estética e funcionalidade ao ambiente.
 - `[cortina.como.3.titulo]` → Produção com qualidade
-- `[cortina.como.3.texto]` → Materiais de alta qualidade e precisão milimétrica na fabricação.
+- `[cortina.como.3.texto]` → Vidro temperado ou laminado de 8, 10 ou 12mm e perfis de alumínio com precisão milimétrica na fabricação.
 - `[cortina.como.4.titulo]` → Instalação limpa e rápida
 - `[cortina.como.4.texto]` → Execução que respeita o prazo combinado e o ambiente da sua casa.
 - `[cortina.como.5.titulo]` → Entrega com garantia
-- `[cortina.como.5.texto]` → Suporte pós-venda depois da instalação concluída.
+- `[cortina.como.5.texto]` `⚠︎` → Garantia de 7 anos do fabricante nos trilhos do sistema, mais 24 meses de garantia da própria VETRA sobre a instalação.
+
+> Os dois textos acima (passo 03 e 05) e a pergunta de garantia no FAQ mais
+> abaixo vieram prontos assim do André, na instrução da campanha (19/08/2026)
+> — são dados dele sobre a própria empresa, não algo que eu inferi de
+> material de terceiro. Ainda assim, é uma promessa concreta (prazo de
+> garantia) publicada no site — mesmo cuidado das outras promessas marcadas
+> `⚠︎`: se o prazo mudar, atualizar aqui também.
 
 > Mesma origem do bloco acima (print "Processo Fine Glass", 5 passos
 > numerados) — reescrito, sem a marca do concorrente.
@@ -330,6 +354,27 @@ Vidro, mesmas de `solutions.ts`.)
 > O material original citava "valorização de até 20%" sem fonte. Você pediu
 > para suavizar em vez de publicar um número sem lastro — o fechamento ficou
 > qualitativo.
+
+### Perguntas frequentes (fundo azul claro, accordion)
+
+- `[cortina.faq.eyebrow]` → Antes de pedir o orçamento
+- `[cortina.faq.titulo]` → Perguntas frequentes sobre cortina de vidro.
+- `[cortina.faq.1.pergunta]` → Quanto tempo leva a instalação de uma cortina de vidro?
+- `[cortina.faq.1.resposta]` → O prazo varia conforme o tamanho do vão e a linha do sistema. Após a medição técnica, a VETRA informa o prazo exato de fabricação e instalação para o seu projeto.
+- `[cortina.faq.2.pergunta]` → Precisa fazer obra ou alvenaria para instalar?
+- `[cortina.faq.2.resposta]` → Não. O sistema é fixado diretamente na estrutura existente da varanda, sem necessidade de obra civil ou reforço estrutural na maioria dos casos.
+- `[cortina.faq.3.pergunta]` → Funciona em varandas curvas ou com formato irregular?
+- `[cortina.faq.3.resposta]` → Sim. O sistema se adapta a vãos curvos e formatos variados — a VETRA faz a medição técnica no local para confirmar o dimensionamento exato de cada painel.
+- `[cortina.faq.4.pergunta]` → Qual a garantia da cortina de vidro?
+- `[cortina.faq.4.resposta]` `⚠︎` → Garantia de 7 anos do fabricante sobre os trilhos do sistema, mais 24 meses de garantia da VETRA sobre a instalação e regulagem.
+- `[cortina.faq.5.pergunta]` → O vidro embaça, risca ou perde a vedação com o tempo?
+- `[cortina.faq.5.resposta]` → O sistema usa vidro temperado de segurança com vedação em silicone que não resseca. A manutenção recomendada é simples: limpeza periódica dos trilhos e aplicação de silicone spray na pista de deslizamento.
+
+> Seção nova (19/08/2026), pedida para a campanha de tráfego pago. Usa
+> `<details>/<summary>` nativo (sem componente de accordion no projeto) e
+> leva também um bloco JSON-LD `FAQPage` no `<head>` da página — ajuda tanto
+> o SEO quanto a leitura por ferramentas de busca com IA. O texto de cada
+> resposta fica no HTML mesmo com o accordion fechado.
 
 ### Fechamento
 
