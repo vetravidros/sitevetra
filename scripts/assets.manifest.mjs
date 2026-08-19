@@ -71,11 +71,12 @@ export const IMAGES = [
 
   // Galeria da /cortina-de-vidro — fotos enviadas pelo André das obras
   // Reserva do Parque, Ana Amélia Boulevard, Unique Meireles, Portal de
-  // Malaga e Manhattan Beach Riviera.
-  { out: 'cortina-vidro-ana-amelia', src: `${HERO_DIR}cortina-vidro-ana-amelia.jpg` }, // 3024x4032
-  { out: 'cortina-vidro-unique-meireles', src: `${HERO_DIR}cortina-vidro-unique-meireles.jpg` }, // 3213x5712
-  { out: 'cortina-vidro-portal-de-malaga', src: `${HERO_DIR}cortina-vidro-portal-de-malaga.jpg` }, // 3024x4032
-  { out: 'cortina-vidro-manhattan-beach', src: `${HERO_DIR}cortina-vidro-manhattan-beach.jpg` }, // 1536x2048
+  // Malaga e Manhattan Beach Riviera. `widths: HERO_WIDTHS` porque as mesmas
+  // 4 fotos também entram no carrossel do hero (fill, tela inteira).
+  { out: 'cortina-vidro-ana-amelia', src: `${HERO_DIR}cortina-vidro-ana-amelia.jpg`, widths: HERO_WIDTHS }, // 3024x4032
+  { out: 'cortina-vidro-unique-meireles', src: `${HERO_DIR}cortina-vidro-unique-meireles.jpg`, widths: HERO_WIDTHS }, // 3213x5712
+  { out: 'cortina-vidro-portal-de-malaga', src: `${HERO_DIR}cortina-vidro-portal-de-malaga.jpg`, widths: HERO_WIDTHS }, // 3024x4032
+  { out: 'cortina-vidro-manhattan-beach', src: `${HERO_DIR}cortina-vidro-manhattan-beach.jpg`, widths: HERO_WIDTHS }, // 1536x2048 — não gera 1920/2560
 
   // -------------------------------------------- slide door / divisórias
   { out: 'aldeota-01', src: 'Slide Door/9D37763B-A1FE-4C8E-A7D0-348EC3A055B0.jpeg' }, // 1200x1600

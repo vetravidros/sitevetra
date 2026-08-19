@@ -1,4 +1,5 @@
 import { CTA, WhatsAppGlyph } from '@/components/CTA'
+import { HeroCarousel } from '@/components/HeroCarousel'
 import { Picture } from '@/components/Picture'
 import { Seo } from '@/components/Seo'
 import { Eyebrow, Rule, Section, SectionHead } from '@/components/ui'
@@ -76,11 +77,29 @@ export default function CortinaDeVidro() {
           Fundo fotográfico, mesmo tratamento do hero do ArqVetra: véus em
           `ink`, nunca em navy (navy tinge a foto de azul). */}
       <section className="relative overflow-hidden bg-ink py-20 text-white md:py-28">
-        <Picture
-          name="cortina-vidro-hero"
-          alt="Varanda fechada com cortina de vidro, mesa posta e vista para os prédios de Fortaleza"
-          fill
-          priority
+        <HeroCarousel
+          slides={[
+            {
+              name: 'cortina-vidro-hero',
+              alt: 'Varanda fechada com cortina de vidro, mesa posta e vista para os prédios de Fortaleza',
+            },
+            {
+              name: 'cortina-vidro-ana-amelia',
+              alt: 'Varanda curva fechada com cortina de vidro, vista panorâmica para os prédios de Fortaleza',
+            },
+            {
+              name: 'cortina-vidro-unique-meireles',
+              alt: 'Varanda fechada com cortina de vidro e tela de proteção, vista para os prédios do bairro Meireles',
+            },
+            {
+              name: 'cortina-vidro-portal-de-malaga',
+              alt: 'Varanda fechada com cortina de vidro em corredor longo, vista para prédios e área verde',
+            },
+            {
+              name: 'cortina-vidro-manhattan-beach',
+              alt: 'Varanda fechada com cortina de vidro sob cobertura de palha, vista para piscina de condomínio',
+            },
+          ]}
           sizes="100vw"
         />
 

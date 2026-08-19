@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { CTA, WhatsAppGlyph } from '@/components/CTA'
+import { HeroCarousel } from '@/components/HeroCarousel'
 import { Picture, ProjectPicture, imageSrcSet } from '@/components/Picture'
 import { Seo } from '@/components/Seo'
 import { Eyebrow, Rule, Section, SectionHead } from '@/components/ui'
@@ -47,12 +48,16 @@ export default function Home() {
           CRESCER. Com altura travada, o conteúdo transbordava para cima e o
           eyebrow sumia atrás do header. */}
       <section className="relative -mt-20 flex min-h-svh flex-col overflow-hidden md:-mt-24">
-        <Picture
-          name="hero-desktop"
-          mobile="hero-mobile"
-          alt="Varanda envidraçada de piso a teto com vista para a praia, os coqueiros da orla e os prédios de Fortaleza"
-          fill
-          priority
+        {/* 1 slide só por enquanto — vira carrossel automático assim que
+            entrar uma 2ª foto no array (ver README › Imagens › Hero). */}
+        <HeroCarousel
+          slides={[
+            {
+              name: 'hero-desktop',
+              mobile: 'hero-mobile',
+              alt: 'Varanda envidraçada de piso a teto com vista para a praia, os coqueiros da orla e os prédios de Fortaleza',
+            },
+          ]}
           sizes="100vw"
         />
 
