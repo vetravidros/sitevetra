@@ -1,3 +1,4 @@
+import type { SVGProps } from 'react'
 import { CTA, WhatsAppGlyph } from '@/components/CTA'
 import { HeroCarousel } from '@/components/HeroCarousel'
 import { Picture } from '@/components/Picture'
@@ -7,6 +8,93 @@ import { site } from '@/content/site'
 
 const MSG_ORCAMENTO =
   'Olá, VETRA. Quero orçamento de cortina de vidro para minha varanda/sacada.'
+
+/** Ícones de linha, 24×24, mesmo traço fino em todo o set — não é pacote de
+    terceiro, são só os 11 glifos que essa página usa. */
+function IconBase(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    />
+  )
+}
+
+const icons = {
+  estavel: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <rect x="7" y="4" width="10" height="12" rx="1" />
+      <path d="M4 20h16" />
+      <path d="M9 20v-2M15 20v-2" />
+    </IconBase>
+  ),
+  vista: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <path d="M3 12c2.5-4 6-6 9-6s6.5 2 9 6c-2.5 4-6 6-9 6s-6.5-2-9-6Z" />
+      <circle cx="12" cy="12" r="2.5" />
+    </IconBase>
+  ),
+  manutencao: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <path d="M12 3a9 9 0 1 0 9 9" />
+      <path d="M12 3v5l3-2" />
+      <path d="m9 15 2 2 4-4" />
+    </IconBase>
+  ),
+  certificado: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <circle cx="12" cy="9" r="5.5" />
+      <path d="m9 8.5 2 2 4-3.5" />
+      <path d="m9 13.5-1.5 6L12 18l4.5 1.5-1.5-6" />
+    </IconBase>
+  ),
+  corrosao: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <path d="M12 3c3 4 5 7 5 10a5 5 0 0 1-10 0c0-3 2-6 5-10Z" />
+    </IconBase>
+  ),
+  design: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <path d="M4 18c3-8 7-12 16-13" />
+      <path d="M4 18c5 1 9-1 12-5" />
+    </IconBase>
+  ),
+  area: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <path d="M9 4H4v5M20 9V4h-5M4 15v5h5M15 20h5v-5" />
+    </IconBase>
+  ),
+  estetica: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+      <path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4Z" />
+    </IconBase>
+  ),
+  conforto: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <path d="M9 4a2 2 0 0 1 4 0v9.5a3.5 3.5 0 1 1-4 0V4Z" />
+      <path d="M17 8c1.5.7 2.5 2 2.5 4M17 5c2.5 1 4 3.2 4 6" />
+    </IconBase>
+  ),
+  seguranca: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <path d="M12 3.5 5 6v5c0 4.5 3 7.5 7 9.5 4-2 7-5 7-9.5V6l-7-2.5Z" />
+    </IconBase>
+  ),
+  exclusividade: (p: SVGProps<SVGSVGElement>) => (
+    <IconBase {...p}>
+      <path d="M12 3v4M12 17v4M4.5 12h4M15.5 12h4" />
+      <path d="m6 6 2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" />
+      <circle cx="12" cy="12" r="2.5" />
+    </IconBase>
+  ),
+}
 
 const motivos = [
   {
@@ -29,11 +117,93 @@ const motivos = [
   },
 ]
 
-const sistema = [
-  'Sem roldanas aparentes — o painel desliza em fitas de polímero de alta resistência, apoiado no trilho inferior.',
-  'Travamento interno entre os painéis, para alinhamento perfeito do conjunto.',
-  'Vedação com perfil de silicone entre os vidros — sem ressecar, sem abrir vão com o tempo.',
-  'Manutenção praticamente inexistente: sem rolamento para desgastar.',
+const sistemaFeatures = [
+  {
+    icon: icons.estavel,
+    title: 'Mais estável',
+    text: 'O painel se apoia na base, sem depender de roldana suspensa — mais segurança e estabilidade no uso diário.',
+  },
+  {
+    icon: icons.vista,
+    title: 'Vista sem interrupções',
+    text: 'Perfil mínimo entre os vidros, sem travessa vertical cortando a paisagem.',
+  },
+  {
+    icon: icons.manutencao,
+    title: 'Baixa manutenção',
+    text: 'Sem rolamento para desgastar — menos manutenção ao longo dos anos.',
+  },
+  {
+    icon: icons.certificado,
+    title: 'Testado e aprovado',
+    text: 'Sistema testado e aprovado em ensaios de pressão e resistência ao vento pelo Instituto Falcão Bauer.',
+  },
+  {
+    icon: icons.corrosao,
+    title: 'Resistente à corrosão',
+    text: 'Componentes com alta resistência à corrosão — inclusive na maresia de Fortaleza.',
+  },
+  {
+    icon: icons.design,
+    title: 'Acabamento de alto padrão',
+    text: 'Linhas curvas e suaves, acabamento pensado para não competir com a arquitetura do imóvel.',
+  },
+]
+
+const processo = [
+  {
+    n: '01',
+    title: 'Visita técnica',
+    text: 'Avaliação detalhada do espaço e das necessidades do seu projeto, feita por quem vai executar.',
+  },
+  {
+    n: '02',
+    title: 'Projeto personalizado',
+    text: 'Layout sob medida que une estética e funcionalidade ao ambiente.',
+  },
+  {
+    n: '03',
+    title: 'Produção com qualidade',
+    text: 'Materiais de alta qualidade e precisão milimétrica na fabricação.',
+  },
+  {
+    n: '04',
+    title: 'Instalação limpa e rápida',
+    text: 'Execução que respeita o prazo combinado e o ambiente da sua casa.',
+  },
+  {
+    n: '05',
+    title: 'Entrega com garantia',
+    text: 'Suporte pós-venda depois da instalação concluída.',
+  },
+]
+
+const valorizacao = [
+  {
+    icon: icons.area,
+    title: 'Aumento da área útil',
+    text: 'A varanda fechada vira extensão da sala, espaço gourmet ou escritório.',
+  },
+  {
+    icon: icons.estetica,
+    title: 'Estética de alto padrão',
+    text: 'Design limpo e moderno, que valoriza a fachada e o ambiente.',
+  },
+  {
+    icon: icons.conforto,
+    title: 'Conforto térmico e acústico',
+    text: 'Proteção contra vento, chuva e ruído externo.',
+  },
+  {
+    icon: icons.seguranca,
+    title: 'Segurança',
+    text: 'Barreira física adicional — importante para quem tem criança, idoso ou pet em casa.',
+  },
+  {
+    icon: icons.exclusividade,
+    title: 'Percepção de exclusividade',
+    text: 'Diferencial claro frente a imóveis parecidos no mesmo bairro.',
+  },
 ]
 
 /** Fotos das obras que o André mandou para a página. */
@@ -75,8 +245,12 @@ export default function CortinaDeVidro() {
 
       {/* ------------------------------------------------------------- hero
           Fundo fotográfico, mesmo tratamento do hero do ArqVetra: véus em
-          `ink`, nunca em navy (navy tinge a foto de azul). */}
-      <section className="relative overflow-hidden bg-ink py-20 text-white md:py-28">
+          `ink`, nunca em navy (navy tinge a foto de azul).
+          As fotos do carrossel são retrato (celular) — banda baixa e larga
+          cortava demais no object-cover. Mais altura sobra respiro pra foto;
+          um véu a menos (tirei o flat ink/50) deixa a cena mais visível fora
+          da coluna de texto. */}
+      <section className="relative min-h-[560px] overflow-hidden bg-ink py-24 text-white md:min-h-[680px] md:py-32">
         <HeroCarousel
           slides={[
             {
@@ -103,7 +277,6 @@ export default function CortinaDeVidro() {
           sizes="100vw"
         />
 
-        <div className="pointer-events-none absolute inset-0 bg-ink/50" aria-hidden="true" />
         <div
           className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/10"
           aria-hidden="true"
@@ -175,17 +348,48 @@ export default function CortinaDeVidro() {
           <SectionHead
             tone="white"
             eyebrow="O sistema"
-            title="Vidro que desliza, não que emperra."
+            title="Sistema de envidraçamento de sacadas sem roldanas premium."
           />
-          <ul className="mt-16 grid gap-x-10 gap-y-6 md:grid-cols-2">
-            {sistema.map((texto) => (
-              <li key={texto} className="border-t border-white/15 pt-5 text-white/70">
-                {texto}
-              </li>
+          <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {sistemaFeatures.map((f) => (
+              <div key={f.title}>
+                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-cyan">
+                  <f.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 font-display text-heading font-medium text-balance text-white">
+                  {f.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-white/70">{f.text}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
+
+      {/* ----------------------------------------------------- como funciona
+          Adaptado do formato de "processo em 5 passos" de material de
+          referência de mercado — reescrito com as palavras da VETRA, sem
+          citar marca de terceiro. */}
+      <Section>
+        <SectionHead
+          eyebrow="Como funciona"
+          title="Do primeiro contato à instalação, um processo só."
+        />
+        <ol className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+          {processo.map((p) => (
+            <li key={p.n}>
+              <Rule />
+              <span className="mt-6 block font-display text-eyebrow tracking-label text-navy">
+                {p.n}
+              </span>
+              <h3 className="mt-4 font-display text-heading font-medium text-balance">
+                {p.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink/60">{p.text}</p>
+            </li>
+          ))}
+        </ol>
+      </Section>
 
       {/* ---------------------------------------------------------- galeria */}
       <Section tone="mist">
@@ -204,6 +408,35 @@ export default function CortinaDeVidro() {
             />
           ))}
         </div>
+      </Section>
+
+      {/* ------------------------------------------------- valorização
+          Estatística "até 20%" do material de referência não tinha fonte —
+          publicar um número sem lastro no site oficial é risco (alguém pode
+          perguntar de onde veio). Fechamento ficou qualitativo em vez disso. */}
+      <Section>
+        <SectionHead
+          eyebrow="Além do conforto"
+          title="Varanda fechada também é valorização do imóvel."
+          lede="O mercado imobiliário está mais competitivo a cada ano, e quem compra busca diferenciais claros. Em regiões valorizadas, a varanda envidraçada virou um dos itens mais procurados."
+        />
+        <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {valorizacao.map((v) => (
+            <div key={v.title}>
+              <span className="flex h-12 w-12 items-center justify-center rounded-full border border-ink/15 text-navy">
+                <v.icon className="h-6 w-6" />
+              </span>
+              <h3 className="mt-5 font-display text-heading font-medium text-balance">
+                {v.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink/60">{v.text}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-16 max-w-2xl border-t border-ink/10 pt-8 text-ink/60">
+          Imóveis com varanda fechada e bem aproveitada tendem a se destacar
+          no anúncio e vender com mais agilidade.
+        </p>
       </Section>
 
       {/* --------------------------------------------------------- fechamento */}

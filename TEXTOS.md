@@ -225,19 +225,46 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.motivo.3.titulo]` → Menos barulho da rua
 - `[cortina.motivo.3.texto]` → O vidro também barra ruído: menos trânsito, menos vizinho, mais sossego.
 
-### O sistema (faixa azul-escura)
+### O sistema (faixa azul-escura, 6 características com ícone)
 
 - `[cortina.sistema.eyebrow]` → O sistema
-- `[cortina.sistema.titulo]` → Vidro que desliza, não que emperra.
-- `[cortina.sistema.1]` → Sem roldanas aparentes — o painel desliza em fitas de polímero de alta resistência, apoiado no trilho inferior.
-- `[cortina.sistema.2]` → Travamento interno entre os painéis, para alinhamento perfeito do conjunto.
-- `[cortina.sistema.3]` → Vedação com perfil de silicone entre os vidros — sem ressecar, sem abrir vão com o tempo.
-- `[cortina.sistema.4]` → Manutenção praticamente inexistente: sem rolamento para desgastar.
+- `[cortina.sistema.titulo]` → Sistema de envidraçamento de sacadas sem roldanas premium.
+- `[cortina.sistema.1.titulo]` → Mais estável
+- `[cortina.sistema.1.texto]` → O painel se apoia na base, sem depender de roldana suspensa — mais segurança e estabilidade no uso diário.
+- `[cortina.sistema.2.titulo]` → Vista sem interrupções
+- `[cortina.sistema.2.texto]` → Perfil mínimo entre os vidros, sem travessa vertical cortando a paisagem.
+- `[cortina.sistema.3.titulo]` → Baixa manutenção
+- `[cortina.sistema.3.texto]` → Sem rolamento para desgastar — menos manutenção ao longo dos anos.
+- `[cortina.sistema.4.titulo]` → Testado e aprovado
+- `[cortina.sistema.4.texto]` `⚠︎` → Sistema testado e aprovado em ensaios de pressão e resistência ao vento pelo Instituto Falcão Bauer.
+- `[cortina.sistema.5.titulo]` → Resistente à corrosão
+- `[cortina.sistema.5.texto]` → Componentes com alta resistência à corrosão — inclusive na maresia de Fortaleza.
+- `[cortina.sistema.6.titulo]` → Acabamento de alto padrão
+- `[cortina.sistema.6.texto]` → Linhas curvas e suaves, acabamento pensado para não competir com a arquitetura do imóvel.
 
-> Vem de um catálogo técnico de terceiro que você mandou (fabricante Cristal
-> System / "Kit Sacada Certa", revenda "Ramos Vidraçaria"). Usei só os pontos
-> técnicos genéricos do sistema sem roldanas — não citei a marca do
-> fabricante, porque não é produto próprio da VETRA.
+> Você mandou um print de material de divulgação de outra empresa (marca
+> "Fine Glass") com essas 6 características e pediu para incluir no site.
+> Reescrevi com as palavras da VETRA — não citei a marca do concorrente em
+> nenhum texto. O item 4 (Instituto Falcão Bauer) você confirmou que é real
+> para o sistema que a VETRA usa; se isso mudar, tem que sair do site.
+
+### Como funciona (5 passos, fundo branco)
+
+- `[cortina.como.eyebrow]` → Como funciona
+- `[cortina.como.titulo]` → Do primeiro contato à instalação, um processo só.
+- `[cortina.como.1.titulo]` → Visita técnica
+- `[cortina.como.1.texto]` → Avaliação detalhada do espaço e das necessidades do seu projeto, feita por quem vai executar.
+- `[cortina.como.2.titulo]` → Projeto personalizado
+- `[cortina.como.2.texto]` → Layout sob medida que une estética e funcionalidade ao ambiente.
+- `[cortina.como.3.titulo]` → Produção com qualidade
+- `[cortina.como.3.texto]` → Materiais de alta qualidade e precisão milimétrica na fabricação.
+- `[cortina.como.4.titulo]` → Instalação limpa e rápida
+- `[cortina.como.4.texto]` → Execução que respeita o prazo combinado e o ambiente da sua casa.
+- `[cortina.como.5.titulo]` → Entrega com garantia
+- `[cortina.como.5.texto]` → Suporte pós-venda depois da instalação concluída.
+
+> Mesma origem do bloco acima (print "Processo Fine Glass", 5 passos
+> numerados) — reescrito, sem a marca do concorrente.
 
 ### Galeria (fundo azul claro)
 
@@ -247,6 +274,27 @@ entrou no menu principal, entre Projetos e Arquitetos.
 (6 fotos: 4 reais das obras Ana Amélia Boulevard, Unique Meireles, Portal de
 Malaga e Manhattan Beach Riviera — + 2 provisórias da categoria Cortina de
 Vidro, mesmas de `solutions.ts`.)
+
+### Valorização do imóvel (fundo branco, 5 benefícios com ícone)
+
+- `[cortina.valor.eyebrow]` → Além do conforto
+- `[cortina.valor.titulo]` → Varanda fechada também é valorização do imóvel.
+- `[cortina.valor.lede]` → O mercado imobiliário está mais competitivo a cada ano, e quem compra busca diferenciais claros. Em regiões valorizadas, a varanda envidraçada virou um dos itens mais procurados.
+- `[cortina.valor.1.titulo]` → Aumento da área útil
+- `[cortina.valor.1.texto]` → A varanda fechada vira extensão da sala, espaço gourmet ou escritório.
+- `[cortina.valor.2.titulo]` → Estética de alto padrão
+- `[cortina.valor.2.texto]` → Design limpo e moderno, que valoriza a fachada e o ambiente.
+- `[cortina.valor.3.titulo]` → Conforto térmico e acústico
+- `[cortina.valor.3.texto]` → Proteção contra vento, chuva e ruído externo.
+- `[cortina.valor.4.titulo]` → Segurança
+- `[cortina.valor.4.texto]` → Barreira física adicional — importante para quem tem criança, idoso ou pet em casa.
+- `[cortina.valor.5.titulo]` → Percepção de exclusividade
+- `[cortina.valor.5.texto]` → Diferencial claro frente a imóveis parecidos no mesmo bairro.
+- `[cortina.valor.fechamento]` → Imóveis com varanda fechada e bem aproveitada tendem a se destacar no anúncio e vender com mais agilidade.
+
+> O material original citava "valorização de até 20%" sem fonte. Você pediu
+> para suavizar em vez de publicar um número sem lastro — o fechamento ficou
+> qualitativo.
 
 ### Fechamento
 
