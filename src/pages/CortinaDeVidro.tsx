@@ -278,11 +278,11 @@ export default function CortinaDeVidro() {
         />
 
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/10"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/40 to-ink/5"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/60 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/45 to-transparent"
           aria-hidden="true"
         />
         <div

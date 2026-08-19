@@ -210,6 +210,15 @@ entrou no menu principal, entre Projetos e Arquitetos.
 > Foto: obra Reserva do Parque. As outras 4 fotos reais que você mandou
 > entraram na galeria (Ana Amélia Boulevard, Unique Meireles, Portal de
 > Malaga e Manhattan Beach Riviera).
+>
+> Véu do hero reduzido (18/08/2026) — medi o contraste real do texto sobre a
+> foto: o pior ponto ficou em 8.08:1 (H1 precisa de só 3:1), o resto entre
+> 9.5 e 13.8:1. Sobra folga se a foto trocar, mas se alguma foto nova entrar
+> muito mais clara vale medir de novo.
+>
+> Você mandou mais 2 fotos (Ana Amélia Boulevard 2ª foto, Maison de la
+> Musique) para entrar no carrossel — o HEIC dessas duas não abriu em nenhuma
+> ferramenta daqui. Peço reenvio em JPEG para completar.
 
 ### Por que fechar a varanda
 
