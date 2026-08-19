@@ -251,20 +251,33 @@ export default function CortinaDeVidro() {
           um véu a menos (tirei o flat ink/50) deixa a cena mais visível fora
           da coluna de texto. */}
       <section className="relative min-h-[560px] overflow-hidden bg-ink py-24 text-white md:min-h-[680px] md:py-32">
-        {/* Só 1 foto por enquanto: as outras 4 (Reserva do Parque, Ana
-            Amélia, Unique Meireles, Portal de Malaga) foram fotografadas
-            contra a luz, através do vidro, olhando pro céu aberto — o
-            resultado é neblina/véu óptico real no arquivo. Contraste e
-            saturação em CSS redistribuem o que já existe na foto; quando o
-            arquivo não tem informação de contraste ali (testei até
-            contrast(2.2) saturate(1.8) brightness(0.7) sem recuperar o céu),
-            não tem o que puxar de volta. Voltam ao carrossel quando fotos
-            novas sem esse problema chegarem — é só adicionar ao array. */}
+        {/* As 4 fotos antigas (Reserva do Parque, Ana Amélia, Unique
+            Meireles, Portal de Malaga) ficaram de fora: fotografadas contra
+            a luz através do vidro, olhando pro céu aberto, saem com
+            neblina/véu óptico real no arquivo — nem contrast(2.2)
+            saturate(1.8) brightness(0.7) recuperou o céu. Seguem só na
+            galeria, mais abaixo. */}
         <HeroCarousel
           slides={[
             {
               name: 'cortina-vidro-manhattan-beach',
               alt: 'Varanda fechada com cortina de vidro sob cobertura de palha, vista para piscina de condomínio',
+            },
+            {
+              name: 'cortina-vidro-topo-predios-verde',
+              alt: 'Varanda fechada com cortina de vidro, vista para prédios altos e área verde de Fortaleza',
+            },
+            {
+              name: 'cortina-vidro-topo-ceu-azul',
+              alt: 'Varanda curva fechada com cortina de vidro, céu azul e vista para os prédios do bairro',
+            },
+            {
+              name: 'cortina-vidro-topo-nublado',
+              alt: 'Varanda curva fechada com cortina de vidro, tela de proteção e vista para os prédios em dia nublado',
+            },
+            {
+              name: 'cortina-vidro-topo-piso-tijolo',
+              alt: 'Varanda fechada com cortina de vidro, piso em porcelanato e vista para os prédios',
             },
           ]}
           sizes="100vw"

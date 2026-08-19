@@ -207,18 +207,24 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.hero.msg-whatsapp]` (mensagem pré-preenchida) → Olá, VETRA. Quero orçamento de cortina de vidro para minha varanda/sacada.
 - `[cortina.hero.alt]` `ALT` → Varanda fechada com cortina de vidro sob cobertura de palha, vista para piscina de condomínio
 
-> Foto: obra Manhattan Beach Riviera. **É a única foto no hero agora**
-> (18/08/2026) — sem carrossel, porque as outras 4 (Reserva do Parque, Ana
-> Amélia, Unique Meireles, Portal de Malaga) foram fotografadas contra a luz,
+> Primeira foto do carrossel: obra Manhattan Beach Riviera. O carrossel do
+> hero tem 5 fotos agora (18/08/2026) — Manhattan Beach + 4 fotos novas que
+> vieram em `img/Topo/` (pasta local fora do git, mesmo padrão de
+> `fotos-origem/LEIA-ME.md`): varanda com vista para prédios e área verde,
+> varanda curva com céu azul, varanda curva em dia nublado e varanda com
+> piso em porcelanato.
+>
+> As 4 fotos antigas (Reserva do Parque, Ana Amélia, Unique Meireles, Portal
+> de Malaga) **ficaram de fora do hero** — foram fotografadas contra a luz,
 > através do vidro, olhando pro céu aberto: o resultado é neblina/véu óptico
 > real no arquivo, não uma questão de cor fraca que CSS resolva. Testei até
 > `contrast(2.2) saturate(1.8) brightness(0.7)` (bem mais forte que o normal)
-> e o céu continuou raso — quando a informação de contraste não está no
-> arquivo, não tem o que puxar de volta.
+> e o céu continuou raso. Elas continuam na galeria, mais abaixo — em
+> miniatura o problema incomoda menos.
 >
-> As 4 continuam na galeria (mais abaixo, em miniatura o problema incomoda
-> menos) e voltam ao carrossel do hero se/quando você mandar fotos sem esse
-> problema — é só adicionar ao array em `CortinaDeVidro.tsx`.
+> Uma 5ª foto nova (varanda com luminárias pretas penduradas) ficou de fora
+> a pedido seu — só 640×360px, resolução baixa demais pra hero de tela
+> cheia. Entra se você mandar uma versão maior.
 >
 > Ainda faltam: 2 fotos (Ana Amélia 2ª, Maison de la Musique) com HEIC que
 > não abre em nenhuma ferramenta daqui — peço reenvio em JPEG — e mais 4

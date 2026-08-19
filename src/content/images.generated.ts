@@ -130,6 +130,45 @@ export const IMAGE_META = {
       1440
     ]
   },
+  "cortina-vidro-topo-nublado": {
+    "w": 640,
+    "h": 853,
+    "widths": [
+      640
+    ]
+  },
+  "cortina-vidro-topo-predios-verde": {
+    "w": 2560,
+    "h": 3413,
+    "widths": [
+      640,
+      1024,
+      1440,
+      1920,
+      2560
+    ]
+  },
+  "cortina-vidro-topo-ceu-azul": {
+    "w": 1920,
+    "h": 3413,
+    "widths": [
+      640,
+      1024,
+      1440,
+      1920
+    ]
+  },
+  "cortina-vidro-topo-piso-tijolo": {
+    "w": 2560,
+    "h": 1440,
+    "widths": [
+      640,
+      1024,
+      1440,
+      1920,
+      2560
+    ]
+  },
   "aldeota-01": {
     "w": 1200,
     "h": 1600,

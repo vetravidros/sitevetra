@@ -78,6 +78,14 @@ export const IMAGES = [
   { out: 'cortina-vidro-portal-de-malaga', src: `${HERO_DIR}cortina-vidro-portal-de-malaga.jpg`, widths: HERO_WIDTHS }, // 3024x4032
   { out: 'cortina-vidro-manhattan-beach', src: `${HERO_DIR}cortina-vidro-manhattan-beach.jpg`, widths: HERO_WIDTHS }, // 1536x2048 — não gera 1920/2560
 
+  // Mais 4 fotos para o carrossel do hero, mandadas em img/Topo/ (pasta fora
+  // do git — ver .gitignore). Sem o problema de neblina óptica das 4 fotos
+  // que ficaram só na galeria.
+  { out: 'cortina-vidro-topo-nublado', src: `${HERO_DIR}cortina-vidro-topo-varanda-curva-nublado.jpg`, widths: HERO_WIDTHS }, // 768x1024
+  { out: 'cortina-vidro-topo-predios-verde', src: `${HERO_DIR}cortina-vidro-topo-predios-verde.jpg`, widths: HERO_WIDTHS }, // 3024x4032
+  { out: 'cortina-vidro-topo-ceu-azul', src: `${HERO_DIR}cortina-vidro-topo-varanda-curva-ceu-azul.jpg`, widths: HERO_WIDTHS }, // 2268x4032
+  { out: 'cortina-vidro-topo-piso-tijolo', src: `${HERO_DIR}cortina-vidro-topo-varanda-piso-tijolo.jpg`, widths: HERO_WIDTHS }, // 4032x2268
+
   // -------------------------------------------- slide door / divisórias
   { out: 'aldeota-01', src: 'Slide Door/9D37763B-A1FE-4C8E-A7D0-348EC3A055B0.jpeg' }, // 1200x1600
   { out: 'aldeota-02', src: 'Slide Door/F25068D1-7019-45D6-B1A3-723066F0F3A8.jpeg' }, // 1200x1600
