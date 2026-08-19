@@ -290,10 +290,10 @@ export default function CortinaDeVidro() {
           className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/45 to-transparent"
           aria-hidden="true"
         />
-        <div
-          className="glass-stripes pointer-events-none absolute inset-0 opacity-[0.06]"
-          aria-hidden="true"
-        />
+        {/* Sem glass-stripes aqui: o padrão de listras brancas some bem numa
+            faixa sólida (navy/ink), mas por cima de foto vibrante ele lia
+            como uma camada esbranquiçada sobre a imagem — exatamente o
+            problema que o André reportou. */}
 
         <div className="container-vetra relative">
           <Eyebrow tone="photo">Cortina de Vidro — VETRA Soluções em Vidros</Eyebrow>
