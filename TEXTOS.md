@@ -229,6 +229,22 @@ entrou no menu principal, entre Projetos e Arquitetos.
 > Ainda faltam: 2 fotos (Ana Amélia 2ª, Maison de la Musique) com HEIC que
 > não abre em nenhuma ferramenta daqui — peço reenvio em JPEG — e mais 4
 > coladas direto na mensagem, sem arquivo acessível.
+>
+> **A causa real da mancha esbranquiçada** (19/08/2026, achada só agora):
+> não era neblina de foto nem véu escuro — era um bug no `HeroCarousel`. Cada
+> foto vem dentro de uma `<div>` com fundo `bg-mist/60` (placeholder de
+> carregamento do componente `Picture`); eu só desligava a opacidade da
+> `<img>` das fotos inativas, não da `<div>` em volta. Com 5 fotos empilhadas,
+> os 4 fundos claros "invisíveis" ficavam por cima da foto ativa. Corrigido
+> movendo a opacidade pro wrapper inteiro, em `HeroCarousel.tsx`.
+>
+> A pedido seu, tirei também o véu escuro que existia por cima da foto (as
+> duas faixas em `ink`) — agora a foto fica 100% limpa. A legibilidade do
+> texto vem de sombra projetada (`drop-shadow`) em vez de escurecer a cena.
+> Isso funciona bem visualmente, mas não é a mesma coisa que o contraste
+> medido em WCAG (o método de medir pixel-a-pixel que usei antes não se
+> aplica a sombra) — se algum texto ficar difícil de ler sobre alguma foto
+> nova especialmente clara, é a sombra que precisa reforçar, não um véu.
 
 ### Por que fechar a varanda
 

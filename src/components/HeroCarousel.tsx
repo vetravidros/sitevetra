@@ -51,9 +51,15 @@ export function HeroCarousel({
           fill
           priority={i === 0}
           sizes={sizes}
-          imgClassName={`transition-opacity duration-1000 ease-glass ${imgClassName} ${
+          // A opacidade vai no wrapper (className), não só na <img>: o
+          // wrapper do Picture tem bg-mist/60 (placeholder de carregamento)
+          // que não é afetado por opacidade aplicada só na imagem — com 5
+          // fotos empilhadas, os 4 fundos "invisíveis" ficavam por cima da
+          // foto ativa, lidos como uma mancha esbranquiçada.
+          className={`transition-opacity duration-1000 ease-glass ${
             i === index ? 'opacity-100' : 'opacity-0'
           }`}
+          imgClassName={imgClassName}
         />
       ))}
     </>

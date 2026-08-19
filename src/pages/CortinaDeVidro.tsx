@@ -283,27 +283,21 @@ export default function CortinaDeVidro() {
           sizes="100vw"
         />
 
-        <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/40 to-ink/5"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/45 to-transparent"
-          aria-hidden="true"
-        />
-        {/* Sem glass-stripes aqui: o padrão de listras brancas some bem numa
-            faixa sólida (navy/ink), mas por cima de foto vibrante ele lia
-            como uma camada esbranquiçada sobre a imagem — exatamente o
-            problema que o André reportou. */}
+        {/* Sem véu nenhum sobre a foto — o André pediu a imagem limpa, sem
+            nenhum efeito de escurecimento por cima. Legibilidade do texto
+            vem só da sombra projetada (drop-shadow), não de escurecer a
+            cena. */}
 
         <div className="container-vetra relative">
-          <Eyebrow tone="photo">Cortina de Vidro — VETRA Soluções em Vidros</Eyebrow>
+          <Eyebrow tone="photo" className="drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            Cortina de Vidro — VETRA Soluções em Vidros
+          </Eyebrow>
           <Rule className="mt-5" />
-          <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white">
+          <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
             Feche a sacada. Não feche a vista.
             <span className="block font-normal">Cortina de vidro sob medida.</span>
           </h1>
-          <p className="mt-8 max-w-2xl text-lede text-white">
+          <p className="mt-8 max-w-2xl text-lede text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             Cortina de vidro premium em Fortaleza.
             <span className="block">
               Medição, fabricação e instalação com materiais e execução do
