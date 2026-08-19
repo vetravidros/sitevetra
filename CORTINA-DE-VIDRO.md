@@ -6,7 +6,7 @@
 > [TEXTOS.md](TEXTOS.md), seção 4. Este arquivo é o "porquê" por trás do que
 > está lá.
 >
-> **Sincronizado com o commit `24cf7f0` (19/08/2026).**
+> **Sincronizado com o commit `5de21c9` (19/08/2026).**
 
 ---
 
@@ -238,6 +238,7 @@ existentes.
 ## 10. Histórico de commits desta página
 
 ```
+5de21c9 Prepara Cortina de Vidro para a campanha de tráfego pago (Google Ads)
 24cf7f0 Troca drop-shadow único por text-shadow em camadas no hero de Cortina de Vidro
 751a269 Corrige o bug real da mancha esbranquiçada no hero: opacidade no wrapper
 cffd9a2 Volta o carrossel do hero em Cortina de Vidro com 5 fotos boas
@@ -257,4 +258,4 @@ d6bf994 Troca as fotos do hero e de 2 cards da galeria em Cortina de Vidro
 ```
 
 Para conferir se este dossiê está desatualizado:
-`git log --oneline 24cf7f0..HEAD -- src/pages/CortinaDeVidro.tsx`.
+`git log --oneline 5de21c9..HEAD -- src/pages/CortinaDeVidro.tsx`.
