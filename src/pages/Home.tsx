@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Seo
         path="/"
-        title="VETRA — Arquitetura em vidro sob medida · Fortaleza/CE"
+        title="VETRA · Arquitetura em vidro sob medida · Fortaleza/CE"
         description="Cortina de vidro, portas de correr e divisórias, espelhos e box de banheiro sob medida em Fortaleza. Obras executadas para condomínios, escritórios e residências."
       >
         {/* O hero é o LCP da home. Sem preload o browser só descobre a imagem
@@ -96,7 +96,7 @@ export default function Home() {
 
         <div className="container-vetra relative flex h-full flex-col justify-end pt-20 pb-16 md:pt-24 md:pb-20">
           <Eyebrow tone="photo">
-            {site.address.locality} / {site.address.region} — desde o projeto
+            {site.address.locality} / {site.address.region} · desde o projeto
           </Eyebrow>
           {/* Uma cor só. A hierarquia entre as duas linhas vem do PESO
               (light → regular), não de tingir a segunda linha: sobre foto,
@@ -294,7 +294,7 @@ export default function Home() {
               expectativa de quem clica. Mudou lá, muda aqui. */}
           <SectionHead
             tone="white"
-            eyebrow="ArqVetra — programa de parceria"
+            eyebrow="ArqVetra · programa de parceria"
             title="Para quem especifica."
             lede="Arquitetos e designers parceiros têm canal direto com especialista e retorno em até 24h, prioridade na agenda de medição, execução e instalação, e condição especial de valor e pagamento para os clientes que indicam."
           />
@@ -320,7 +320,7 @@ export default function Home() {
               Manda a planta, a foto do vão ou só a dúvida.
             </h2>
             <p className="mt-6 max-w-xl text-lede text-ink/60">
-              Respondemos com a especificação técnica e o caminho de execução —
+              Respondemos com a especificação técnica e o caminho de execução,
               antes de falar de preço.
             </p>
           </div>

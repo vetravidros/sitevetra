@@ -31,7 +31,7 @@ export default function Projetos() {
           <span className="block text-ink/45">executados.</span>
         </h1>
         <p className="mt-8 max-w-xl text-lede text-ink/60">
-          Obras entregues em Fortaleza e Região Metropolitana — condomínios,
+          Obras entregues em Fortaleza e Região Metropolitana: condomínios,
           escritórios, lojas e residências.
         </p>
 
@@ -87,7 +87,7 @@ export default function Projetos() {
 
         {visible.length === 0 && (
           <p className="mt-14 text-lede text-ink/60">
-            Ainda não publicamos projetos nessa categoria. Fale com a gente — temos
+            Ainda não publicamos projetos nessa categoria. Fale com a gente: temos
             obras não fotografadas.
           </p>
         )}

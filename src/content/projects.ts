@@ -84,7 +84,7 @@ const RESUMOS: Record<string, string> = {
 const CORPOS: Record<string, string[]> = {
   'ana-amelia-boulevard': [
     'A laje curva é o dado que define tudo: cada folha precisa acompanhar um raio diferente, e o trilho tem de descrever a curva sem quebrar em segmentos visíveis.',
-    'O resultado mantém a leitura contínua do peitoril — de dentro, a linha do vidro acompanha a linha da varanda, e a vista do mar não é interrompida por montante.',
+    'O resultado mantém a leitura contínua do peitoril: de dentro, a linha do vidro acompanha a linha da varanda, e a vista do mar não é interrompida por montante.',
   ],
   'paco-do-bem': [
     'Dois panos se encontram na quina sem montante intermediário. É o ponto onde o envidraçamento normalmente entrega um perfil grosso, e onde ele mais aparece.',
@@ -100,7 +100,7 @@ const CORPOS: Record<string, string[]> = {
   ],
   loopfit: [
     'A loja é uma caixa de vidro montada dentro de um galpão: não há fachada externa para apoiar, então a estrutura precisa se sustentar e ainda desenhar o limite da operação.',
-    'O perfil preto foi escolhido pela seção estreita — ele marca a aresta da caixa sem competir com a estrutura metálica do galpão ao redor.',
+    'O perfil preto foi escolhido pela seção estreita: ele marca a aresta da caixa sem competir com a estrutura metálica do galpão ao redor.',
   ],
 }
 
@@ -145,7 +145,7 @@ export const projects: Project[] = OBRAS_GERADAS.map((obra) => {
     coverAlt: alt,
     gallery: obra.fotos.map((photo, i) => ({
       photo,
-      alt: obra.fotos.length > 1 ? `${alt} — foto ${i + 1} de ${obra.fotos.length}` : alt,
+      alt: obra.fotos.length > 1 ? `${alt}, foto ${i + 1} de ${obra.fotos.length}` : alt,
     })),
     ...(ficha && Object.keys(ficha).length > 0 ? { spec: ficha } : {}),
     body: CORPOS[obra.slug] ?? [],

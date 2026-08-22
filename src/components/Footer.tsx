@@ -33,7 +33,7 @@ export function Footer() {
             </CTA>
           </div>
 
-          <nav aria-label="Rodapé — navegação">
+          <nav aria-label="Rodapé, navegação">
             <Eyebrow tone="white">Navegação</Eyebrow>
             <ul className="mt-4 space-y-0.5">
               {nav.map((item) => (

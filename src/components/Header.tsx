@@ -65,7 +65,7 @@ export function Header() {
         <Link
           to="/"
           className="flex shrink-0 items-center gap-2 md:gap-2.5"
-          aria-label={`${site.legalName} — página inicial`}
+          aria-label={`${site.legalName}, página inicial`}
         >
           {/* Proporção: no lockup do manual o símbolo é dimensionado contra o
               bloco de texto INTEIRO (wordmark + tagline ≈ 59 unidades), numa

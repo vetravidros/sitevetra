@@ -32,8 +32,8 @@ export const site = {
 
   /** Formato schema.org openingHours. */
   hours: [
-    { label: 'Segunda a sexta', value: '08h — 18h', schema: 'Mo,Tu,We,Th,Fr 08:00-18:00' },
-    { label: 'Sábado', value: '08h — 12h', schema: 'Sa 08:00-12:00' },
+    { label: 'Segunda a sexta', value: '08h às 18h', schema: 'Mo,Tu,We,Th,Fr 08:00-18:00' },
+    { label: 'Sábado', value: '08h às 12h', schema: 'Sa 08:00-12:00' },
     { label: 'Domingo', value: 'Fechado', schema: null },
   ],
 

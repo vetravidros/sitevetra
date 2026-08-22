@@ -107,7 +107,7 @@ const motivos = [
     n: '02',
     tag: 'Espaço',
     title: 'Metro quadrado que você já paga',
-    text: 'A varanda fechada vira sala, home office ou espaço de estar — sem obra, sem alvenaria.',
+    text: 'A varanda fechada vira sala, home office ou espaço de estar, sem obra, sem alvenaria.',
   },
   {
     n: '03',
@@ -121,7 +121,7 @@ const sistemaFeatures = [
   {
     icon: icons.estavel,
     title: 'Mais estável',
-    text: 'O painel se apoia na base, sem depender de roldana suspensa — mais segurança e estabilidade no uso diário.',
+    text: 'O painel se apoia na base, sem depender de roldana suspensa: mais segurança e estabilidade no uso diário.',
   },
   {
     icon: icons.vista,
@@ -131,7 +131,7 @@ const sistemaFeatures = [
   {
     icon: icons.manutencao,
     title: 'Baixa manutenção',
-    text: 'Sem rolamento para desgastar — menos manutenção ao longo dos anos.',
+    text: 'Sem rolamento para desgastar: menos manutenção ao longo dos anos.',
   },
   {
     icon: icons.certificado,
@@ -141,7 +141,7 @@ const sistemaFeatures = [
   {
     icon: icons.corrosao,
     title: 'Resistente à corrosão',
-    text: 'Componentes com alta resistência à corrosão — inclusive na maresia de Fortaleza.',
+    text: 'Componentes com alta resistência à corrosão, inclusive na maresia de Fortaleza.',
   },
   {
     icon: icons.design,
@@ -197,7 +197,7 @@ const valorizacao = [
   {
     icon: icons.seguranca,
     title: 'Segurança',
-    text: 'Barreira física adicional — importante para quem tem criança, idoso ou pet em casa.',
+    text: 'Barreira física adicional, importante para quem tem criança, idoso ou pet em casa.',
   },
   {
     icon: icons.exclusividade,
@@ -279,7 +279,7 @@ const faq = [
   {
     pergunta: 'Funciona em varandas curvas ou com formato irregular?',
     resposta:
-      'Sim. O sistema se adapta a vãos curvos e formatos variados — a VETRA faz a medição técnica no local para confirmar o dimensionamento exato de cada painel.',
+      'Sim. O sistema se adapta a vãos curvos e formatos variados. A VETRA faz a medição técnica no local para confirmar o dimensionamento exato de cada painel.',
   },
   {
     pergunta: 'Qual a garantia da cortina de vidro?',
@@ -294,12 +294,12 @@ const faq = [
   {
     pergunta: 'Vocês atendem qual região?',
     resposta:
-      'Presença ativa nos principais bairros verticalizados de Fortaleza — Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes — com atendimento também em Eusébio e Aquiraz, para projetos residenciais e condomínios de alto padrão.',
+      'Presença ativa nos principais bairros verticalizados de Fortaleza, como Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes, com atendimento também em Eusébio e Aquiraz, para projetos residenciais e condomínios de alto padrão.',
   },
   {
     pergunta: 'O vidro desbota ou perde a cor com o sol?',
     resposta:
-      'Não. Vidro é material inorgânico e não desbota com exposição solar. O perfil de alumínio recebe pintura eletrostática, resistente à ação do sol e da maresia — o mesmo acabamento descrito na característica "resistente à corrosão" do sistema.',
+      'Não. Vidro é material inorgânico e não desbota com exposição solar. O perfil de alumínio recebe pintura eletrostática, resistente à ação do sol e da maresia, o mesmo acabamento descrito na característica "resistente à corrosão" do sistema.',
   },
   {
     pergunta: 'Como é feita a limpeza e manutenção do sistema?',
@@ -378,7 +378,7 @@ export default function CortinaDeVidro() {
 
         <div className="container-vetra relative">
           <div className="max-w-2xl rounded-3xl bg-ink/55 p-8 backdrop-blur-md md:p-12">
-            <Eyebrow tone="photo">Cortina de Vidro — VETRA Soluções em Vidros</Eyebrow>
+            <Eyebrow tone="photo">Cortina de Vidro · VETRA Soluções em Vidros</Eyebrow>
             <Rule className="mt-5" />
             <h1 className="mt-6 font-display text-hero font-light text-balance text-white">
               Feche a sacada. Não feche a vista.
@@ -615,7 +615,7 @@ export default function CortinaDeVidro() {
               Do orçamento à instalação, o mesmo time acompanha o projeto.
             </h2>
             <p className="mt-6 max-w-xl text-lede text-ink/60">
-              Atendimento em {site.address.locality} e Região Metropolitana —{' '}
+              Atendimento em {site.address.locality} e Região Metropolitana:{' '}
               <a
                 href={`tel:${site.contact.phoneE164}`}
                 className="underline decoration-ink/20 underline-offset-2 transition-colors hover:text-navy"

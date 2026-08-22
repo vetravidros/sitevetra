@@ -7,7 +7,7 @@ import { site } from '@/content/site'
 const diferenciais = [
   {
     title: 'O vidro é decidido cedo ou é remendado depois',
-    text: 'Trilho embutido pede rebaixo de forro. Guarda-corpo pede ponto de fixação estrutural. Box com perfil embutido pede que o revestimento pare na cota certa. Nada disso se resolve na semana da instalação — e é por isso que entramos na fase de projeto.',
+    text: 'Trilho embutido pede rebaixo de forro. Guarda-corpo pede ponto de fixação estrutural. Box com perfil embutido pede que o revestimento pare na cota certa. Nada disso se resolve na semana da instalação. É por isso que entramos na fase de projeto.',
   },
   {
     title: 'Medição depois do acabamento, sempre',
@@ -15,7 +15,7 @@ const diferenciais = [
   },
   {
     title: 'Ferragem escolhida com a paleta, não com o preço',
-    text: 'O acabamento da ferragem convive com o metal da louça e com a maçaneta da porta. Quando o box chega por último, ele se adapta ao que já foi especificado — nunca o contrário.',
+    text: 'O acabamento da ferragem convive com o metal da louça e com a maçaneta da porta. Quando o box chega por último, ele se adapta ao que já foi especificado, nunca o contrário.',
   },
   {
     title: 'Uma pessoa responde do início ao fim',
@@ -65,7 +65,7 @@ export default function Sobre() {
           <div className="space-y-6 text-lede text-ink/70">
             <p>
               Um painel de vidro define o que se vê, o que se ouve e por onde a
-              luz entra. Ele resolve as mesmas questões que uma parede resolve —
+              luz entra. Ele resolve as mesmas questões que uma parede resolve,
               só que sem pedir licença ao espaço.
             </p>
             <p>
@@ -116,7 +116,7 @@ export default function Sobre() {
               {site.address.note}.
             </h2>
             <p className="mt-6 max-w-xl text-lede text-ink/60">
-              {site.areaServed.slice(0, 4).join(' · ')} — e obras fora dessa
+              {site.areaServed.slice(0, 4).join(' · ')}, e obras fora dessa
               área mediante avaliação de logística.
             </p>
           </div>

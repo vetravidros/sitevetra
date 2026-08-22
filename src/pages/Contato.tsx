@@ -126,7 +126,7 @@ export default function Contato() {
                 <p className="font-display text-heading font-medium">Recebido.</p>
                 <p className="mt-3 text-ink/60">
                   Respondemos em até 1 dia útil. Se for urgente, chama no
-                  WhatsApp — costuma ser mais rápido.
+                  WhatsApp: costuma ser mais rápido.
                 </p>
                 <CTA utm={{ campaign: 'contato', content: 'pos-envio' }} className="mt-6">
                   <WhatsAppGlyph />
@@ -177,7 +177,7 @@ export default function Contato() {
 
                 {status === 'error' && (
                   <p role="alert" className="text-sm text-navy">
-                    Não conseguimos enviar agora. Use o WhatsApp ao lado — o
+                    Não conseguimos enviar agora. Use o WhatsApp ao lado: o
                     retorno é imediato.
                   </p>
                 )}

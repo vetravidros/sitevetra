@@ -53,7 +53,7 @@ export function Seo({
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${site.legalName} — ${site.positioning}`} />
+      <meta property="og:image:alt" content={`${site.legalName}: ${site.positioning}`} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />

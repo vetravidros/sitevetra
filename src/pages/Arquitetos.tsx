@@ -13,19 +13,19 @@ const beneficios = [
     n: '01',
     tag: 'Acesso técnico',
     title: 'Fale com quem entende, em até 24h',
-    text: 'Parceiro ArqVetra tem canal direto de atendimento com um especialista — não com atendente genérico. Dúvida de especificação, detalhe construtivo ou pedido de orçamento têm retorno garantido em até 24 horas.',
+    text: 'Parceiro ArqVetra tem canal direto de atendimento com um especialista, não com atendente genérico. Dúvida de especificação, detalhe construtivo ou pedido de orçamento têm retorno garantido em até 24 horas.',
   },
   {
     n: '02',
     tag: 'Vantagem comercial',
     title: 'Condição exclusiva de valor e pagamento',
-    text: 'Clientes indicados por parceiro ArqVetra recebem condição especial de valor e de forma de pagamento — vantagem exclusiva do canal de parceria, que você leva para a mesa junto com o seu projeto.',
+    text: 'Clientes indicados por parceiro ArqVetra recebem condição especial de valor e de forma de pagamento: vantagem exclusiva do canal de parceria, que você leva para a mesa junto com o seu projeto.',
   },
   {
     n: '03',
     tag: 'Prazo',
     title: 'Seu projeto entra na frente',
-    text: 'Prioridade em toda a cadeia: medição, execução e instalação. Projeto de parceiro ArqVetra não disputa fila com a demanda geral — o cronograma da sua obra não fica refém do nosso.',
+    text: 'Prioridade em toda a cadeia: medição, execução e instalação. Projeto de parceiro ArqVetra não disputa fila com a demanda geral. O cronograma da sua obra não fica refém do nosso.',
   },
 ]
 
@@ -61,7 +61,7 @@ export default function Arquitetos() {
     <>
       <Seo
         path="/arquitetos"
-        title="ArqVetra — programa de parceria para arquitetos e designers"
+        title="ArqVetra · programa de parceria para arquitetos e designers"
         description="Programa de parceria técnica da VETRA em Fortaleza: canal direto com especialista e retorno em até 24h, prioridade na agenda de medição, execução e instalação, e condição especial de valor e pagamento para os clientes indicados."
       />
 
@@ -107,7 +107,7 @@ export default function Arquitetos() {
         <div className="container-vetra relative">
           {/* `photo`, não `white`: sobre foto nenhuma transparência sobrevive
               ao AA — mesma regra já aplicada no hero da home. */}
-          <Eyebrow tone="photo">ArqVetra — Programa de parceria VETRA</Eyebrow>
+          <Eyebrow tone="photo">ArqVetra · Programa de parceria VETRA</Eyebrow>
           <Rule className="mt-5" />
           <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white">
             Especificar vidro deixa de ser risco.
@@ -115,7 +115,7 @@ export default function Arquitetos() {
           </h1>
           <p className="mt-8 max-w-2xl text-lede text-white">
             Um programa de parceria técnica para arquitetos e designers que
-            projetam com padrão — canal direto com especialista, prioridade em
+            projetam com padrão: canal direto com especialista, prioridade em
             toda a agenda de produção e condições especiais para os seus
             clientes.
           </p>
@@ -152,7 +152,7 @@ export default function Arquitetos() {
         />
         <p className="mt-8 max-w-3xl text-lede text-ink/60">
           Especificar vidro em projeto exige confiar num fornecedor que não vai
-          te deixar na mão na hora H — prazo estourado, medição errada,
+          te deixar na mão na hora H: prazo estourado, medição errada,
           retrabalho que vira problema seu com o cliente. A maioria dos
           vidraceiros trata arquiteto como canal de venda. A VETRA trata como
           parceiro técnico com responsabilidade compartilhada pelo resultado.
@@ -231,7 +231,7 @@ export default function Arquitetos() {
         <SectionHead
           eyebrow="Especificação técnica, não venda de vidro"
           title="A especificação vai por escrito, pronta para o memorial."
-          lede="Sistema, espessura, tipo de vidro, ferragem, folgas e parâmetros de medição — documentados para o seu projeto, no formato que entra direto no memorial descritivo."
+          lede="Sistema, espessura, tipo de vidro, ferragem, folgas e parâmetros de medição: documentados para o seu projeto, no formato que entra direto no memorial descritivo."
         />
         <div className="mt-10">
           <CTA
@@ -255,7 +255,7 @@ export default function Arquitetos() {
             <p className="mt-6 max-w-xl text-lede text-ink/60">
               Entre no ArqVetra. Sem burocracia, sem contrato de exclusividade,
               somente um compromisso técnico. Atendimento em{' '}
-              {site.address.locality} e Região Metropolitana —{' '}
+              {site.address.locality} e Região Metropolitana:{' '}
               {site.contact.phoneDisplay}.
             </p>
           </div>
