@@ -248,12 +248,19 @@ entrou no menu principal, entre Projetos e Arquitetos.
 > movendo a opacidade pro wrapper inteiro, em `HeroCarousel.tsx`.
 >
 > A pedido seu, tirei também o véu escuro que existia por cima da foto (as
-> duas faixas em `ink`) — agora a foto fica 100% limpa. A legibilidade do
-> texto vem de sombra projetada (`drop-shadow`) em vez de escurecer a cena.
-> Isso funciona bem visualmente, mas não é a mesma coisa que o contraste
-> medido em WCAG (o método de medir pixel-a-pixel que usei antes não se
-> aplica a sombra) — se algum texto ficar difícil de ler sobre alguma foto
-> nova especialmente clara, é a sombra que precisa reforçar, não um véu.
+> duas faixas em `ink`) — a foto ficou 100% limpa, com a legibilidade do
+> texto vindo de sombra projetada (`text-shadow`) em vez de escurecer a
+> cena. Funcionava bem visualmente, mas dependia de qual parte da foto caía
+> atrás de cada letra — sem garantia matemática de contraste.
+>
+> **Painel de vidro (19/08/2026)** — você reportou que ainda não estava
+> legível o bastante. Troquei a sombra por um painel translúcido
+> (`bg-ink/55` + `backdrop-blur-md`) atrás só da coluna de texto — a foto
+> segue 100% visível fora do painel (a maior parte da imagem, à direita).
+> Medi o contraste de novo com o mesmo método de antes (pixel real da foto
+> por trás, através do painel): pior ponto **7.01:1**, o resto entre 8 e
+> 9.5:1 — folga garantida em qualquer uma das 5 fotos do carrossel, não só
+> na que eu testei.
 
 ### Onde atendemos (faixa logo abaixo do hero)
 

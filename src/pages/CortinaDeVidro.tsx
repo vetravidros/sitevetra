@@ -323,43 +323,37 @@ export default function CortinaDeVidro() {
           sizes="100vw"
         />
 
-        {/* Sem véu nenhum sobre a foto — o André pediu a imagem limpa, sem
-            nenhum efeito de escurecimento por cima. Legibilidade do texto
-            vem só de sombra no texto, não de escurecer a cena.
-            `text-shadow` em camadas, não `drop-shadow` único: uma sombra
-            fechada (pouco blur) desenha um contorno nítido que separa a
-            letra de fundo cheio de linha (grade da varanda, esquadria);
-            camadas maiores por trás dão profundidade sem depender só do
-            blur, que sozinho lia como um halo fraco sobre fundo cheio de
-            detalhe. */}
+        {/* Legibilidade não depende mais só de sombra: texto/sombra sozinhos
+            variavam demais de legibilidade conforme a foto do carrossel
+            (o André reportou de novo depois do texto sozinho). Painel de
+            vidro (bg-ink/55 + blur) atrás só da coluna de texto — cobre no
+            máximo ~metade da largura em telas grandes, o resto da foto
+            segue 100% visível, sem véu nenhum por cima dela. */}
 
         <div className="container-vetra relative">
-          <Eyebrow
-            tone="photo"
-            className="[text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_2px_8px_rgba(0,0,0,0.85)]"
-          >
-            Cortina de Vidro — VETRA Soluções em Vidros
-          </Eyebrow>
-          <Rule className="mt-5" />
-          <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.95),0_4px_14px_rgba(0,0,0,0.85),0_10px_36px_rgba(0,0,0,0.7)]">
-            Feche a sacada. Não feche a vista.
-            <span className="block font-normal">Cortina de vidro sob medida.</span>
-          </h1>
-          <p className="mt-8 max-w-2xl text-lede text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.95),0_3px_10px_rgba(0,0,0,0.8)]">
-            Cortina de vidro premium em Fortaleza.
-            <span className="block">
-              Medição, fabricação e instalação com materiais e execução do
-              serviço de alta qualidade.
-            </span>
-          </p>
-          <div className="mt-10">
-            <CTA
-              utm={{ campaign: 'cortina-de-vidro', content: 'hero-whatsapp' }}
-              message={MSG_ORCAMENTO}
-            >
-              <WhatsAppGlyph />
-              Pedir orçamento
-            </CTA>
+          <div className="max-w-2xl rounded-3xl bg-ink/55 p-8 backdrop-blur-md md:p-12">
+            <Eyebrow tone="photo">Cortina de Vidro — VETRA Soluções em Vidros</Eyebrow>
+            <Rule className="mt-5" />
+            <h1 className="mt-6 font-display text-hero font-light text-balance text-white">
+              Feche a sacada. Não feche a vista.
+              <span className="block font-normal">Cortina de vidro sob medida.</span>
+            </h1>
+            <p className="mt-8 text-lede text-white/90">
+              Cortina de vidro premium em Fortaleza.
+              <span className="block">
+                Medição, fabricação e instalação com materiais e execução do
+                serviço de alta qualidade.
+              </span>
+            </p>
+            <div className="mt-10">
+              <CTA
+                utm={{ campaign: 'cortina-de-vidro', content: 'hero-whatsapp' }}
+                message={MSG_ORCAMENTO}
+              >
+                <WhatsAppGlyph />
+                Pedir orçamento
+              </CTA>
+            </div>
           </div>
         </div>
       </section>
