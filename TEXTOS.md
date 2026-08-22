@@ -274,6 +274,23 @@ entrou no menu principal, entre Projetos e Arquitetos.
 > por trás, através do painel): pior ponto **7.01:1**, o resto entre 8 e
 > 9.5:1 — folga garantida em qualquer uma das 5 fotos do carrossel, não só
 > na que eu testei.
+>
+> **Hero mais baixo (22/08/2026)** — você achou o topo muito grande e pediu
+> pra ficar do tamanho do hero da Home. Causa real: o painel de texto era
+> estreito (`max-w-2xl`), e a fonte grande do H1 (`text-hero`, a mesma
+> fluida usada em todo o site) quebrava em muito mais linhas do que na Home
+> — isso inflava a altura sozinho, mais do que o padding. Medi no browser
+> (viewport 1280×800): a versão antiga dava 1142px de hero contra 800px da
+> Home. Existe uma troca real entre altura e quanto da foto sobra visível
+> ao lado do texto (painel mais largo = menos linha = hero mais baixo, mas
+> cobre mais foto). Você escolheu o meio-termo: painel em `max-w-3xl`
+> (era `max-w-2xl`), padding vertical reduzido (`py-12 md:py-16`, era
+> `py-24 md:py-32`) e `min-h` menor (`420px/500px`, era `560px/680px`).
+> Resultado medido: **910px** de hero (contra 1142px antes, 800px na
+> Home) — bem mais próximo, sem cobrir tanto da foto quanto a opção mais
+> agressiva testada (826px, mas só 25% de foto visível). Contraste
+> reconferido com o painel mais estreito: pior ponto 6.91:1, ainda acima
+> do mínimo.
 
 ### Onde atendemos (faixa logo abaixo do hero)
 

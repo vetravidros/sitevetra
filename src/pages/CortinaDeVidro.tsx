@@ -336,7 +336,7 @@ export default function CortinaDeVidro() {
           cortava demais no object-cover. Mais altura sobra respiro pra foto;
           um véu a menos (tirei o flat ink/50) deixa a cena mais visível fora
           da coluna de texto. */}
-      <section className="relative min-h-[560px] overflow-hidden bg-ink py-24 text-white md:min-h-[680px] md:py-32">
+      <section className="relative min-h-[420px] overflow-hidden bg-ink py-12 text-white md:min-h-[500px] md:py-16">
         {/* As 4 fotos antigas (Reserva do Parque, Ana Amélia, Unique
             Meireles, Portal de Malaga) ficaram de fora: fotografadas contra
             a luz através do vidro, olhando pro céu aberto, saem com
@@ -377,7 +377,7 @@ export default function CortinaDeVidro() {
             segue 100% visível, sem véu nenhum por cima dela. */}
 
         <div className="container-vetra relative">
-          <div className="max-w-2xl rounded-3xl bg-ink/55 p-8 backdrop-blur-md md:p-12">
+          <div className="max-w-3xl rounded-3xl bg-ink/55 p-8 backdrop-blur-md md:p-10">
             <Eyebrow tone="photo">Cortina de Vidro · VETRA Soluções em Vidros</Eyebrow>
             <Rule className="mt-5" />
             <h1 className="mt-6 font-display text-hero font-light text-balance text-white">
