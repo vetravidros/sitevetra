@@ -387,8 +387,8 @@ export default function CortinaDeVidro() {
             <p className="mt-8 text-lede text-white/90">
               Cortina de vidro premium em Fortaleza.
               <span className="block">
-                Medição, fabricação e instalação com materiais e execução do
-                serviço de alta qualidade.
+                Vidro temperado ou laminado de 8, 10 ou 12mm, com garantia de
+                7 anos do fabricante e 24 meses da VETRA.
               </span>
             </p>
             <div className="mt-10">
@@ -412,7 +412,7 @@ export default function CortinaDeVidro() {
         <Eyebrow>Onde atendemos</Eyebrow>
         <p className="mt-4 max-w-3xl text-lede text-ink/60">
           Presença ativa nos principais bairros verticalizados de Fortaleza:
-          Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes e com
+          Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes, com
           atendimento também em Eusébio e Aquiraz, para projetos
           residenciais e condomínios de alto padrão.
         </p>
@@ -450,7 +450,7 @@ export default function CortinaDeVidro() {
           <SectionHead
             tone="white"
             eyebrow="O sistema"
-            title="Sistema de envidraçamento de sacadas sem roldanas premium."
+            title="Vidro que desliza, não que emperra."
           />
           <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {sistemaFeatures.map((f) => (

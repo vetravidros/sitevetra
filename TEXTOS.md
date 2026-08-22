@@ -211,11 +211,16 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.hero.h1.linha1]` → Feche a sacada. Não feche a vista.
 - `[cortina.hero.h1.linha2]` → Cortina de vidro sob medida.
 - `[cortina.hero.lede.linha1]` → Cortina de vidro premium em Fortaleza.
-- `[cortina.hero.lede.linha2]` → Medição, fabricação e instalação com materiais e execução do serviço de alta qualidade.
+- `[cortina.hero.lede.linha2]` → Vidro temperado ou laminado de 8, 10 ou 12mm, com garantia de 7 anos do fabricante e 24 meses da VETRA.
 - `[cortina.hero.cta]` → Pedir orçamento
 - `[cortina.hero.msg-whatsapp]` (mensagem pré-preenchida) → Olá, VETRA. Quero orçamento de cortina de vidro para minha varanda/sacada.
 - `[cortina.hero.alt]` `ALT` → Varanda fechada com cortina de vidro sob cobertura de palha, vista para piscina de condomínio
 
+> Lede trocada (22/08/2026, auditoria de copy) — "materiais e execução do
+> serviço de alta qualidade" era a frase que qualquer concorrente também
+> escreveria. Troquei pelos dois fatos concretos que a página já cita mais
+> abaixo (espessura do vidro, prazo de garantia), sem inventar número novo.
+>
 > Primeira foto do carrossel: obra Manhattan Beach Riviera. O carrossel do
 > hero tem 5 fotos agora (18/08/2026) — Manhattan Beach + 4 fotos novas que
 > vieram em `img/Topo/` (pasta local fora do git, mesmo padrão de
@@ -265,7 +270,7 @@ entrou no menu principal, entre Projetos e Arquitetos.
 ### Onde atendemos (faixa logo abaixo do hero)
 
 - `[cortina.onde.eyebrow]` → Onde atendemos
-- `[cortina.onde.texto]` → Presença ativa nos principais bairros verticalizados de Fortaleza: Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes e com atendimento também em Eusébio e Aquiraz, para projetos residenciais e condomínios de alto padrão.
+- `[cortina.onde.texto]` → Presença ativa nos principais bairros verticalizados de Fortaleza: Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes, com atendimento também em Eusébio e Aquiraz, para projetos residenciais e condomínios de alto padrão.
 
 > Seção nova (19/08/2026), pedida para a campanha de tráfego pago — SEO
 > local, mira os bairros que o Google Ads está direcionando.
@@ -287,7 +292,7 @@ entrou no menu principal, entre Projetos e Arquitetos.
 ### O sistema (faixa azul-escura, 6 características com ícone)
 
 - `[cortina.sistema.eyebrow]` → O sistema
-- `[cortina.sistema.titulo]` → Sistema de envidraçamento de sacadas sem roldanas premium.
+- `[cortina.sistema.titulo]` → Vidro que desliza, não que emperra.
 - `[cortina.sistema.1.titulo]` → Mais estável
 - `[cortina.sistema.1.texto]` → O painel se apoia na base, sem depender de roldana suspensa — mais segurança e estabilidade no uso diário.
 - `[cortina.sistema.2.titulo]` → Vista sem interrupções
