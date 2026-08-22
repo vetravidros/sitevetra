@@ -387,8 +387,8 @@ export default function CortinaDeVidro() {
             <p className="mt-8 text-lede text-white/90">
               Cortina de vidro premium em Fortaleza.
               <span className="block">
-                Vidro temperado ou laminado de 8, 10 ou 12mm, com garantia de
-                7 anos do fabricante e 24 meses da VETRA.
+                Medição, fabricação e instalação com materiais e execução do
+                serviço de alta qualidade.
               </span>
             </p>
             <div className="mt-10">

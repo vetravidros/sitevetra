@@ -211,7 +211,15 @@ entrou no menu principal, entre Projetos e Arquitetos.
 - `[cortina.hero.h1.linha1]` → Feche a sacada. Não feche a vista.
 - `[cortina.hero.h1.linha2]` → Cortina de vidro sob medida.
 - `[cortina.hero.lede.linha1]` → Cortina de vidro premium em Fortaleza.
-- `[cortina.hero.lede.linha2]` → Vidro temperado ou laminado de 8, 10 ou 12mm, com garantia de 7 anos do fabricante e 24 meses da VETRA.
+- `[cortina.hero.lede.linha2]` → Medição, fabricação e instalação com materiais e execução do serviço de alta qualidade.
+
+> Voltou ao texto original (22/08/2026) — uma sessão anterior (auditoria de
+> copy automática) tinha trocado essa linha pela versão técnica ("8, 10 ou
+> 12mm... 7 anos... 24 meses"), avaliando o texto genérico como fraco.
+> André achou a versão técnica ruim demais pra lede de hero (lê como ficha
+> técnica) e pediu para reverter. As specs e o prazo de garantia continuam
+> presentes mais abaixo, em "Como funciona" (passos 03 e 05) e no FAQ — não
+> se perdeu informação, só saiu do topo da página.
 - `[cortina.hero.cta]` → Pedir orçamento
 - `[cortina.hero.msg-whatsapp]` (mensagem pré-preenchida) → Olá, VETRA. Quero orçamento de cortina de vidro para minha varanda/sacada.
 - `[cortina.hero.alt]` `ALT` → Varanda fechada com cortina de vidro sob cobertura de palha, vista para piscina de condomínio
