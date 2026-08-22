@@ -376,12 +376,25 @@ Vidro, mesmas de `solutions.ts`.)
 - `[cortina.faq.4.resposta]` `⚠︎` → Garantia de 7 anos do fabricante sobre os trilhos do sistema, mais 24 meses de garantia da VETRA sobre a instalação e regulagem.
 - `[cortina.faq.5.pergunta]` → O vidro embaça, risca ou perde a vedação com o tempo?
 - `[cortina.faq.5.resposta]` → O sistema usa vidro temperado de segurança com vedação em silicone que não resseca. A manutenção recomendada é simples: limpeza periódica dos trilhos e aplicação de silicone spray na pista de deslizamento.
+- `[cortina.faq.6.pergunta]` → Vocês atendem qual região?
+- `[cortina.faq.6.resposta]` → Presença ativa nos principais bairros verticalizados de Fortaleza — Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes — com atendimento também em Eusébio e Aquiraz, para projetos residenciais e condomínios de alto padrão.
+- `[cortina.faq.7.pergunta]` → O vidro desbota ou perde a cor com o sol?
+- `[cortina.faq.7.resposta]` → Não. Vidro é material inorgânico e não desbota com exposição solar. O perfil de alumínio recebe pintura eletrostática, resistente à ação do sol e da maresia — o mesmo acabamento descrito na característica "resistente à corrosão" do sistema.
+- `[cortina.faq.8.pergunta]` → Como é feita a limpeza e manutenção do sistema?
+- `[cortina.faq.8.resposta]` → É simples: limpeza periódica do vidro com produto neutro, remoção de areia e sujeira dos trilhos inferiores, e aplicação eventual de silicone spray na pista de deslizamento para manter o deslize suave. Sem rolamento, a manutenção estrutural é praticamente inexistente.
 
 > Seção nova (19/08/2026), pedida para a campanha de tráfego pago. Usa
 > `<details>/<summary>` nativo (sem componente de accordion no projeto) e
 > leva também um bloco JSON-LD `FAQPage` no `<head>` da página — ajuda tanto
 > o SEO quanto a leitura por ferramentas de busca com IA. O texto de cada
 > resposta fica no HTML mesmo com o accordion fechado.
+>
+> **Expansão de 5 → 8 perguntas (19/08/2026)** — uma lista de tarefas de
+> preparação para Google Ads pedia 8-10 perguntas, incluindo preço médio,
+> parcelamento no cartão e prazo de resposta de orçamento em 24h. Só
+> acrescentei as 3 que já dava para responder com o que está confirmado no
+> site (região, durabilidade do material, limpeza) — as 3 que pediam preço/
+> pagamento/prazo ficaram de fora até você confirmar os dados reais.
 
 ### Fechamento
 

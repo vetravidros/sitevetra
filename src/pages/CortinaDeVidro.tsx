@@ -260,6 +260,21 @@ const faq = [
     resposta:
       'O sistema usa vidro temperado de segurança com vedação em silicone que não resseca. A manutenção recomendada é simples: limpeza periódica dos trilhos e aplicação de silicone spray na pista de deslizamento.',
   },
+  {
+    pergunta: 'Vocês atendem qual região?',
+    resposta:
+      'Presença ativa nos principais bairros verticalizados de Fortaleza — Aldeota, Meireles, Cocó, Dionísio Torres e Guararapes — com atendimento também em Eusébio e Aquiraz, para projetos residenciais e condomínios de alto padrão.',
+  },
+  {
+    pergunta: 'O vidro desbota ou perde a cor com o sol?',
+    resposta:
+      'Não. Vidro é material inorgânico e não desbota com exposição solar. O perfil de alumínio recebe pintura eletrostática, resistente à ação do sol e da maresia — o mesmo acabamento descrito na característica "resistente à corrosão" do sistema.',
+  },
+  {
+    pergunta: 'Como é feita a limpeza e manutenção do sistema?',
+    resposta:
+      'É simples: limpeza periódica do vidro com produto neutro, remoção de areia e sujeira dos trilhos inferiores, e aplicação eventual de silicone spray na pista de deslizamento para manter o deslize suave. Sem rolamento, a manutenção estrutural é praticamente inexistente.',
+  },
 ]
 
 export default function CortinaDeVidro() {
