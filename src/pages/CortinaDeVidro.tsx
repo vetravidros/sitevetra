@@ -362,7 +362,7 @@ export default function CortinaDeVidro() {
           Bairros-alvo da campanha de tráfego pago (Google Ads) — SEO local.
           Mesmo estilo de texto do parágrafo de atendimento no fechamento da
           página, só que logo abaixo do hero. */}
-      <Section className="py-10 md:py-12">
+      <Section id="bairros" className="py-10 md:py-12">
         <Eyebrow>Onde atendemos</Eyebrow>
         <p className="mt-4 max-w-3xl text-lede text-ink/60">
           Presença ativa nos principais bairros verticalizados de Fortaleza:
@@ -373,7 +373,7 @@ export default function CortinaDeVidro() {
       </Section>
 
       {/* ------------------------------------------------- por que fechar */}
-      <Section>
+      <Section id="beneficios">
         <SectionHead
           eyebrow="Por que fechar a varanda"
           title="Chuva, poeira e barulho ficam do lado de fora."
@@ -395,7 +395,7 @@ export default function CortinaDeVidro() {
       </Section>
 
       {/* ------------------------------------------------------ o sistema */}
-      <section className="relative overflow-hidden bg-navy py-section text-white">
+      <section id="sistema" className="relative overflow-hidden bg-navy py-section text-white">
         <div
           className="glass-stripes pointer-events-none absolute inset-0 opacity-[0.05]"
           aria-hidden="true"
@@ -426,7 +426,7 @@ export default function CortinaDeVidro() {
           Adaptado do formato de "processo em 5 passos" de material de
           referência de mercado — reescrito com as palavras da VETRA, sem
           citar marca de terceiro. */}
-      <Section>
+      <Section id="processo">
         <SectionHead
           eyebrow="Como funciona"
           title="Do primeiro contato à instalação, um processo só."
@@ -448,7 +448,7 @@ export default function CortinaDeVidro() {
       </Section>
 
       {/* ---------------------------------------------------------- galeria */}
-      <Section tone="mist">
+      <Section id="galeria" tone="mist">
         <SectionHead
           eyebrow="Instalações executadas"
           title="Cada vão, medido e executado pela VETRA."
@@ -470,7 +470,7 @@ export default function CortinaDeVidro() {
           Estatística "até 20%" do material de referência não tinha fonte —
           publicar um número sem lastro no site oficial é risco (alguém pode
           perguntar de onde veio). Fechamento ficou qualitativo em vez disso. */}
-      <Section>
+      <Section id="valorizacao">
         <SectionHead
           eyebrow="Além do conforto"
           title="Varanda fechada também é valorização do imóvel."
@@ -501,7 +501,7 @@ export default function CortinaDeVidro() {
           sem JS nem dependência nova. O texto de cada resposta já está no
           HTML estático mesmo fechado — bom pra SEO e pra leitura por IA,
           que é o motivo do FAQPage JSON-LD logo no topo do arquivo. */}
-      <Section tone="mist">
+      <Section id="faq" tone="mist">
         <SectionHead
           eyebrow="Antes de pedir o orçamento"
           title="Perguntas frequentes sobre cortina de vidro."
@@ -525,7 +525,7 @@ export default function CortinaDeVidro() {
       </Section>
 
       {/* --------------------------------------------------------- fechamento */}
-      <Section>
+      <Section id="contato">
         <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <Eyebrow>Peça o seu</Eyebrow>
@@ -534,7 +534,13 @@ export default function CortinaDeVidro() {
             </h2>
             <p className="mt-6 max-w-xl text-lede text-ink/60">
               Atendimento em {site.address.locality} e Região Metropolitana —{' '}
-              {site.contact.phoneDisplay}.
+              <a
+                href={`tel:${site.contact.phoneE164}`}
+                className="underline decoration-ink/20 underline-offset-2 transition-colors hover:text-navy"
+              >
+                {site.contact.phoneDisplay}
+              </a>
+              .
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
