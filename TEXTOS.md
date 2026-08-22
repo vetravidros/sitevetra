@@ -341,6 +341,40 @@ entrou no menu principal, entre Projetos e Arquitetos.
 Malaga e Manhattan Beach Riviera — + 2 provisórias da categoria Cortina de
 Vidro, mesmas de `solutions.ts`.)
 
+### Números (faixa azul-escura, 4 estatísticas)
+
+- `[cortina.numeros.1.valor]` → +900
+- `[cortina.numeros.1.label]` → Cortinas de vidro instaladas
+- `[cortina.numeros.2.valor]` → 7 anos
+- `[cortina.numeros.2.label]` → Garantia do fabricante nos trilhos
+- `[cortina.numeros.3.valor]` → 24 meses
+- `[cortina.numeros.3.label]` → Garantia VETRA sobre a instalação
+- `[cortina.numeros.4.valor]` → Falcão Bauer
+- `[cortina.numeros.4.label]` → Ensaio técnico de pressão e vento aprovado
+
+> Seção nova (19/08/2026). O "+900" é número real passado pelo André; os
+> outros 3 já eram fatos confirmados em outras seções da página (garantia,
+> Instituto Falcão Bauer) — só reunidos aqui num resumo.
+
+### Depoimentos (fundo azul claro, 4 clientes)
+
+- `[cortina.depoimentos.eyebrow]` → Quem já fechou a varanda
+- `[cortina.depoimentos.titulo]` → O que dizem os clientes VETRA.
+- `[cortina.depoimentos.1.nome]` → Mariana Farias
+- `[cortina.depoimentos.1.texto]` → Excelente qualidade e serviço. Indico!
+- `[cortina.depoimentos.2.nome]` → Livanessa Mendes
+- `[cortina.depoimentos.2.texto]` → Profissional excelente, pontual e muito caprichoso.
+- `[cortina.depoimentos.3.nome]` → Giovanni Santos
+- `[cortina.depoimentos.3.texto]` → A VETRA e seu empresário André trouxeram a solução que há muito buscava para meu apartamento, o que gerou muito desconforto no passado, a ponto de eu desistir em algumas ocasiões de concretizar a instalação da cortina de vidro. Mas agora estamos todos em casa muito satisfeitos. Indico com muita força.
+- `[cortina.depoimentos.4.nome]` → Cleudson Vidal
+- `[cortina.depoimentos.4.texto]` → Queria agradecer pela atenção, pela agilidade e pela qualidade do serviço prestado, em especial ao André. Serviço ficou ótimo!
+
+> Textos reais, passados pelo André (19/08/2026) — sem bairro, a pedido
+> dele. Fiz só limpeza ortográfica pontual (typo óbvio, como "ocasioões" →
+> "ocasiões", "trouxerão" → "trouxeram"), sem mudar o sentido de nenhum
+> depoimento. Sem foto de cliente — não foi fornecida autorização para uso
+> de imagem.
+
 ### Valorização do imóvel (fundo branco, 5 benefícios com ícone)
 
 - `[cortina.valor.eyebrow]` → Além do conforto

@@ -234,6 +234,37 @@ const galeria = [
   },
 ]
 
+const numeros = [
+  { valor: '+900', label: 'Cortinas de vidro instaladas' },
+  { valor: '7 anos', label: 'Garantia do fabricante nos trilhos' },
+  { valor: '24 meses', label: 'Garantia VETRA sobre a instalação' },
+  { valor: 'Falcão Bauer', label: 'Ensaio técnico de pressão e vento aprovado' },
+]
+
+/** Depoimentos reais, passados pelo André (19/08/2026). Sem bairro — pedido
+    dele — e com pequena limpeza ortográfica (typo óbvio), sem mudar o
+    sentido do que cada cliente disse. */
+const depoimentos = [
+  {
+    nome: 'Mariana Farias',
+    texto: 'Excelente qualidade e serviço. Indico!',
+  },
+  {
+    nome: 'Livanessa Mendes',
+    texto: 'Profissional excelente, pontual e muito caprichoso.',
+  },
+  {
+    nome: 'Giovanni Santos',
+    texto:
+      'A VETRA e seu empresário André trouxeram a solução que há muito buscava para meu apartamento, o que gerou muito desconforto no passado, a ponto de eu desistir em algumas ocasiões de concretizar a instalação da cortina de vidro. Mas agora estamos todos em casa muito satisfeitos. Indico com muita força.',
+  },
+  {
+    nome: 'Cleudson Vidal',
+    texto:
+      'Queria agradecer pela atenção, pela agilidade e pela qualidade do serviço prestado, em especial ao André. Serviço ficou ótimo!',
+  },
+]
+
 const faq = [
   {
     pergunta: 'Quanto tempo leva a instalação de uma cortina de vidro?',
@@ -477,6 +508,42 @@ export default function CortinaDeVidro() {
               ratio="3/4"
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             />
+          ))}
+        </div>
+      </Section>
+
+      {/* ------------------------------------------------------- números
+          Os 4 números vieram do André (19/08/2026) — 3 já confirmados em
+          outras seções da página (garantia, Falcão Bauer), 1 novo (+900
+          instalações). Nenhum estimado ou arredondado por mim. */}
+      <Section id="numeros" tone="navy">
+        <div className="grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          {numeros.map((n) => (
+            <div key={n.label} className="border-t border-white/15 pt-6">
+              <p className="font-display text-title font-light text-white">{n.valor}</p>
+              <p className="mt-2 text-sm text-white/70">{n.label}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* --------------------------------------------------- depoimentos
+          Textos reais, passados pelo André (19/08/2026) — sem bairro, a
+          pedido dele. Só limpeza ortográfica pontual, sem mudar o sentido. */}
+      <Section id="depoimentos" tone="mist">
+        <SectionHead
+          eyebrow="Quem já fechou a varanda"
+          title="O que dizem os clientes VETRA."
+        />
+        <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2">
+          {depoimentos.map((d) => (
+            <div key={d.nome}>
+              <Rule />
+              <p className="mt-6 text-ink/70">"{d.texto}"</p>
+              <p className="mt-4 font-display text-eyebrow uppercase tracking-label text-navy">
+                {d.nome}
+              </p>
+            </div>
           ))}
         </div>
       </Section>
