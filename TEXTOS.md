@@ -660,6 +660,16 @@ própria conversa.
 
 - `[contato.lado.direto]` → Direto
 - `[contato.lado.onde]` → Onde atendemos
+- `[contato.lado.onde.texto]` → Atendimento técnico agendado na cidade de Fortaleza, Eusébio e Aquiraz.
+
+> Texto próprio desta página (22/08/2026) — antes vinha de `site.endereco.nota`
+> + `site.areaServed` (dado compartilhado, ver seção 0), que ainda geram o
+> texto da página Sobre e o `areaServed` do schema JSON-LD (LocalBusiness,
+> em toda página). Só troquei aqui, a pedido do André — Sobre e o schema
+> continuam como estavam, com Caucaia e "Região Metropolitana" incluídos.
+> A meta description desta página (SEO, não aparece na tela) também ainda
+> usa a frase antiga — não mexi por não ter sido pedido.
+
 - `[contato.lado.maps]` → Abrir no Google Maps ↗
 - `[contato.lado.horario]` → Horário
 - `[contato.lado.redes]` → Também estamos em

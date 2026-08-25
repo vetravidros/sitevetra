@@ -214,8 +214,10 @@ export default function Contato() {
             <div>
               <Eyebrow>Onde atendemos</Eyebrow>
               <Rule className="mt-4" />
-              <p className="mt-6 text-ink/70">{site.address.note}.</p>
-              <p className="mt-3 text-sm text-ink/60">{site.areaServed.join(' · ')}</p>
+              <p className="mt-6 text-ink/70">
+                Atendimento técnico agendado na cidade de Fortaleza, Eusébio e
+                Aquiraz.
+              </p>
               <a
                 href={site.social.maps}
                 target="_blank"
