@@ -331,6 +331,15 @@ mesmo quando o clique não chega ao analytics. Todo clique também dispara um ev
 O botão flutuante fica acima da safe-area e o `<main>` reserva `pb-28` no mobile,
 então ele nunca cobre conteúdo.
 
+### Google Ads (gtag.js)
+
+A tag de conversão do Google Ads (`AW-18403738170`) está em `index.html`, no
+`<head>` — carrega em toda página, porque `index.html` é o template único do
+build SSG. Serve só para o Google Ads medir a campanha; é independente do
+Vercel Analytics (que segue rastreando `cta_click`). Para trocar o ID ou
+adicionar conversão de evento específico (ex.: clique de WhatsApp), edite o
+bloco direto no `index.html`.
+
 ## Formulário de contato
 
 Validação client-side, honeypot anti-spam, sem backend próprio.
