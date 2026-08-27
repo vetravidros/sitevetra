@@ -330,13 +330,14 @@ export default function CortinaDeVidro() {
       />
 
       {/* ------------------------------------------------------------- hero
-          Fundo fotográfico, mesmo tratamento do hero do ArqVetra: véus em
-          `ink`, nunca em navy (navy tinge a foto de azul).
-          As fotos do carrossel são retrato (celular) — banda baixa e larga
-          cortava demais no object-cover. Mais altura sobra respiro pra foto;
-          um véu a menos (tirei o flat ink/50) deixa a cena mais visível fora
-          da coluna de texto. */}
-      <section className="relative min-h-[420px] overflow-hidden bg-ink py-12 text-white md:min-h-[500px] md:py-16">
+          Mesma estrutura do hero da Home (22/08/2026) — tela cheia, sobe por
+          baixo do header (que fica transparente nesta rota também, ver
+          Header.tsx) com margem negativa, header vira sólido ao rolar. Antes
+          este hero tinha altura própria (~910px) com um painel de vidro atrás
+          do texto; o André pediu 3 vezes pra ficar do mesmo tamanho da Home,
+          então a estrutura passou a ser a mesma, não só parecida.
+          Véus em `ink`, nunca em navy (navy tinge a foto de azul). */}
+      <section className="relative -mt-20 flex min-h-svh flex-col overflow-hidden text-white md:-mt-24">
         {/* As 4 fotos antigas (Reserva do Parque, Ana Amélia, Unique
             Meireles, Portal de Malaga) ficaram de fora: fotografadas contra
             a luz através do vidro, olhando pro céu aberto, saem com
@@ -369,37 +370,44 @@ export default function CortinaDeVidro() {
           sizes="100vw"
         />
 
-        {/* Legibilidade não depende mais só de sombra: texto/sombra sozinhos
-            variavam demais de legibilidade conforme a foto do carrossel
-            (o André reportou de novo depois do texto sozinho). Painel de
-            vidro (bg-ink/55 + blur) atrás só da coluna de texto — cobre no
-            máximo ~metade da largura em telas grandes, o resto da foto
-            segue 100% visível, sem véu nenhum por cima dela. */}
+        {/* Mesmos 3 véus da Home, mesmos valores — 5 fotos diferentes giram
+            aqui (contra 1 só na Home), então reconferi o contraste nos 5
+            depois (ver TEXTOS.md). */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink/70 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/65 via-ink/15 to-transparent"
+          aria-hidden="true"
+        />
 
-        <div className="container-vetra relative">
-          <div className="max-w-3xl rounded-3xl bg-ink/55 p-8 backdrop-blur-md md:p-10">
-            <Eyebrow tone="photo">Cortina de Vidro · VETRA Soluções em Vidros</Eyebrow>
-            <Rule className="mt-5" />
-            <h1 className="mt-6 font-display text-hero font-light text-balance text-white">
-              Feche a sacada. Não feche a vista.
-              <span className="block font-normal">Cortina de vidro sob medida.</span>
-            </h1>
-            <p className="mt-8 text-lede text-white/90">
-              Cortina de vidro premium em Fortaleza.
-              <span className="block">
-                Medição, fabricação e instalação com materiais e execução do
-                serviço de alta qualidade.
-              </span>
-            </p>
-            <div className="mt-10">
-              <CTA
-                utm={{ campaign: 'cortina-de-vidro', content: 'hero-whatsapp' }}
-                message={MSG_ORCAMENTO}
-              >
-                <WhatsAppGlyph />
-                Pedir orçamento
-              </CTA>
-            </div>
+        <div className="container-vetra relative flex h-full flex-col justify-end pt-20 pb-16 md:pt-24 md:pb-20">
+          <Eyebrow tone="photo">Cortina de Vidro · VETRA Soluções em Vidros</Eyebrow>
+          <Rule className="mt-5" />
+          <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white">
+            Feche a sacada. Não feche a vista.
+            <span className="block font-normal">Cortina de vidro sob medida.</span>
+          </h1>
+          <p className="mt-8 max-w-2xl text-lede text-white/90">
+            Cortina de vidro premium em Fortaleza.
+            <span className="block">
+              Medição, fabricação e instalação com materiais e execução do
+              serviço de alta qualidade.
+            </span>
+          </p>
+          <div className="mt-10">
+            <CTA
+              utm={{ campaign: 'cortina-de-vidro', content: 'hero-whatsapp' }}
+              message={MSG_ORCAMENTO}
+            >
+              <WhatsAppGlyph />
+              Pedir orçamento
+            </CTA>
           </div>
         </div>
       </section>

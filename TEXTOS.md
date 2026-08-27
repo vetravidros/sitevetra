@@ -291,6 +291,23 @@ entrou no menu principal, entre Projetos e Arquitetos.
 > agressiva testada (826px, mas só 25% de foto visível). Contraste
 > reconferido com o painel mais estreito: pior ponto 6.91:1, ainda acima
 > do mínimo.
+>
+> **Estrutura igual à Home, de vez (22/08/2026)** — o meio-termo do
+> parágrafo acima ainda não bastou; você pediu pela 3ª vez o mesmo tamanho
+> da Home. Em vez de mais um ajuste de altura, troquei a estrutura pela
+> mesma da Home: `min-h-svh` (tela cheia) + `-mt-20/-mt-24` (sobe por baixo
+> do header) em vez de `min-h` fixo + padding próprio, e os mesmos 3 véus
+> em gradiente da Home em vez do painel de vidro (`Header.tsx` agora trata
+> `/cortina-de-vidro` como "sobre foto" também — mesma lógica que já
+> existia só para a Home). Medido: **800px exatos** no viewport 1280×800,
+> igual à Home no mesmo viewport (porque agora é literalmente a mesma
+> estrutura, não uma aproximação).
+>
+> Como agora giram 5 fotos diferentes por trás dos mesmos véus (a Home tem
+> só 1), reconferi o contraste nas 5: pior ponto **5.76:1** (H1, precisa de
+> só 3:1), as outras 4 fotos bateram no teto de 21:1 (fundo lido como
+> preto puro pelo véu ali). Testado em mobile (375×812) também — cabe
+> igual à Home.
 
 ### Onde atendemos (faixa logo abaixo do hero)
 

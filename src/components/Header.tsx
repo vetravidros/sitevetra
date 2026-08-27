@@ -17,10 +17,11 @@ export function Header() {
     return () => setScrollLocked(false)
   }, [open])
 
-  // Na home o header flutua sobre a foto do topo. Ele só vira branco depois
+  // Na home e em cortina-de-vidro o header flutua sobre a foto do topo (as
+  // duas páginas usam o mesmo hero de tela cheia). Ele só vira branco depois
   // que a pessoa rola — antes disso, fundo transparente e marca em branco.
   const [scrolled, setScrolled] = useState(false)
-  const overHero = pathname === '/'
+  const overHero = pathname === '/' || pathname === '/cortina-de-vidro'
 
   useEffect(() => {
     if (!overHero) return
