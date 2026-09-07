@@ -333,12 +333,20 @@ então ele nunca cobre conteúdo.
 
 ### Google Ads (gtag.js)
 
-A tag de conversão do Google Ads (`AW-18403738170`) está em `index.html`, no
-`<head>` — carrega em toda página, porque `index.html` é o template único do
-build SSG. Serve só para o Google Ads medir a campanha; é independente do
-Vercel Analytics (que segue rastreando `cta_click`). Para trocar o ID ou
-adicionar conversão de evento específico (ex.: clique de WhatsApp), edite o
-bloco direto no `index.html`.
+A tag base do Google Ads (`AW-18403738170`) está em `index.html`, no `<head>`
+— carrega em toda página, porque `index.html` é o template único do build
+SSG. Ela sozinha só mede visita de página; o evento de conversão de verdade
+está em `src/lib/gtag.ts` (`reportarConversaoContato`), chamado no clique de
+**todo** botão de WhatsApp do site (dentro de `CTA.tsx` e `WhatsAppFAB`) — é
+a ação "Contato" criada no Google Ads em 22/08/2026. Telefone, Instagram e
+outros links `ghost`/`portfolio` não disparam conversão, só WhatsApp.
+
+Isso é independente do Vercel Analytics (que segue rastreando `cta_click`
+para todo clique, não só WhatsApp). Para adicionar uma 2ª ação de conversão
+(ex.: envio do formulário de contato), crie a ação no Google Ads, pegue o
+rótulo novo (`AW-18403738170/XXXXXXXXX`) e chame `window.gtag('event',
+'conversion', { send_to: '<rótulo>' })` no ponto certo — não precisa reinstalar
+a tag base, ela já está no `index.html`.
 
 ## Formulário de contato
 

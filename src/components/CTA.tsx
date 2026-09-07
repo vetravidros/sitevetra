@@ -1,6 +1,7 @@
 import { track } from '@vercel/analytics'
 import { Link } from 'react-router-dom'
 import { useEffect, useState, type ReactNode } from 'react'
+import { reportarConversaoContato } from '@/lib/gtag'
 import { whatsappUrl, withUtm, defaultWhatsappMessage, type Utm } from '@/lib/utm'
 import { site } from '@/content/site'
 
@@ -69,16 +70,20 @@ export function CTA({
     )
   }
 
-  const target =
-    href !== undefined
-      ? withUtm(href, utm)
-      : whatsappUrl(message ?? defaultWhatsappMessage, utm)
+  const isWhatsapp = href === undefined
+  const target = isWhatsapp ? whatsappUrl(message ?? defaultWhatsappMessage, utm) : withUtm(href, utm)
 
   return (
     <a
       href={target}
       className={classes}
-      onClick={onClick}
+      onClick={() => {
+        onClick()
+        // Ação de conversão "Contato" no Google Ads mede exatamente isto: o
+        // clique que abre o WhatsApp. Links que não são WhatsApp (Google,
+        // Instagram, telefone) não contam.
+        if (isWhatsapp) reportarConversaoContato()
+      }}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -128,7 +133,10 @@ export function WhatsAppFAB({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => track('cta_click', { variant: 'whatsapp', campaign, content: 'fab' })}
+      onClick={() => {
+        track('cta_click', { variant: 'whatsapp', campaign, content: 'fab' })
+        reportarConversaoContato()
+      }}
       aria-label={`Falar com a ${site.name} no WhatsApp`}
       aria-hidden={!visible}
       tabIndex={visible ? undefined : -1}
