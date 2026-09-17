@@ -4,55 +4,27 @@ import { Seo } from '@/components/Seo'
 import { Eyebrow, Rule, Section, SectionHead } from '@/components/ui'
 import { site } from '@/content/site'
 
-/** Mensagem única de entrada no programa — o "cadastro" acontece na conversa. */
-const MSG_PARCERIA =
-  'Quero ser parceiro do ArqVetra. Sou arquiteto(a)/designer e quero conhecer o programa.'
+const MSG_ARQUITETO =
+  'Olá, VETRA. Sou arquiteto(a)/designer e quero falar sobre um projeto.'
 
 const beneficios = [
   {
     n: '01',
     tag: 'Acesso técnico',
-    title: 'Fale com quem entende, em até 24h',
-    text: 'Parceiro ArqVetra tem canal direto de atendimento com um especialista, não com atendente genérico. Dúvida de especificação, detalhe construtivo ou pedido de orçamento têm retorno garantido em até 24 horas.',
+    title: 'Fale direto com quem especifica',
+    text: 'Canal direto com um especialista técnico, não com atendente genérico. Dúvida de especificação, detalhe construtivo ou pedido de orçamento é tratada por quem entende do assunto.',
   },
   {
     n: '02',
-    tag: 'Vantagem comercial',
-    title: 'Condição exclusiva de valor e pagamento',
-    text: 'Clientes indicados por parceiro ArqVetra recebem condição especial de valor e de forma de pagamento: vantagem exclusiva do canal de parceria, que você leva para a mesa junto com o seu projeto.',
+    tag: 'Cuidado com o projeto',
+    title: 'Especificação pensada para o seu projeto',
+    text: 'Sistema, espessura, ferragem e folgas definidos para a sua obra, não copiados de um catálogo genérico. Cada projeto recebe atenção própria.',
   },
   {
     n: '03',
-    tag: 'Prazo',
-    title: 'Seu projeto entra na frente',
-    text: 'Prioridade em toda a cadeia: medição, execução e instalação. Projeto de parceiro ArqVetra não disputa fila com a demanda geral. O cronograma da sua obra não fica refém do nosso.',
-  },
-]
-
-/** Letra miúda da condição comercial. Fica colada aos benefícios de propósito:
-    a vantagem e o limite dela são lidos no mesmo fôlego. */
-const termos = [
-  'Condição válida exclusivamente para clientes indicados por parceiro ArqVetra ativo.',
-  'Aplicável apenas se o fechamento ocorrer dentro do prazo de validade da proposta.',
-  'Não cumulativa com outras condições especiais eventualmente em vigor.',
-  'Condições de pagamento sujeitas a análise por projeto.',
-]
-
-const entrada = [
-  {
-    n: '01',
-    title: 'Cadastro',
-    text: 'Você se identifica como arquiteto ou designer parceiro pelo WhatsApp: nome, escritório e CAU ou contato.',
-  },
-  {
-    n: '02',
-    title: 'Ativação',
-    text: 'Confirmação em até 24h e liberação do canal direto com especialista.',
-  },
-  {
-    n: '03',
-    title: 'Indicação',
-    text: 'Você especifica VETRA no projeto ou indica um cliente; a condição especial é aplicada no orçamento.',
+    tag: 'Agenda',
+    title: 'Sua obra não fica esperando',
+    text: 'Alinhamos medição, execução e instalação com o cronograma da sua obra, para que o prazo do seu cliente não vire problema seu.',
   },
 ]
 
@@ -61,8 +33,8 @@ export default function Arquitetos() {
     <>
       <Seo
         path="/arquitetos"
-        title="ArqVetra · programa de parceria para arquitetos e designers"
-        description="Programa de parceria técnica da VETRA em Fortaleza: canal direto com especialista e retorno em até 24h, prioridade na agenda de medição, execução e instalação, e condição especial de valor e pagamento para os clientes indicados."
+        title="Atendimento para arquitetos e designers · VETRA"
+        description="Atendimento técnico dedicado a arquitetos e designers em Fortaleza: canal direto com especialista, cuidado na especificação e acompanhamento do projeto até a entrega."
       />
 
       {/* ------------------------------------------------------------- hero
@@ -107,25 +79,24 @@ export default function Arquitetos() {
         <div className="container-vetra relative">
           {/* `photo`, não `white`: sobre foto nenhuma transparência sobrevive
               ao AA — mesma regra já aplicada no hero da home. */}
-          <Eyebrow tone="photo">ArqVetra · Programa de parceria VETRA</Eyebrow>
+          <Eyebrow tone="photo">Atendimento para arquitetos e designers</Eyebrow>
           <Rule className="mt-5" />
           <h1 className="mt-6 max-w-4xl font-display text-hero font-light text-balance text-white">
-            Especificar vidro deixa de ser risco.
-            <span className="block font-normal">Passa a ser vantagem.</span>
+            Especificar vidro é coisa séria.
+            <span className="block font-normal">Tratamos assim.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lede text-white">
-            Um programa de parceria técnica para arquitetos e designers que
-            projetam com padrão: canal direto com especialista, prioridade em
-            toda a agenda de produção e condições especiais para os seus
-            clientes.
+            Atendimento técnico dedicado a arquitetos e designers que
+            projetam com padrão: fale direto com quem entende de
+            especificação, do primeiro contato até a entrega da obra.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <CTA
               utm={{ campaign: 'arquitetos', content: 'hero-whatsapp' }}
-              message={MSG_PARCERIA}
+              message={MSG_ARQUITETO}
             >
               <WhatsAppGlyph />
-              Quero ser parceiro ArqVetra
+              Falar com um especialista
             </CTA>
             <CTA
               variant="glass"
@@ -138,16 +109,12 @@ export default function Arquitetos() {
         </div>
       </section>
 
-      {/* A faixa com `aldeota-02` saiu daqui quando o hero virou fotográfico:
-          duas fotos coladas, sem respiro entre elas, liam como galeria — e
-          aquela era uma foto vertical forçada em 16/9. */}
-
-      {/* --------------------------------------------------------- problema
+      {/* ------------------------------------------------------------ problema
           Framing, não venda: nomeia o risco que o arquiteto já conhece antes
           de oferecer qualquer coisa. */}
       <Section>
         <SectionHead
-          eyebrow="Por que o ArqVetra existe"
+          eyebrow="Por que isso importa"
           title="Especificar vidro é assumir um risco que não é seu."
         />
         <p className="mt-8 max-w-3xl text-lede text-ink/60">
@@ -155,15 +122,15 @@ export default function Arquitetos() {
           te deixar na mão na hora H: prazo estourado, medição errada,
           retrabalho que vira problema seu com o cliente. A maioria dos
           vidraceiros trata arquiteto como canal de venda. A VETRA trata como
-          parceiro técnico com responsabilidade compartilhada pelo resultado.
+          parceiro técnico, com atenção direta ao seu projeto.
         </p>
       </Section>
 
       {/* ------------------------------------------------------- benefícios */}
       <Section tone="mist">
         <SectionHead
-          eyebrow="O que você ganha no ArqVetra"
-          title="Três compromissos, sem letra miúda escondida."
+          eyebrow="Como tratamos seu projeto"
+          title="Atenção direta, do primeiro contato à entrega."
         />
         <div className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-3">
           {beneficios.map((b) => (
@@ -179,48 +146,7 @@ export default function Arquitetos() {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 border-t border-ink/10 pt-8">
-          <p className="font-display text-eyebrow uppercase tracking-label text-ink/50">
-            Termos da condição comercial
-          </p>
-          <ul className="mt-5 grid gap-2.5 text-sm leading-relaxed text-ink/50 md:grid-cols-2 md:gap-x-10">
-            {termos.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
-        </div>
       </Section>
-
-      {/* ----------------------------------------------------- como entrar */}
-      <section className="relative overflow-hidden bg-navy py-section text-white">
-        <div
-          className="glass-stripes pointer-events-none absolute inset-0 opacity-[0.05]"
-          aria-hidden="true"
-        />
-        <div className="container-vetra relative">
-          <SectionHead
-            tone="white"
-            eyebrow="Como entrar"
-            title="Três passos, tudo pelo WhatsApp."
-          />
-          <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-3">
-            {entrada.map((e) => (
-              <li key={e.n}>
-                <span className="font-display text-eyebrow tracking-label text-cyan">
-                  {e.n}
-                </span>
-                <h3 className="mt-4 font-display text-heading font-medium text-white text-balance">
-                  {e.title}
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed text-white/60">
-                  {e.text}
-                </p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
 
       {/* ----------------------------------------------------- prova técnica
           Promete a especificação POR PROJETO, não um documento pronto: não
@@ -250,19 +176,18 @@ export default function Arquitetos() {
           <div>
             <Eyebrow>Próximo passo</Eyebrow>
             <h2 className="mt-6 max-w-2xl font-display text-title font-light text-balance">
-              Transparência é posicionamento.
+              Atendimento direto, sem intermediário.
             </h2>
             <p className="mt-6 max-w-xl text-lede text-ink/60">
-              Entre no ArqVetra. Sem burocracia, sem contrato de exclusividade,
-              somente um compromisso técnico. Atendimento em{' '}
-              {site.address.locality} e Região Metropolitana:{' '}
+              Fale com a gente. Sem burocracia, só atendimento técnico direto.
+              Atendimento em {site.address.locality} e Região Metropolitana:{' '}
               {site.contact.phoneDisplay}.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
             <CTA
               utm={{ campaign: 'arquitetos', content: 'fechamento-whatsapp' }}
-              message={MSG_PARCERIA}
+              message={MSG_ARQUITETO}
             >
               <WhatsAppGlyph />
               Falar no WhatsApp

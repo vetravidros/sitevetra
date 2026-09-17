@@ -138,10 +138,10 @@ Boulevard* — ver seção **9. Obras**). Trocar = editar `DESTAQUES` em
 
 ### Faixa azul-escura para arquitetos
 
-- `[home.arq.eyebrow]` → ArqVetra — programa de parceria
+- `[home.arq.eyebrow]` → Atendimento para arquitetos e designers
 - `[home.arq.titulo]` → Para quem especifica.
-- `[home.arq.lede]` ⚠︎ → Arquitetos e designers parceiros têm canal direto com especialista e retorno em até 24h, prioridade na agenda de medição, execução e instalação, e condição especial de valor e pagamento para os clientes que indicam.
-- `[home.arq.cta]` → Conhecer o programa
+- `[home.arq.lede]` → Arquitetos e designers têm canal direto com um especialista, atenção dedicada à especificação do projeto e agenda de medição, execução e instalação alinhada ao cronograma da obra.
+- `[home.arq.cta]` → Falar com um especialista
 
 > Este lede repete os **três pilares** da seção 5, na mesma ordem. É a porta de
 > entrada do programa: se os pilares mudarem lá, mudam aqui também — senão quem
@@ -507,66 +507,47 @@ a ser visíveis quando você preencher `FICHAS` em `src/content/projects.ts`.
 
 ---
 
-## 5. Arquitetos — programa ArqVetra (`/arquitetos`)
+## 5. Arquitetos — atendimento diferenciado (`/arquitetos`)
 
-A página inteira foi reescrita como programa de parceria. Único CTA de
-conversão: WhatsApp. Não existe formulário aqui — o "cadastro" acontece na
-própria conversa.
+Sem programa formal, sem nome de produto, sem processo de adesão. A página
+posiciona um atendimento mais próximo e técnico para arquitetos e designers.
+Único CTA de conversão: WhatsApp.
 
 ### SEO
 
-- `[arq.seo.title]` `SEO` → ArqVetra — programa de parceria para arquitetos e designers
-- `[arq.seo.description]` `SEO` ⚠︎ → Programa de parceria técnica da VETRA em Fortaleza: canal direto com especialista e retorno em até 24h, prioridade na agenda de medição, execução e instalação, e condição especial de valor e pagamento para os clientes indicados.
+- `[arq.seo.title]` `SEO` → Atendimento para arquitetos e designers · VETRA
+- `[arq.seo.description]` `SEO` → Atendimento técnico dedicado a arquitetos e designers em Fortaleza: canal direto com especialista, cuidado na especificação e acompanhamento do projeto até a entrega.
 
 ### Topo (sobre a foto)
 
-- `[arq.eyebrow]` → ArqVetra — Programa de parceria VETRA
-- `[arq.h1.linha1]` → Especificar vidro deixa de ser risco.
-- `[arq.h1.linha2]` (mesma cor, peso maior) → Passa a ser vantagem.
-- `[arq.lede]` → Um programa de parceria técnica para arquitetos e designers que projetam com padrão — canal direto com especialista, prioridade em toda a agenda de produção e condições especiais para os seus clientes.
-- `[arq.cta1]` → Quero ser parceiro ArqVetra
+- `[arq.eyebrow]` → Atendimento para arquitetos e designers
+- `[arq.h1.linha1]` → Especificar vidro é coisa séria.
+- `[arq.h1.linha2]` (mesma cor, peso maior) → Tratamos assim.
+- `[arq.lede]` → Atendimento técnico dedicado a arquitetos e designers que projetam com padrão — fale direto com quem entende de especificação, do primeiro contato até a entrega da obra.
+- `[arq.cta1]` → Falar com um especialista
 - `[arq.cta2]` → Ver projetos executados
 - `[arq.foto.alt]` `ALT` → Dois profissionais da VETRA conferindo a planta e medindo o vão de uma varanda envidraçada em obra, com vista para o mar
-- `[arq.msg-whatsapp]` (texto já preenchido ao abrir a conversa) → Quero ser parceiro do ArqVetra. Sou arquiteto(a)/designer e quero conhecer o programa.
+- `[arq.msg-whatsapp]` (texto já preenchido ao abrir a conversa) → Olá, VETRA. Sou arquiteto(a)/designer e quero falar sobre um projeto.
 
-### Por que o programa existe
+### Por que isso importa
 
-- `[arq.problema.eyebrow]` → Por que o ArqVetra existe
+- `[arq.problema.eyebrow]` → Por que isso importa
 - `[arq.problema.titulo]` → Especificar vidro é assumir um risco que não é seu.
-- `[arq.problema.texto]` → Especificar vidro em projeto exige confiar num fornecedor que não vai te deixar na mão na hora H — prazo estourado, medição errada, retrabalho que vira problema seu com o cliente. A maioria dos vidraceiros trata arquiteto como canal de venda. A VETRA trata como parceiro técnico com responsabilidade compartilhada pelo resultado.
+- `[arq.problema.texto]` → Especificar vidro em projeto exige confiar num fornecedor que não vai te deixar na mão na hora H — prazo estourado, medição errada, retrabalho que vira problema seu com o cliente. A maioria dos vidraceiros trata arquiteto como canal de venda. A VETRA trata como parceiro técnico, com atenção direta ao seu projeto.
 
 ### Os três benefícios (fundo azul claro)
 
-- `[arq.benef.eyebrow]` → O que você ganha no ArqVetra
-- `[arq.benef.titulo]` → Três compromissos, sem letra miúda escondida.
+- `[arq.benef.eyebrow]` → Como tratamos seu projeto
+- `[arq.benef.titulo]` → Atenção direta, do primeiro contato à entrega.
 - `[arq.benef.1.tag]` → 01 · Acesso técnico
-- `[arq.benef.1.titulo]` ⚠︎ → Fale com quem entende, em até 24h
-- `[arq.benef.1.texto]` ⚠︎ → Parceiro ArqVetra tem canal direto de atendimento com um especialista — não com atendente genérico. Dúvida de especificação, detalhe construtivo ou pedido de orçamento têm retorno garantido em até 24 horas.
-- `[arq.benef.2.tag]` → 02 · Vantagem comercial
-- `[arq.benef.2.titulo]` → Condição exclusiva de valor e pagamento
-- `[arq.benef.2.texto]` ⚠︎ → Clientes indicados por parceiro ArqVetra recebem condição especial de valor e de forma de pagamento — vantagem exclusiva do canal de parceria, que você leva para a mesa junto com o seu projeto.
-- `[arq.benef.3.tag]` → 03 · Prazo
-- `[arq.benef.3.titulo]` → Seu projeto entra na frente
-- `[arq.benef.3.texto]` ⚠︎ → Prioridade em toda a cadeia: medição, execução e instalação. Projeto de parceiro ArqVetra não disputa fila com a demanda geral — o cronograma da sua obra não fica refém do nosso.
-
-### Termos da condição comercial (letra miúda, logo abaixo dos benefícios)
-
-- `[arq.termos.titulo]` → Termos da condição comercial
-- `[arq.termos.1]` → Condição válida exclusivamente para clientes indicados por parceiro ArqVetra ativo.
-- `[arq.termos.2]` → Aplicável apenas se o fechamento ocorrer dentro do prazo de validade da proposta.
-- `[arq.termos.3]` → Não cumulativa com outras condições especiais eventualmente em vigor.
-- `[arq.termos.4]` → Condições de pagamento sujeitas a análise por projeto.
-
-### Como entrar (faixa azul-escura, 3 passos)
-
-- `[arq.entrar.eyebrow]` → Como entrar
-- `[arq.entrar.titulo]` → Três passos, tudo pelo WhatsApp.
-- `[arq.entrar.1.titulo]` → Cadastro
-- `[arq.entrar.1.texto]` → Você se identifica como arquiteto ou designer parceiro pelo WhatsApp: nome, escritório e CAU ou contato.
-- `[arq.entrar.2.titulo]` → Ativação
-- `[arq.entrar.2.texto]` ⚠︎ → Confirmação em até 24h e liberação do canal direto com especialista.
-- `[arq.entrar.3.titulo]` → Indicação
-- `[arq.entrar.3.texto]` → Você especifica VETRA no projeto ou indica um cliente; a condição especial é aplicada no orçamento.
+- `[arq.benef.1.titulo]` → Fale direto com quem especifica
+- `[arq.benef.1.texto]` → Canal direto com um especialista técnico, não com atendente genérico. Dúvida de especificação, detalhe construtivo ou pedido de orçamento é tratada por quem entende do assunto.
+- `[arq.benef.2.tag]` → 02 · Cuidado com o projeto
+- `[arq.benef.2.titulo]` → Especificação pensada para o seu projeto
+- `[arq.benef.2.texto]` → Sistema, espessura, ferragem e folgas definidos para a sua obra, não copiados de um catálogo genérico. Cada projeto recebe atenção própria.
+- `[arq.benef.3.tag]` → 03 · Agenda
+- `[arq.benef.3.titulo]` → Sua obra não fica esperando
+- `[arq.benef.3.texto]` → Alinhamos medição, execução e instalação com o cronograma da sua obra, para que o prazo do seu cliente não vire problema seu.
 
 ### Prova técnica
 
@@ -582,13 +563,15 @@ própria conversa.
 ### Fechamento
 
 - `[arq.fim.eyebrow]` → Próximo passo
-- `[arq.fim.titulo]` → Transparência é posicionamento.
-- `[arq.fim.texto]` → Entre no ArqVetra. Sem burocracia, sem contrato de exclusividade, somente um compromisso técnico. Atendimento em Fortaleza e Região Metropolitana — (85) 99178-5809.
+- `[arq.fim.titulo]` → Atendimento direto, sem intermediário.
+- `[arq.fim.texto]` → Fale com a gente. Sem burocracia, só atendimento técnico direto. Atendimento em Fortaleza e Região Metropolitana — (85) 99178-5809.
 - `[arq.fim.cta]` → Falar no WhatsApp
 
-> **O prazo de 24h aparece em dois lugares** (`[arq.benef.1.*]` e
-> `[arq.entrar.2.texto]`) e também na descrição do Google (`[arq.seo.description]`).
-> Se mudar, mude nos três. Se não for sustentável, tire dos três.
+> **Sem programa, sem nome de produto.** Nada de "ArqVetra", "cadastro",
+> "ativação" ou condição comercial formal — o diferencial é só atendimento
+> mais próximo e técnico. Se um programa concreto (com benefício comercial
+> real) for definido no futuro, esta seção e a faixa correspondente na Home
+> (`[home.arq.*]`) precisam ser reescritas juntas.
 
 ---
 
